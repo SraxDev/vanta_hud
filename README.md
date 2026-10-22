@@ -2,6 +2,15 @@
 
 A standalone roleplay HUD for FiveM: health, hunger, thirst, voice, vehicle gauge, custom minimap with GPS, quick menu, compass, cash/job and a weapon HUD. Everything is adjustable in game, no file editing needed. Available in English and French (`Config.Locale`).
 
+## Screenshots
+
+![Vehicle gauge, weapon HUD, compass and cash](docs/images/hud-vehicle.jpg)
+![On foot: minimap with GPS, health, hunger, thirst and voice](docs/images/hud-on-foot.jpg)
+![Quick menu](docs/images/quick-menu.jpg)
+![Full-screen map with places and route](docs/images/map.jpg)
+![Interface settings with live preview](docs/images/interface-settings.jpg)
+![Placement editor: drag the map and gauges where you want them](docs/images/placement-editor.jpg)
+
 ## Features
 
 - Minimap and full-screen map rendered in WebGL (local atlas), custom blips, GPS on foot and in vehicles. One click sets the waypoint.
