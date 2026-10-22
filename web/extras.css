@@ -1,0 +1,315 @@
+/* Extras 1.9 : boussole, argent/métier, mode cinéma. Sans flou ni ombre portée (rendu noir dans le CEF). */
+#compass {
+  position: fixed;
+  top: calc(14 * var(--u,1px));
+  left: 50%;
+  margin-left: -190px;
+  width: 380px;
+  height: calc(40 * var(--u,1px));
+  z-index: 6;
+  pointer-events: none;
+  color: #e3eee9;
+  font-family: GameDisplay,sans-serif;
+  background: linear-gradient(120deg,rgba(var(--surface-top,12,22,29),var(--hud-opacity,.6)),rgba(var(--surface-bottom,6,15,22),var(--hud-opacity,.6)));
+  border: 1px solid #d1e2db4d;
+  border-top: 2px solid var(--accent,#21d7eb);
+  overflow: hidden;
+}
+#compass[hidden],#money-hud[hidden] {
+  display: none;
+}
+#compass-ribbon {
+  position: absolute;
+  top: 0;
+  height: 100%;
+}
+#compass-ribbon i {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 0;
+  font-style: normal;
+}
+#compass-ribbon .tick {
+  border-left: 1px solid #d6e6df55;
+  top: calc(22 * var(--u,1px));
+  height: calc(8 * var(--u,1px));
+}
+#compass-ribbon .tick.major {
+  height: calc(12 * var(--u,1px));
+  top: calc(18 * var(--u,1px));
+  border-left-color: #d6e6df88;
+}
+#compass-ribbon .cardinal {
+  display: block;
+  width: 30px;
+  margin-left: -15px;
+  text-align: center;
+  line-height: calc(40 * var(--u,1px));
+  font-size: calc(15 * var(--u,1px));
+  letter-spacing: .05em;
+  color: #dcebe3;
+  top: 0;
+}
+#compass-ribbon .north {
+  color: var(--accent,#21d7eb);
+}
+#compass-mark {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  margin-left: -1px;
+  width: 2px;
+  height: calc(7 * var(--u,1px));
+  background: var(--accent,#21d7eb);
+}
+#compass-readout {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: calc(-1 * var(--u,1px));
+  display: none;
+}
+#compass-degrees {
+  position: absolute;
+  left: 8px;
+  top: calc(2 * var(--u,1px));
+  font-size: calc(11 * var(--u,1px));
+  color: #aebfb9;
+  letter-spacing: .08em;
+}
+#compass-place {
+  position: absolute;
+  right: 8px;
+  top: calc(2 * var(--u,1px));
+  max-width: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: calc(11 * var(--u,1px));
+  color: #aebfb9;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+#money-hud {
+  position: fixed;
+  top: calc(16 * var(--u,1px));
+  right: calc(22 * var(--u,1px));
+  z-index: 6;
+  min-width: calc(190 * var(--u,1px));
+  padding: calc(9 * var(--u,1px)) calc(14 * var(--u,1px));
+  pointer-events: none;
+  color: #e3eee9;
+  font-family: GameDisplay,sans-serif;
+  background: linear-gradient(120deg,rgba(var(--surface-top,12,22,29),var(--hud-opacity,.6)),rgba(var(--surface-bottom,6,15,22),var(--hud-opacity,.6)));
+  border: 1px solid #d1e2db4d;
+  border-left: 2px solid var(--accent,#21d7eb);
+}
+#money-hud .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: calc(14 * var(--u,1px));
+  line-height: 1.45;
+}
+#money-hud .row span {
+  font-size: calc(10 * var(--u,1px));
+  letter-spacing: .14em;
+  color: #9fb2ab;
+}
+#money-hud .row b {
+  font-size: calc(17 * var(--u,1px));
+  letter-spacing: .04em;
+  font-weight: 400;
+}
+#money-hud .job {
+  margin-top: calc(4 * var(--u,1px));
+  padding-top: calc(5 * var(--u,1px));
+  border-top: 1px solid #d1e2db30;
+}
+#money-hud .job b {
+  font-size: calc(12 * var(--u,1px));
+  color: #c9dbd3;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+.money-delta {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  margin-top: calc(4 * var(--u,1px));
+  padding: calc(3 * var(--u,1px)) calc(10 * var(--u,1px));
+  font-size: calc(14 * var(--u,1px));
+  letter-spacing: .05em;
+  opacity: 0;
+  background: rgba(6,15,22,.9);
+  border: 1px solid #d1e2db40;
+}
+.money-delta.on {
+  opacity: 1;
+}
+.money-delta.gain {
+  color: #8be6a6;
+  border-left: 2px solid #8be6a6;
+}
+.money-delta.loss {
+  color: #f0a0a0;
+  border-left: 2px solid #f0a0a0;
+}
+#cinema-top,#cinema-bottom {
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: 0;
+  background: #000;
+  z-index: 50;
+  pointer-events: none;
+  transition: height .35s ease;
+}
+#cinema-top {
+  top: 0;
+}
+#cinema-bottom {
+  bottom: 0;
+}
+body.cinema #cinema-top,body.cinema #cinema-bottom {
+  height: 11.5vh;
+}
+#cinema-top,#cinema-bottom {
+  transition: none;
+}
+/* Carte : la liste des lieux s'arrête au-dessus de la colonne d'outils (bas droite) au lieu de passer dessous. */
+#map3d-places {
+  max-height: calc(100vh - 480 * var(--m));
+}
+/* HUD d'arme : même largeur et même bord droit que le compteur véhicule ; posé au-dessus de lui en voiture. */
+#weapon-hud {
+  position: fixed;
+  right: calc(48 * var(--u,1px));
+  bottom: calc(40 * var(--u,1px));
+  width: calc(280 * var(--u,1px));
+  z-index: 6;
+  pointer-events: none;
+  color: #e3eee9;
+  font-family: GameDisplay,sans-serif;
+  background: linear-gradient(120deg,rgba(var(--surface-top,12,22,29),var(--hud-opacity,.6)),rgba(var(--surface-bottom,6,15,22),var(--hud-opacity,.6)));
+  border: 1px solid #d1e0d84a;
+  border-top: calc(2 * var(--u,1px)) solid var(--accent,#21d7eb);
+  clip-path: polygon(10px 0,100% 0,100% calc(100% - 10px),calc(100% - 10px) 100%,0 100%,0 10px);
+  overflow: hidden;
+}
+#weapon-hud[hidden] {
+  display: none;
+}
+#weapon-hud .whead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: calc(8 * var(--u,1px));
+  padding: calc(8 * var(--u,1px)) calc(14 * var(--u,1px)) 0 calc(16 * var(--u,1px));
+  min-height: calc(20 * var(--u,1px));
+}
+#weapon-name {
+  font-size: calc(12 * var(--u,1px));
+  letter-spacing: .16em;
+  color: #c4d4ce;
+  text-transform: uppercase;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+#weapon-state {
+  flex: none;
+  font-size: calc(9.5 * var(--u,1px));
+  letter-spacing: .14em;
+  color: #e7c082;
+  border: 1px solid currentColor;
+  padding: calc(2 * var(--u,1px)) calc(6 * var(--u,1px));
+  white-space: nowrap;
+}
+#weapon-state:empty {
+  display: none;
+}
+#weapon-hud .wmain {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: calc(10 * var(--u,1px));
+  padding: 0 calc(16 * var(--u,1px)) calc(2 * var(--u,1px)) calc(10 * var(--u,1px));
+}
+#weapon-icon {
+  flex: none;
+  width: calc(96 * var(--u,1px));
+  height: calc(58 * var(--u,1px));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: var(--accent,#21d7eb);
+}
+#weapon-icon svg {
+  width: 100%;
+  height: calc(39 * var(--u,1px));
+}
+#weapon-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+#weapon-icon.photo svg {
+  display: none;
+}
+#weapon-hud .ammo {
+  display: flex;
+  align-items: baseline;
+  gap: calc(8 * var(--u,1px));
+  white-space: nowrap;
+}
+#weapon-clip {
+  font-size: calc(46 * var(--u,1px));
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: .02em;
+}
+#weapon-reserve {
+  font-size: calc(17 * var(--u,1px));
+  color: #aebfb9;
+}
+#weapon-pips {
+  display: flex;
+  gap: calc(2 * var(--u,1px));
+  height: calc(5 * var(--u,1px));
+  padding: 0;
+  background: #030c102e;
+}
+#weapon-pips i {
+  flex: 1;
+  background: #d1e2db1f;
+}
+#weapon-pips i.on {
+  background: var(--accent,#21d7eb);
+}
+#weapon-hud.melee .ammo,#weapon-hud.melee #weapon-pips {
+  display: none;
+}
+#weapon-hud.melee .wmain {
+  justify-content: flex-start;
+}
+#weapon-hud.low #weapon-clip {
+  color: #e7c082;
+}
+#weapon-hud.low #weapon-pips i.on {
+  background: #e7c082;
+}
+#weapon-hud.low #weapon-icon svg {
+  fill: #e7c082;
+}
+#weapon-hud.empty #weapon-clip {
+  color: #ef9d8d;
+}
+#weapon-hud.empty #weapon-state {
+  color: #ef9d8d;
+}
+#weapon-hud.empty #weapon-icon svg {
+  fill: #ef9d8d;
+}
+

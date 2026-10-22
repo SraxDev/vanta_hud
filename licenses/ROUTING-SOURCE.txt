@@ -1,0 +1,8 @@
+Local stock-world road connectivity
+Source: https://github.com/DurtyFree/gta-v-data-dumps
+Revision: b65684e00f689fdec405c5f1055322c802d3c895
+Original source: nodes.zip / nodes.json (GTA V road positions and connected lane counts).
+Credits: DurtyFree and contributors; original world data Rockstar Games. No MIT license is asserted for these data.
+Transformation: node positions/elevation, CSR adjacency, lane-direction and freeway flags; water nodes removed.
+A* implementation in web/route-worker.js is local presentation logic, never a server authority.
+The generated roads.json hash and source archive provenance are in web/assets/routing/source.json.

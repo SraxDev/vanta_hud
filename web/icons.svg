@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg"><defs>
+<symbol id="heart" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" d="M12 21S2 15 2 8a5 5 0 0 1 10-2 5 5 0 0 1 10 2c0 7-10 13-10 13Z"/></symbol>
+<symbol id="shield" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" d="m12 3 8 3-1 8c-1 4-7 7-7 7s-6-3-7-7L4 6Z"/></symbol>
+<symbol id="food" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 2v6q0 3 3 3t3-3V2M7 2v20M20 2q-7 5-5 11h5M20 2v20"/></g></symbol>
+<symbol id="drop" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" d="M12 3S5 11 5 15a7 7 0 0 0 14 0c0-4-7-12-7-12Z"/></symbol>
+<symbol id="mic" viewBox="0 0 24 24"><g stroke="currentColor" fill="none" stroke-width="1.8" stroke-linecap="round"><rect x="8" y="2" width="8" height="13" rx="4"/><path d="M5 10v2a7 7 0 0 0 14 0v-2M12 19v3M8 22h8"/></g></symbol>
+<symbol id="fuel" viewBox="0 0 24 24"><g stroke="currentColor" fill="none" stroke-width="1.7" stroke-linejoin="round"><path d="M3 22V3h11v19M1 22h15M5 5h7v6H5ZM14 11h3v7q0 3 3 3t2-3V7l-5-5M19 4v4h3"/></g></symbol>
+<symbol id="belt" viewBox="0 0 24 24"><circle cx="12" cy="4" r="2.4" fill="currentColor"/><path d="M8.1 8.1Q12 6.5 15.9 8.1L17.2 16.8H6.8Z" fill="currentColor" opacity=".32"/><path d="M8.1 8.2 6.8 16.8M15.9 8.2l1.3 8.6M8.4 19.4 7.7 22M15.6 19.4l.7 2.6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><path d="M17.4 7.5 7.1 17.8M5.8 18h12.4" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><rect x="10.1" y="16.3" width="3.8" height="3.3" rx=".7" fill="currentColor"/></symbol>
+<symbol id="navigation" viewBox="0 0 24 24"><path fill="currentColor" d="m12 2 10 20-10-6-10 6Z"/></symbol>
+</defs></svg>

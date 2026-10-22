@@ -1,0 +1,21 @@
+{
+  "source": {
+    "repository": "https://github.com/DurtyFree/gta-v-data-dumps",
+    "commit": "b65684e00f689fdec405c5f1055322c802d3c895",
+    "files": [
+      {
+        "file": "nodes.zip",
+        "sha256": "39ea47a1cce9b56affc09f76d5b5e3150dfc47824a0788bc3a15578e28d40ca6"
+      },
+      {
+        "file": "README.md",
+        "sha256": "d018ea683f221dff1eb59fa3bece8be5104d4f9a753f6ba5b873ea3d72e5dc76"
+      }
+    ]
+  },
+  "method": "Native connected vehicle-road nodes, retaining elevation and lane direction. Water nodes excluded; walking may traverse road links in either direction.",
+  "nodes": 64357,
+  "links": 135740,
+  "bytes": 2881178,
+  "sha256": "f1ab91e9bf5a906e3f30b21de240bb4b7212d5a7534ea455b72a82f24c9d88b9"
+}

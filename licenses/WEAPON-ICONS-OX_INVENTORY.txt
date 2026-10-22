@@ -1,0 +1,4 @@
+Weapon icons (web/weapons/WEAPON_*.png): taken from the web/images folder of the ox_inventory project
+https://github.com/overextended/ox_inventory — Copyright 2021-2026 Linden, Luke, Dunak and contributors.
+License: GPL-3.0 or later: https://www.gnu.org/licenses/gpl-3.0.en.html
+The images were not modified.

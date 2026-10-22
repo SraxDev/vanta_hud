@@ -1,0 +1,19 @@
+Atlas background — version 1.7
+
+Source: https://github.com/VIRUXE/gtav-map-tiles
+Revision: 07946ff6dc8a175f96be442038823360fddf2756
+Files: atlas/5/{x}-{y}.webp, 32 x 32 native 256 px tiles.
+Upstream description: publicly circulated GTA V map renders, native 8192 x 8192 master.
+GTA V and associated map artwork belong to Rockstar Games. This is an unofficial map distribution.
+No MIT license is asserted for the map artwork.
+
+Local adaptation: tile regrouping to 1024 px, replicated sampling gutters, 2048 px overview,
+day/night GPU color treatment, native XY positioning, custom navigation interface.
+No NoPixel artwork, branding, Watch Dogs map or AI-generated geography is included.
+The generated mockup is a design reference only and is not shipped to players.
+
+Source master SHA256:
+c310fcf1da2ff0588b1a4365c4201cd7258ace9357d50337ed9659af526a9ec9
+
+Older model/vector files and their licenses stay on disk for rollback.
+They are not requested by the active atlas renderer.

@@ -1,0 +1,5807 @@
+{
+  "entries": 968,
+  "sourceBuildCount": 922,
+  "base": "minimap.gfx présent dans esx_hud sur le serveur local",
+  "entriesById": [
+    {
+      "id": 0,
+      "name": "radar_higher",
+      "symbol": 680,
+      "status": "custom"
+    },
+    {
+      "id": 1,
+      "name": "radar_level",
+      "symbol": 675,
+      "status": "custom"
+    },
+    {
+      "id": 2,
+      "name": "radar_lower",
+      "symbol": 670,
+      "status": "custom"
+    },
+    {
+      "id": 3,
+      "name": "radar_police_ped",
+      "symbol": 593,
+      "status": "custom"
+    },
+    {
+      "id": 4,
+      "name": "radar_wanted_radius",
+      "symbol": 376,
+      "status": "custom"
+    },
+    {
+      "id": 5,
+      "name": "radar_area_blip",
+      "symbol": 448,
+      "status": "custom"
+    },
+    {
+      "id": 6,
+      "name": "radar_centre",
+      "symbol": 712,
+      "status": "custom"
+    },
+    {
+      "id": 7,
+      "name": "radar_north",
+      "symbol": 660,
+      "status": "custom"
+    },
+    {
+      "id": 8,
+      "name": "radar_waypoint",
+      "symbol": 765,
+      "status": "custom"
+    },
+    {
+      "id": 9,
+      "name": "radar_radius_blip",
+      "symbol": 388,
+      "status": "custom"
+    },
+    {
+      "id": 10,
+      "name": "radar_radius_outline_blip",
+      "symbol": 386,
+      "status": "custom"
+    },
+    {
+      "id": 11,
+      "name": "radar_weapon_higher",
+      "symbol": 489,
+      "status": "custom"
+    },
+    {
+      "id": 12,
+      "name": "radar_weapon_lower",
+      "symbol": 483,
+      "status": "custom"
+    },
+    {
+      "id": 13,
+      "name": "radar_higher_ai",
+      "symbol": 679,
+      "status": "custom"
+    },
+    {
+      "id": 14,
+      "name": "radar_lower_ai",
+      "symbol": 669,
+      "status": "custom"
+    },
+    {
+      "id": 15,
+      "name": "radar_police_heli_spin",
+      "symbol": 585,
+      "status": "custom"
+    },
+    {
+      "id": 16,
+      "name": "radar_police_plane_move",
+      "symbol": 1072,
+      "status": "custom"
+    },
+    {
+      "id": 17,
+      "name": "radar_numbered_1",
+      "symbol": 658,
+      "status": "custom"
+    },
+    {
+      "id": 18,
+      "name": "radar_numbered_2",
+      "symbol": 657,
+      "status": "custom"
+    },
+    {
+      "id": 19,
+      "name": "radar_numbered_3",
+      "symbol": 656,
+      "status": "custom"
+    },
+    {
+      "id": 20,
+      "name": "radar_numbered_4",
+      "symbol": 655,
+      "status": "custom"
+    },
+    {
+      "id": 21,
+      "name": "radar_numbered_5",
+      "symbol": 654,
+      "status": "custom"
+    },
+    {
+      "id": 22,
+      "name": "radar_numbered_6",
+      "symbol": 653,
+      "status": "custom"
+    },
+    {
+      "id": 23,
+      "name": "radar_numbered_7",
+      "symbol": 651,
+      "status": "custom"
+    },
+    {
+      "id": 24,
+      "name": "radar_numbered_8",
+      "symbol": 649,
+      "status": "custom"
+    },
+    {
+      "id": 25,
+      "name": "radar_numbered_9",
+      "symbol": 647,
+      "status": "custom"
+    },
+    {
+      "id": 26,
+      "name": "radar_numbered_10",
+      "symbol": 645,
+      "status": "custom"
+    },
+    {
+      "id": 27,
+      "name": "radar_mp_crew",
+      "symbol": 667,
+      "status": "custom"
+    },
+    {
+      "id": 28,
+      "name": "radar_mp_friendlies",
+      "symbol": 664,
+      "status": "custom"
+    },
+    {
+      "id": 29,
+      "name": "radar_empty",
+      "symbol": 52029,
+      "status": "transparent"
+    },
+    {
+      "id": 30,
+      "name": "radar_empty",
+      "status": "shared-empty-symbol"
+    },
+    {
+      "id": 31,
+      "name": "radar_empty",
+      "status": "shared-empty-symbol"
+    },
+    {
+      "id": 32,
+      "name": "radar_script_objective",
+      "symbol": 52032,
+      "status": "custom"
+    },
+    {
+      "id": 33,
+      "name": "radar_empty",
+      "status": "shared-empty-symbol"
+    },
+    {
+      "id": 34,
+      "name": "radar_empty",
+      "status": "shared-empty-symbol"
+    },
+    {
+      "id": 35,
+      "name": "radar_station",
+      "symbol": 52035,
+      "status": "custom"
+    },
+    {
+      "id": 36,
+      "name": "radar_cable_car",
+      "symbol": 1680,
+      "status": "custom"
+    },
+    {
+      "id": 37,
+      "name": "radar_activities",
+      "symbol": 293,
+      "status": "custom"
+    },
+    {
+      "id": 38,
+      "name": "radar_raceflag",
+      "symbol": 1003,
+      "status": "custom"
+    },
+    {
+      "id": 39,
+      "name": "radar_fire",
+      "symbol": 52039,
+      "status": "custom"
+    },
+    {
+      "id": 40,
+      "name": "radar_safehouse",
+      "symbol": 378,
+      "status": "custom"
+    },
+    {
+      "id": 41,
+      "name": "radar_police",
+      "symbol": 594,
+      "status": "custom"
+    },
+    {
+      "id": 42,
+      "name": "radar_police_chase",
+      "symbol": 590,
+      "status": "custom"
+    },
+    {
+      "id": 43,
+      "name": "radar_police_heli",
+      "symbol": 1074,
+      "status": "custom"
+    },
+    {
+      "id": 44,
+      "name": "radar_bomb_a",
+      "symbol": 285,
+      "status": "custom"
+    },
+    {
+      "id": 45,
+      "name": "radar_bomb_b",
+      "symbol": 52045,
+      "status": "custom"
+    },
+    {
+      "id": 46,
+      "name": "radar_bomb_c",
+      "symbol": 52046,
+      "status": "custom"
+    },
+    {
+      "id": 47,
+      "name": "radar_snitch",
+      "symbol": 907,
+      "status": "custom"
+    },
+    {
+      "id": 48,
+      "name": "radar_planning_locations",
+      "symbol": 173,
+      "status": "custom"
+    },
+    {
+      "id": 49,
+      "name": "radar_crim_arrest",
+      "symbol": 52049,
+      "status": "custom"
+    },
+    {
+      "id": 50,
+      "name": "radar_crim_carsteal",
+      "symbol": 1540,
+      "status": "custom"
+    },
+    {
+      "id": 51,
+      "name": "radar_crim_drugs",
+      "symbol": 1530,
+      "status": "custom"
+    },
+    {
+      "id": 52,
+      "name": "radar_crim_holdups",
+      "symbol": 1528,
+      "status": "custom"
+    },
+    {
+      "id": 53,
+      "name": "radar_crim_pimping",
+      "symbol": 52053,
+      "status": "custom"
+    },
+    {
+      "id": 54,
+      "name": "radar_crim_player",
+      "symbol": 263,
+      "status": "custom"
+    },
+    {
+      "id": 55,
+      "name": "radar_fence",
+      "symbol": 52055,
+      "status": "custom"
+    },
+    {
+      "id": 56,
+      "name": "radar_cop_patrol",
+      "symbol": 1562,
+      "status": "custom"
+    },
+    {
+      "id": 57,
+      "name": "radar_cop_player",
+      "symbol": 706,
+      "status": "custom"
+    },
+    {
+      "id": 58,
+      "name": "radar_crim_wanted",
+      "symbol": 698,
+      "status": "custom"
+    },
+    {
+      "id": 59,
+      "name": "radar_heist",
+      "symbol": 1358,
+      "status": "custom"
+    },
+    {
+      "id": 60,
+      "name": "radar_police_station",
+      "symbol": 1070,
+      "status": "custom"
+    },
+    {
+      "id": 61,
+      "name": "radar_hospital",
+      "symbol": 1332,
+      "status": "custom"
+    },
+    {
+      "id": 62,
+      "name": "radar_assassins_mark",
+      "symbol": 288,
+      "status": "custom"
+    },
+    {
+      "id": 63,
+      "name": "radar_elevator",
+      "symbol": 256,
+      "status": "custom"
+    },
+    {
+      "id": 64,
+      "name": "radar_helicopter",
+      "symbol": 1340,
+      "status": "custom"
+    },
+    {
+      "id": 65,
+      "name": "radar_joyriders",
+      "symbol": 52065,
+      "status": "custom"
+    },
+    {
+      "id": 66,
+      "name": "radar_random_character",
+      "symbol": 995,
+      "status": "custom"
+    },
+    {
+      "id": 67,
+      "name": "radar_security_van",
+      "symbol": 965,
+      "status": "custom"
+    },
+    {
+      "id": 68,
+      "name": "radar_tow_truck",
+      "symbol": 835,
+      "status": "custom"
+    },
+    {
+      "id": 69,
+      "name": "radar_drive_thru",
+      "symbol": 52069,
+      "status": "custom"
+    },
+    {
+      "id": 70,
+      "name": "radar_illegal_parking",
+      "symbol": 209,
+      "status": "custom"
+    },
+    {
+      "id": 71,
+      "name": "radar_barber",
+      "symbol": 1767,
+      "status": "custom"
+    },
+    {
+      "id": 72,
+      "name": "radar_car_mod_shop",
+      "symbol": 1661,
+      "status": "custom"
+    },
+    {
+      "id": 73,
+      "name": "radar_clothes_store",
+      "symbol": 1588,
+      "status": "custom"
+    },
+    {
+      "id": 74,
+      "name": "radar_gym",
+      "symbol": 52074,
+      "status": "custom"
+    },
+    {
+      "id": 75,
+      "name": "radar_tattoo",
+      "symbol": 865,
+      "status": "custom"
+    },
+    {
+      "id": 76,
+      "name": "radar_armenian_family",
+      "symbol": 1781,
+      "status": "custom"
+    },
+    {
+      "id": 77,
+      "name": "radar_lester_family",
+      "symbol": 1280,
+      "status": "custom"
+    },
+    {
+      "id": 78,
+      "name": "radar_michael_family",
+      "symbol": 1264,
+      "status": "custom"
+    },
+    {
+      "id": 79,
+      "name": "radar_trevor_family",
+      "symbol": 821,
+      "status": "custom"
+    },
+    {
+      "id": 80,
+      "name": "radar_jewelry_heist",
+      "symbol": 1312,
+      "status": "custom"
+    },
+    {
+      "id": 81,
+      "name": "radar_drag_race",
+      "symbol": 52081,
+      "status": "custom"
+    },
+    {
+      "id": 82,
+      "name": "radar_drag_race_finish",
+      "symbol": 261,
+      "status": "custom"
+    },
+    {
+      "id": 83,
+      "name": "radar_car_carrier",
+      "symbol": 52083,
+      "status": "custom"
+    },
+    {
+      "id": 84,
+      "name": "radar_rampage",
+      "symbol": 997,
+      "status": "custom"
+    },
+    {
+      "id": 85,
+      "name": "radar_vinewood_tours",
+      "symbol": 780,
+      "status": "custom"
+    },
+    {
+      "id": 86,
+      "name": "radar_lamar_family",
+      "symbol": 1286,
+      "status": "custom"
+    },
+    {
+      "id": 87,
+      "name": "radar_taco_van",
+      "symbol": 52087,
+      "status": "custom"
+    },
+    {
+      "id": 88,
+      "name": "radar_franklin_family",
+      "symbol": 1428,
+      "status": "custom"
+    },
+    {
+      "id": 89,
+      "name": "radar_chinese_strand",
+      "symbol": 1606,
+      "status": "custom"
+    },
+    {
+      "id": 90,
+      "name": "radar_flight_school",
+      "symbol": 1432,
+      "status": "custom"
+    },
+    {
+      "id": 91,
+      "name": "radar_eye_sky",
+      "symbol": 254,
+      "status": "custom"
+    },
+    {
+      "id": 92,
+      "name": "radar_air_hockey",
+      "symbol": 292,
+      "status": "custom"
+    },
+    {
+      "id": 93,
+      "name": "radar_bar",
+      "symbol": 1769,
+      "status": "custom"
+    },
+    {
+      "id": 94,
+      "name": "radar_base_jump",
+      "symbol": 1763,
+      "status": "custom"
+    },
+    {
+      "id": 95,
+      "name": "radar_basketball",
+      "symbol": 286,
+      "status": "custom"
+    },
+    {
+      "id": 96,
+      "name": "radar_biolab_heist",
+      "symbol": 1704,
+      "status": "custom"
+    },
+    {
+      "id": 97,
+      "name": "radar_bowling",
+      "symbol": 52097,
+      "status": "custom"
+    },
+    {
+      "id": 98,
+      "name": "radar_burger_shot",
+      "symbol": 52098,
+      "status": "custom"
+    },
+    {
+      "id": 99,
+      "name": "radar_cabaret_club",
+      "symbol": 279,
+      "status": "custom"
+    },
+    {
+      "id": 100,
+      "name": "radar_car_wash",
+      "symbol": 1648,
+      "status": "custom"
+    },
+    {
+      "id": 101,
+      "name": "radar_cluckin_bell",
+      "symbol": 52101,
+      "status": "custom"
+    },
+    {
+      "id": 102,
+      "name": "radar_comedy_club",
+      "symbol": 1582,
+      "status": "custom"
+    },
+    {
+      "id": 103,
+      "name": "radar_darts",
+      "symbol": 1514,
+      "status": "custom"
+    },
+    {
+      "id": 104,
+      "name": "radar_docks_heist",
+      "symbol": 1494,
+      "status": "custom"
+    },
+    {
+      "id": 105,
+      "name": "radar_fbi_heist",
+      "symbol": 1456,
+      "status": "custom"
+    },
+    {
+      "id": 106,
+      "name": "radar_fbi_officers_strand",
+      "symbol": 1454,
+      "status": "custom"
+    },
+    {
+      "id": 107,
+      "name": "radar_finale_bank_heist",
+      "symbol": 1442,
+      "status": "custom"
+    },
+    {
+      "id": 108,
+      "name": "radar_financier_strand",
+      "symbol": 1440,
+      "status": "custom"
+    },
+    {
+      "id": 109,
+      "name": "radar_golf",
+      "symbol": 1400,
+      "status": "custom"
+    },
+    {
+      "id": 110,
+      "name": "radar_gun_shop",
+      "symbol": 1376,
+      "status": "custom"
+    },
+    {
+      "id": 111,
+      "name": "radar_internet_cafe",
+      "symbol": 208,
+      "status": "custom"
+    },
+    {
+      "id": 112,
+      "name": "radar_michael_family_exile",
+      "symbol": 1262,
+      "status": "custom"
+    },
+    {
+      "id": 113,
+      "name": "radar_nice_house_heist",
+      "symbol": 1190,
+      "status": "custom"
+    },
+    {
+      "id": 114,
+      "name": "radar_random_female",
+      "symbol": 168,
+      "status": "custom"
+    },
+    {
+      "id": 115,
+      "name": "radar_random_male",
+      "symbol": 167,
+      "status": "custom"
+    },
+    {
+      "id": 116,
+      "name": "radar_repo",
+      "symbol": 52116,
+      "status": "custom"
+    },
+    {
+      "id": 117,
+      "name": "radar_restaurant",
+      "symbol": 52117,
+      "status": "custom"
+    },
+    {
+      "id": 118,
+      "name": "radar_rural_bank_heist",
+      "symbol": 975,
+      "status": "custom"
+    },
+    {
+      "id": 119,
+      "name": "radar_shooting_range",
+      "symbol": 953,
+      "status": "custom"
+    },
+    {
+      "id": 120,
+      "name": "radar_solomon_strand",
+      "symbol": 903,
+      "status": "custom"
+    },
+    {
+      "id": 121,
+      "name": "radar_strip_club",
+      "symbol": 887,
+      "status": "custom"
+    },
+    {
+      "id": 122,
+      "name": "radar_tennis",
+      "symbol": 847,
+      "status": "custom"
+    },
+    {
+      "id": 123,
+      "name": "radar_trevor_family_exile",
+      "symbol": 819,
+      "status": "custom"
+    },
+    {
+      "id": 124,
+      "name": "radar_michael_trevor_family",
+      "symbol": 1260,
+      "status": "custom"
+    },
+    {
+      "id": 125,
+      "name": "radar_vehicle_spawn",
+      "symbol": 52125,
+      "status": "custom"
+    },
+    {
+      "id": 126,
+      "name": "radar_triathlon",
+      "symbol": 813,
+      "status": "custom"
+    },
+    {
+      "id": 127,
+      "name": "radar_off_road_racing",
+      "symbol": 1188,
+      "status": "custom"
+    },
+    {
+      "id": 128,
+      "name": "radar_gang_cops",
+      "symbol": 690,
+      "status": "custom"
+    },
+    {
+      "id": 129,
+      "name": "radar_gang_mexicans",
+      "symbol": 686,
+      "status": "custom"
+    },
+    {
+      "id": 130,
+      "name": "radar_gang_bikers",
+      "symbol": 692,
+      "status": "custom"
+    },
+    {
+      "id": 131,
+      "name": "radar_gang_families",
+      "symbol": 52131,
+      "status": "custom"
+    },
+    {
+      "id": 132,
+      "name": "radar_gang_professionals",
+      "symbol": 52132,
+      "status": "custom"
+    },
+    {
+      "id": 133,
+      "name": "radar_snitch_red",
+      "symbol": 905,
+      "status": "custom"
+    },
+    {
+      "id": 134,
+      "name": "radar_crim_cuff_keys",
+      "symbol": 1532,
+      "status": "custom"
+    },
+    {
+      "id": 135,
+      "name": "radar_cinema",
+      "symbol": 1592,
+      "status": "custom"
+    },
+    {
+      "id": 136,
+      "name": "radar_music_venue",
+      "symbol": 1240,
+      "status": "custom"
+    },
+    {
+      "id": 137,
+      "name": "radar_police_station_blue",
+      "symbol": 1068,
+      "status": "custom"
+    },
+    {
+      "id": 138,
+      "name": "radar_airport",
+      "symbol": 291,
+      "status": "custom"
+    },
+    {
+      "id": 139,
+      "name": "radar_crim_saved_vehicle",
+      "symbol": 262,
+      "status": "custom"
+    },
+    {
+      "id": 140,
+      "name": "radar_weed_stash",
+      "symbol": 747,
+      "status": "custom"
+    },
+    {
+      "id": 141,
+      "name": "radar_hunting",
+      "symbol": 1320,
+      "status": "custom"
+    },
+    {
+      "id": 142,
+      "name": "radar_pool",
+      "symbol": 169,
+      "status": "custom"
+    },
+    {
+      "id": 143,
+      "name": "radar_objective_blue",
+      "symbol": 616,
+      "status": "custom"
+    },
+    {
+      "id": 144,
+      "name": "radar_objective_green",
+      "symbol": 615,
+      "status": "custom"
+    },
+    {
+      "id": 145,
+      "name": "radar_objective_red",
+      "symbol": 614,
+      "status": "custom"
+    },
+    {
+      "id": 146,
+      "name": "radar_objective_yellow",
+      "symbol": 613,
+      "status": "custom"
+    },
+    {
+      "id": 147,
+      "name": "radar_arms_dealing",
+      "symbol": 1779,
+      "status": "custom"
+    },
+    {
+      "id": 148,
+      "name": "radar_mp_friend",
+      "symbol": 665,
+      "status": "custom"
+    },
+    {
+      "id": 149,
+      "name": "radar_celebrity_theft",
+      "symbol": 1610,
+      "status": "custom"
+    },
+    {
+      "id": 150,
+      "name": "radar_weapon_assault_rifle",
+      "symbol": 503,
+      "status": "custom"
+    },
+    {
+      "id": 151,
+      "name": "radar_weapon_bat",
+      "symbol": 501,
+      "status": "custom"
+    },
+    {
+      "id": 152,
+      "name": "radar_weapon_grenade",
+      "symbol": 493,
+      "status": "custom"
+    },
+    {
+      "id": 153,
+      "name": "radar_weapon_health",
+      "symbol": 753,
+      "status": "custom"
+    },
+    {
+      "id": 154,
+      "name": "radar_weapon_knife",
+      "symbol": 485,
+      "status": "custom"
+    },
+    {
+      "id": 155,
+      "name": "radar_weapon_molotov",
+      "symbol": 479,
+      "status": "custom"
+    },
+    {
+      "id": 156,
+      "name": "radar_weapon_pistol",
+      "symbol": 477,
+      "status": "custom"
+    },
+    {
+      "id": 157,
+      "name": "radar_weapon_rocket",
+      "symbol": 475,
+      "status": "custom"
+    },
+    {
+      "id": 158,
+      "name": "radar_weapon_shotgun",
+      "symbol": 473,
+      "status": "custom"
+    },
+    {
+      "id": 159,
+      "name": "radar_weapon_smg",
+      "symbol": 471,
+      "status": "custom"
+    },
+    {
+      "id": 160,
+      "name": "radar_weapon_sniper",
+      "symbol": 469,
+      "status": "custom"
+    },
+    {
+      "id": 161,
+      "name": "radar_mp_noise",
+      "symbol": 406,
+      "status": "custom"
+    },
+    {
+      "id": 162,
+      "name": "radar_poi",
+      "symbol": 1076,
+      "status": "custom"
+    },
+    {
+      "id": 163,
+      "name": "radar_passive",
+      "symbol": 1162,
+      "status": "custom"
+    },
+    {
+      "id": 164,
+      "name": "radar_usingmenu",
+      "symbol": 797,
+      "status": "custom"
+    },
+    {
+      "id": 165,
+      "name": "radar_friend_franklin_p",
+      "symbol": 52165,
+      "status": "custom"
+    },
+    {
+      "id": 166,
+      "name": "radar_friend_franklin_x",
+      "symbol": 52166,
+      "status": "custom"
+    },
+    {
+      "id": 167,
+      "name": "radar_friend_michael_p",
+      "symbol": 52167,
+      "status": "custom"
+    },
+    {
+      "id": 168,
+      "name": "radar_friend_michael_x",
+      "symbol": 52168,
+      "status": "custom"
+    },
+    {
+      "id": 169,
+      "name": "radar_friend_trevor_p",
+      "symbol": 52169,
+      "status": "custom"
+    },
+    {
+      "id": 170,
+      "name": "radar_friend_trevor_x",
+      "symbol": 52170,
+      "status": "custom"
+    },
+    {
+      "id": 171,
+      "name": "radar_gang_cops_partner",
+      "symbol": 688,
+      "status": "custom"
+    },
+    {
+      "id": 172,
+      "name": "radar_friend_lamar",
+      "symbol": 52172,
+      "status": "custom"
+    },
+    {
+      "id": 173,
+      "name": "radar_weapon_minigun",
+      "symbol": 481,
+      "status": "custom"
+    },
+    {
+      "id": 174,
+      "name": "radar_weapon_grenadeLauncher",
+      "symbol": 52174,
+      "status": "custom"
+    },
+    {
+      "id": 175,
+      "name": "radar_weapon_armour",
+      "symbol": 759,
+      "status": "custom"
+    },
+    {
+      "id": 176,
+      "name": "radar_property_takeover",
+      "symbol": 1042,
+      "status": "custom"
+    },
+    {
+      "id": 177,
+      "name": "radar_gang_mexicans_highlight",
+      "symbol": 685,
+      "status": "custom"
+    },
+    {
+      "id": 178,
+      "name": "radar_gang_bikers_highlight",
+      "symbol": 691,
+      "status": "custom"
+    },
+    {
+      "id": 179,
+      "name": "radar_triathlon_cycling",
+      "symbol": 140,
+      "status": "custom"
+    },
+    {
+      "id": 180,
+      "name": "radar_triathlon_swimming",
+      "symbol": 139,
+      "status": "custom"
+    },
+    {
+      "id": 181,
+      "name": "radar_property_takeover_bikers",
+      "symbol": 1040,
+      "status": "custom"
+    },
+    {
+      "id": 182,
+      "name": "radar_property_takeover_cops",
+      "symbol": 1038,
+      "status": "custom"
+    },
+    {
+      "id": 183,
+      "name": "radar_property_takeover_vagos",
+      "symbol": 1036,
+      "status": "custom"
+    },
+    {
+      "id": 184,
+      "name": "radar_camera",
+      "symbol": 1678,
+      "status": "custom"
+    },
+    {
+      "id": 185,
+      "name": "radar_centre_red",
+      "symbol": 713,
+      "status": "custom"
+    },
+    {
+      "id": 186,
+      "name": "radar_handcuff_keys_bikers",
+      "symbol": 1368,
+      "status": "custom"
+    },
+    {
+      "id": 187,
+      "name": "radar_handcuff_keys_vagos",
+      "symbol": 1366,
+      "status": "custom"
+    },
+    {
+      "id": 188,
+      "name": "radar_handcuffs_closed_bikers",
+      "symbol": 1364,
+      "status": "custom"
+    },
+    {
+      "id": 189,
+      "name": "radar_handcuffs_closed_vagos",
+      "symbol": 1362,
+      "status": "custom"
+    },
+    {
+      "id": 190,
+      "name": "radar_handcuffs_open_bikers",
+      "symbol": 52190,
+      "status": "custom"
+    },
+    {
+      "id": 191,
+      "name": "radar_handcuffs_open_vagos",
+      "symbol": 52191,
+      "status": "custom"
+    },
+    {
+      "id": 192,
+      "name": "radar_camera_badger",
+      "symbol": 278,
+      "status": "custom"
+    },
+    {
+      "id": 193,
+      "name": "radar_camera_facade",
+      "symbol": 276,
+      "status": "custom"
+    },
+    {
+      "id": 194,
+      "name": "radar_camera_ifruit",
+      "symbol": 275,
+      "status": "custom"
+    },
+    {
+      "id": 195,
+      "name": "radar_crim_arrest_bikers",
+      "symbol": 52195,
+      "status": "custom"
+    },
+    {
+      "id": 196,
+      "name": "radar_crim_arrest_vagos",
+      "symbol": 52196,
+      "status": "custom"
+    },
+    {
+      "id": 197,
+      "name": "radar_yoga",
+      "symbol": 737,
+      "status": "custom"
+    },
+    {
+      "id": 198,
+      "name": "radar_taxi",
+      "symbol": 863,
+      "status": "custom"
+    },
+    {
+      "id": 199,
+      "name": "radar_numbered_11",
+      "symbol": 644,
+      "status": "custom"
+    },
+    {
+      "id": 200,
+      "name": "radar_numbered_12",
+      "symbol": 643,
+      "status": "custom"
+    },
+    {
+      "id": 201,
+      "name": "radar_numbered_13",
+      "symbol": 642,
+      "status": "custom"
+    },
+    {
+      "id": 202,
+      "name": "radar_numbered_14",
+      "symbol": 641,
+      "status": "custom"
+    },
+    {
+      "id": 203,
+      "name": "radar_numbered_15",
+      "symbol": 640,
+      "status": "custom"
+    },
+    {
+      "id": 204,
+      "name": "radar_numbered_16",
+      "symbol": 639,
+      "status": "custom"
+    },
+    {
+      "id": 205,
+      "name": "radar_shrink",
+      "symbol": 949,
+      "status": "custom"
+    },
+    {
+      "id": 206,
+      "name": "radar_epsilon",
+      "symbol": 1482,
+      "status": "custom"
+    },
+    {
+      "id": 207,
+      "name": "radar_financier_strand_grey",
+      "symbol": 1438,
+      "status": "custom"
+    },
+    {
+      "id": 208,
+      "name": "radar_trevor_family_grey",
+      "symbol": 817,
+      "status": "custom"
+    },
+    {
+      "id": 209,
+      "name": "radar_trevor_family_red",
+      "symbol": 815,
+      "status": "custom"
+    },
+    {
+      "id": 210,
+      "name": "radar_franklin_family_grey",
+      "symbol": 1424,
+      "status": "custom"
+    },
+    {
+      "id": 211,
+      "name": "radar_franklin_family_blue",
+      "symbol": 1426,
+      "status": "custom"
+    },
+    {
+      "id": 212,
+      "name": "radar_franklin_a",
+      "symbol": 251,
+      "status": "custom"
+    },
+    {
+      "id": 213,
+      "name": "radar_franklin_b",
+      "symbol": 250,
+      "status": "custom"
+    },
+    {
+      "id": 214,
+      "name": "radar_franklin_c",
+      "symbol": 249,
+      "status": "custom"
+    },
+    {
+      "id": 215,
+      "name": "radar_numbered_red_1",
+      "symbol": 638,
+      "status": "custom"
+    },
+    {
+      "id": 216,
+      "name": "radar_numbered_red_2",
+      "symbol": 637,
+      "status": "custom"
+    },
+    {
+      "id": 217,
+      "name": "radar_numbered_red_3",
+      "symbol": 635,
+      "status": "custom"
+    },
+    {
+      "id": 218,
+      "name": "radar_numbered_red_4",
+      "symbol": 633,
+      "status": "custom"
+    },
+    {
+      "id": 219,
+      "name": "radar_numbered_red_5",
+      "symbol": 631,
+      "status": "custom"
+    },
+    {
+      "id": 220,
+      "name": "radar_numbered_red_6",
+      "symbol": 629,
+      "status": "custom"
+    },
+    {
+      "id": 221,
+      "name": "radar_numbered_red_7",
+      "symbol": 627,
+      "status": "custom"
+    },
+    {
+      "id": 222,
+      "name": "radar_numbered_red_8",
+      "symbol": 625,
+      "status": "custom"
+    },
+    {
+      "id": 223,
+      "name": "radar_numbered_red_9",
+      "symbol": 623,
+      "status": "custom"
+    },
+    {
+      "id": 224,
+      "name": "radar_numbered_red_10",
+      "symbol": 621,
+      "status": "custom"
+    },
+    {
+      "id": 225,
+      "name": "radar_gang_vehicle",
+      "symbol": 786,
+      "status": "custom"
+    },
+    {
+      "id": 226,
+      "name": "radar_gang_vehicle_bikers",
+      "symbol": 1416,
+      "status": "custom"
+    },
+    {
+      "id": 227,
+      "name": "radar_gang_vehicle_cops",
+      "symbol": 1414,
+      "status": "custom"
+    },
+    {
+      "id": 228,
+      "name": "radar_gang_vehicle_vagos",
+      "symbol": 240,
+      "status": "custom"
+    },
+    {
+      "id": 229,
+      "name": "radar_guncar",
+      "symbol": 1372,
+      "status": "custom"
+    },
+    {
+      "id": 230,
+      "name": "radar_driving_bikers",
+      "symbol": 259,
+      "status": "custom"
+    },
+    {
+      "id": 231,
+      "name": "radar_driving_cops",
+      "symbol": 258,
+      "status": "custom"
+    },
+    {
+      "id": 232,
+      "name": "radar_driving_vagos",
+      "symbol": 257,
+      "status": "custom"
+    },
+    {
+      "id": 233,
+      "name": "radar_gang_cops_highlight",
+      "symbol": 689,
+      "status": "custom"
+    },
+    {
+      "id": 234,
+      "name": "radar_shield_bikers",
+      "symbol": 154,
+      "status": "custom"
+    },
+    {
+      "id": 235,
+      "name": "radar_shield_cops",
+      "symbol": 153,
+      "status": "custom"
+    },
+    {
+      "id": 236,
+      "name": "radar_shield_vagos",
+      "symbol": 152,
+      "status": "custom"
+    },
+    {
+      "id": 237,
+      "name": "radar_custody_bikers",
+      "symbol": 1524,
+      "status": "custom"
+    },
+    {
+      "id": 238,
+      "name": "radar_custody_vagos",
+      "symbol": 1520,
+      "status": "custom"
+    },
+    {
+      "id": 239,
+      "name": "radar_gang_wanted_bikers",
+      "symbol": 234,
+      "status": "custom"
+    },
+    {
+      "id": 240,
+      "name": "radar_gang_wanted_bikers_1",
+      "symbol": 233,
+      "status": "custom"
+    },
+    {
+      "id": 241,
+      "name": "radar_gang_wanted_bikers_2",
+      "symbol": 232,
+      "status": "custom"
+    },
+    {
+      "id": 242,
+      "name": "radar_gang_wanted_bikers_3",
+      "symbol": 231,
+      "status": "custom"
+    },
+    {
+      "id": 243,
+      "name": "radar_gang_wanted_bikers_4",
+      "symbol": 230,
+      "status": "custom"
+    },
+    {
+      "id": 244,
+      "name": "radar_gang_wanted_bikers_5",
+      "symbol": 229,
+      "status": "custom"
+    },
+    {
+      "id": 245,
+      "name": "radar_gang_wanted_vagos",
+      "symbol": 228,
+      "status": "custom"
+    },
+    {
+      "id": 246,
+      "name": "radar_gang_wanted_vagos_1",
+      "symbol": 227,
+      "status": "custom"
+    },
+    {
+      "id": 247,
+      "name": "radar_gang_wanted_vagos_2",
+      "symbol": 225,
+      "status": "custom"
+    },
+    {
+      "id": 248,
+      "name": "radar_gang_wanted_vagos_3",
+      "symbol": 223,
+      "status": "custom"
+    },
+    {
+      "id": 249,
+      "name": "radar_gang_wanted_vagos_4",
+      "symbol": 221,
+      "status": "custom"
+    },
+    {
+      "id": 250,
+      "name": "radar_gang_wanted_vagos_5",
+      "symbol": 219,
+      "status": "custom"
+    },
+    {
+      "id": 251,
+      "name": "radar_arms_dealing_air",
+      "symbol": 1777,
+      "status": "custom"
+    },
+    {
+      "id": 252,
+      "name": "radar_playerstate_arrested",
+      "symbol": 1082,
+      "status": "custom"
+    },
+    {
+      "id": 253,
+      "name": "radar_playerstate_custody",
+      "symbol": 1080,
+      "status": "custom"
+    },
+    {
+      "id": 254,
+      "name": "radar_playerstate_driving",
+      "symbol": 170,
+      "status": "custom"
+    },
+    {
+      "id": 255,
+      "name": "radar_playerstate_keyholder",
+      "symbol": 1078,
+      "status": "custom"
+    },
+    {
+      "id": 256,
+      "name": "radar_playerstate_partner",
+      "symbol": 598,
+      "status": "custom"
+    },
+    {
+      "id": 257,
+      "name": "radar_gang_wanted_1",
+      "symbol": 239,
+      "status": "custom"
+    },
+    {
+      "id": 258,
+      "name": "radar_gang_wanted_2",
+      "symbol": 238,
+      "status": "custom"
+    },
+    {
+      "id": 259,
+      "name": "radar_gang_wanted_3",
+      "symbol": 237,
+      "status": "custom"
+    },
+    {
+      "id": 260,
+      "name": "radar_gang_wanted_4",
+      "symbol": 236,
+      "status": "custom"
+    },
+    {
+      "id": 261,
+      "name": "radar_gang_wanted_5",
+      "symbol": 235,
+      "status": "custom"
+    },
+    {
+      "id": 262,
+      "name": "radar_ztype",
+      "symbol": 136,
+      "status": "custom"
+    },
+    {
+      "id": 263,
+      "name": "radar_stinger",
+      "symbol": 146,
+      "status": "custom"
+    },
+    {
+      "id": 264,
+      "name": "radar_packer",
+      "symbol": 174,
+      "status": "custom"
+    },
+    {
+      "id": 265,
+      "name": "radar_monroe",
+      "symbol": 175,
+      "status": "custom"
+    },
+    {
+      "id": 266,
+      "name": "radar_fairground",
+      "symbol": 1462,
+      "status": "custom"
+    },
+    {
+      "id": 267,
+      "name": "radar_property",
+      "symbol": 1048,
+      "status": "custom"
+    },
+    {
+      "id": 268,
+      "name": "radar_gang_highlight",
+      "symbol": 687,
+      "status": "custom"
+    },
+    {
+      "id": 269,
+      "name": "radar_altruist",
+      "symbol": 1843,
+      "status": "custom"
+    },
+    {
+      "id": 270,
+      "name": "radar_ai",
+      "symbol": 733,
+      "status": "custom"
+    },
+    {
+      "id": 271,
+      "name": "radar_on_mission",
+      "symbol": 612,
+      "status": "custom"
+    },
+    {
+      "id": 272,
+      "name": "radar_cash_pickup",
+      "symbol": 1636,
+      "status": "custom"
+    },
+    {
+      "id": 273,
+      "name": "radar_chop",
+      "symbol": 1604,
+      "status": "custom"
+    },
+    {
+      "id": 274,
+      "name": "radar_dead",
+      "symbol": 696,
+      "status": "custom"
+    },
+    {
+      "id": 275,
+      "name": "radar_territory_locked",
+      "symbol": 141,
+      "status": "custom"
+    },
+    {
+      "id": 276,
+      "name": "radar_cash_lost",
+      "symbol": 1638,
+      "status": "custom"
+    },
+    {
+      "id": 277,
+      "name": "radar_cash_vagos",
+      "symbol": 1634,
+      "status": "custom"
+    },
+    {
+      "id": 278,
+      "name": "radar_cash_cops",
+      "symbol": 1640,
+      "status": "custom"
+    },
+    {
+      "id": 279,
+      "name": "radar_hooker",
+      "symbol": 1336,
+      "status": "custom"
+    },
+    {
+      "id": 280,
+      "name": "radar_friend",
+      "symbol": 1422,
+      "status": "custom"
+    },
+    {
+      "id": 281,
+      "name": "radar_mission_2to4",
+      "symbol": 200,
+      "status": "custom"
+    },
+    {
+      "id": 282,
+      "name": "radar_mission_2to8",
+      "symbol": 199,
+      "status": "custom"
+    },
+    {
+      "id": 283,
+      "name": "radar_mission_2to12",
+      "symbol": 198,
+      "status": "custom"
+    },
+    {
+      "id": 284,
+      "name": "radar_mission_2to16",
+      "symbol": 197,
+      "status": "custom"
+    },
+    {
+      "id": 285,
+      "name": "radar_custody_dropoff",
+      "symbol": 1522,
+      "status": "custom"
+    },
+    {
+      "id": 286,
+      "name": "radar_onmission_cops",
+      "symbol": 611,
+      "status": "custom"
+    },
+    {
+      "id": 287,
+      "name": "radar_onmission_lost",
+      "symbol": 610,
+      "status": "custom"
+    },
+    {
+      "id": 288,
+      "name": "radar_onmission_vagos",
+      "symbol": 609,
+      "status": "custom"
+    },
+    {
+      "id": 289,
+      "name": "radar_crim_carsteal_cops",
+      "symbol": 1536,
+      "status": "custom"
+    },
+    {
+      "id": 290,
+      "name": "radar_crim_carsteal_bikers",
+      "symbol": 1538,
+      "status": "custom"
+    },
+    {
+      "id": 291,
+      "name": "radar_crim_carsteal_vagos",
+      "symbol": 1534,
+      "status": "custom"
+    },
+    {
+      "id": 292,
+      "name": "radar_band_strand",
+      "symbol": 287,
+      "status": "custom"
+    },
+    {
+      "id": 293,
+      "name": "radar_simeon_family",
+      "symbol": 943,
+      "status": "custom"
+    },
+    {
+      "id": 294,
+      "name": "radar_mission_1",
+      "symbol": 203,
+      "status": "custom"
+    },
+    {
+      "id": 295,
+      "name": "radar_mission_2",
+      "symbol": 201,
+      "status": "custom"
+    },
+    {
+      "id": 296,
+      "name": "radar_friend_darts",
+      "symbol": 245,
+      "status": "custom"
+    },
+    {
+      "id": 297,
+      "name": "radar_friend_comedyclub",
+      "symbol": 246,
+      "status": "custom"
+    },
+    {
+      "id": 298,
+      "name": "radar_friend_cinema",
+      "symbol": 247,
+      "status": "custom"
+    },
+    {
+      "id": 299,
+      "name": "radar_friend_tennis",
+      "symbol": 241,
+      "status": "custom"
+    },
+    {
+      "id": 300,
+      "name": "radar_friend_stripclub",
+      "symbol": 242,
+      "status": "custom"
+    },
+    {
+      "id": 301,
+      "name": "radar_friend_livemusic",
+      "symbol": 243,
+      "status": "custom"
+    },
+    {
+      "id": 302,
+      "name": "radar_friend_golf",
+      "symbol": 244,
+      "status": "custom"
+    },
+    {
+      "id": 303,
+      "name": "radar_bounty_hit",
+      "symbol": 727,
+      "status": "custom"
+    },
+    {
+      "id": 304,
+      "name": "radar_ugc_mission",
+      "symbol": 803,
+      "status": "custom"
+    },
+    {
+      "id": 305,
+      "name": "radar_horde",
+      "symbol": 1334,
+      "status": "custom"
+    },
+    {
+      "id": 306,
+      "name": "radar_cratedrop",
+      "symbol": 1542,
+      "status": "custom"
+    },
+    {
+      "id": 307,
+      "name": "radar_plane_drop",
+      "symbol": 1098,
+      "status": "custom"
+    },
+    {
+      "id": 308,
+      "name": "radar_sub",
+      "symbol": 883,
+      "status": "custom"
+    },
+    {
+      "id": 309,
+      "name": "radar_race",
+      "symbol": 1030,
+      "status": "custom"
+    },
+    {
+      "id": 310,
+      "name": "radar_deathmatch",
+      "symbol": 1508,
+      "status": "custom"
+    },
+    {
+      "id": 311,
+      "name": "radar_arm_wrestling",
+      "symbol": 1783,
+      "status": "custom"
+    },
+    {
+      "id": 312,
+      "name": "radar_mission_1to2",
+      "symbol": 202,
+      "status": "custom"
+    },
+    {
+      "id": 313,
+      "name": "radar_shootingrange_gunshop",
+      "symbol": 951,
+      "status": "custom"
+    },
+    {
+      "id": 314,
+      "name": "radar_race_air",
+      "symbol": 1028,
+      "status": "custom"
+    },
+    {
+      "id": 315,
+      "name": "radar_race_land",
+      "symbol": 1018,
+      "status": "custom"
+    },
+    {
+      "id": 316,
+      "name": "radar_race_sea",
+      "symbol": 1011,
+      "status": "custom"
+    },
+    {
+      "id": 317,
+      "name": "radar_tow",
+      "symbol": 837,
+      "status": "custom"
+    },
+    {
+      "id": 318,
+      "name": "radar_garbage",
+      "symbol": 1410,
+      "status": "custom"
+    },
+    {
+      "id": 319,
+      "name": "radar_drill",
+      "symbol": 260,
+      "status": "custom"
+    },
+    {
+      "id": 320,
+      "name": "radar_spikes",
+      "symbol": 149,
+      "status": "custom"
+    },
+    {
+      "id": 321,
+      "name": "radar_firetruck",
+      "symbol": 252,
+      "status": "custom"
+    },
+    {
+      "id": 322,
+      "name": "radar_minigun2",
+      "symbol": 204,
+      "status": "custom"
+    },
+    {
+      "id": 323,
+      "name": "radar_bugstar",
+      "symbol": 280,
+      "status": "custom"
+    },
+    {
+      "id": 324,
+      "name": "radar_submarine",
+      "symbol": 144,
+      "status": "custom"
+    },
+    {
+      "id": 325,
+      "name": "radar_chinook",
+      "symbol": 274,
+      "status": "custom"
+    },
+    {
+      "id": 326,
+      "name": "radar_getaway_car",
+      "symbol": 1402,
+      "status": "custom"
+    },
+    {
+      "id": 327,
+      "name": "radar_mission_bikers_1",
+      "symbol": 196,
+      "status": "custom"
+    },
+    {
+      "id": 328,
+      "name": "radar_mission_bikers_1to2",
+      "symbol": 195,
+      "status": "custom"
+    },
+    {
+      "id": 329,
+      "name": "radar_mission_bikers_2",
+      "symbol": 194,
+      "status": "custom"
+    },
+    {
+      "id": 330,
+      "name": "radar_mission_bikers_2to4",
+      "symbol": 193,
+      "status": "custom"
+    },
+    {
+      "id": 331,
+      "name": "radar_mission_bikers_2to8",
+      "symbol": 192,
+      "status": "custom"
+    },
+    {
+      "id": 332,
+      "name": "radar_mission_bikers_2to12",
+      "symbol": 191,
+      "status": "custom"
+    },
+    {
+      "id": 333,
+      "name": "radar_mission_bikers_2to16",
+      "symbol": 190,
+      "status": "custom"
+    },
+    {
+      "id": 334,
+      "name": "radar_mission_cops_1",
+      "symbol": 189,
+      "status": "custom"
+    },
+    {
+      "id": 335,
+      "name": "radar_mission_cops_1to2",
+      "symbol": 188,
+      "status": "custom"
+    },
+    {
+      "id": 336,
+      "name": "radar_mission_cops_2",
+      "symbol": 187,
+      "status": "custom"
+    },
+    {
+      "id": 337,
+      "name": "radar_mission_cops_2to4",
+      "symbol": 186,
+      "status": "custom"
+    },
+    {
+      "id": 338,
+      "name": "radar_mission_cops_2to8",
+      "symbol": 185,
+      "status": "custom"
+    },
+    {
+      "id": 339,
+      "name": "radar_mission_cops_2to12",
+      "symbol": 184,
+      "status": "custom"
+    },
+    {
+      "id": 340,
+      "name": "radar_mission_cops_2to16",
+      "symbol": 183,
+      "status": "custom"
+    },
+    {
+      "id": 341,
+      "name": "radar_mission_vagos_1",
+      "symbol": 182,
+      "status": "custom"
+    },
+    {
+      "id": 342,
+      "name": "radar_mission_vagos_1to2",
+      "symbol": 181,
+      "status": "custom"
+    },
+    {
+      "id": 343,
+      "name": "radar_mission_vagos_2",
+      "symbol": 180,
+      "status": "custom"
+    },
+    {
+      "id": 344,
+      "name": "radar_mission_vagos_2to4",
+      "symbol": 179,
+      "status": "custom"
+    },
+    {
+      "id": 345,
+      "name": "radar_mission_vagos_2to8",
+      "symbol": 178,
+      "status": "custom"
+    },
+    {
+      "id": 346,
+      "name": "radar_mission_vagos_2to12",
+      "symbol": 177,
+      "status": "custom"
+    },
+    {
+      "id": 347,
+      "name": "radar_mission_vagos_2to16",
+      "symbol": 176,
+      "status": "custom"
+    },
+    {
+      "id": 348,
+      "name": "radar_gang_bike",
+      "symbol": 1418,
+      "status": "custom"
+    },
+    {
+      "id": 349,
+      "name": "radar_gas_grenade",
+      "symbol": 215,
+      "status": "custom"
+    },
+    {
+      "id": 350,
+      "name": "radar_property_for_sale",
+      "symbol": 1044,
+      "status": "custom"
+    },
+    {
+      "id": 351,
+      "name": "radar_gang_attack_package",
+      "symbol": 1420,
+      "status": "custom"
+    },
+    {
+      "id": 352,
+      "name": "radar_martin_madrazzo",
+      "symbol": 1272,
+      "status": "custom"
+    },
+    {
+      "id": 353,
+      "name": "radar_enemy_heli_spin",
+      "symbol": 695,
+      "status": "custom"
+    },
+    {
+      "id": 354,
+      "name": "radar_boost",
+      "symbol": 1692,
+      "status": "custom"
+    },
+    {
+      "id": 355,
+      "name": "radar_devin",
+      "symbol": 1504,
+      "status": "custom"
+    },
+    {
+      "id": 356,
+      "name": "radar_dock",
+      "symbol": 422,
+      "status": "custom"
+    },
+    {
+      "id": 357,
+      "name": "radar_garage",
+      "symbol": 415,
+      "status": "custom"
+    },
+    {
+      "id": 358,
+      "name": "radar_golf_flag",
+      "symbol": 1398,
+      "status": "custom"
+    },
+    {
+      "id": 359,
+      "name": "radar_hangar",
+      "symbol": 411,
+      "status": "custom"
+    },
+    {
+      "id": 360,
+      "name": "radar_helipad",
+      "symbol": 408,
+      "status": "custom"
+    },
+    {
+      "id": 361,
+      "name": "radar_jerry_can",
+      "symbol": 1314,
+      "status": "custom"
+    },
+    {
+      "id": 362,
+      "name": "radar_mask",
+      "symbol": 1268,
+      "status": "custom"
+    },
+    {
+      "id": 363,
+      "name": "radar_heist_prep",
+      "symbol": 1342,
+      "status": "custom"
+    },
+    {
+      "id": 364,
+      "name": "radar_incapacitated",
+      "symbol": 677,
+      "status": "custom"
+    },
+    {
+      "id": 365,
+      "name": "radar_spawn_point_pickup",
+      "symbol": 901,
+      "status": "custom"
+    },
+    {
+      "id": 366,
+      "name": "radar_boilersuit",
+      "symbol": 1696,
+      "status": "custom"
+    },
+    {
+      "id": 367,
+      "name": "radar_completed",
+      "symbol": 1576,
+      "status": "custom"
+    },
+    {
+      "id": 368,
+      "name": "radar_rockets",
+      "symbol": 979,
+      "status": "custom"
+    },
+    {
+      "id": 369,
+      "name": "radar_garage_for_sale",
+      "symbol": 1412,
+      "status": "custom"
+    },
+    {
+      "id": 370,
+      "name": "radar_helipad_for_sale",
+      "symbol": 1338,
+      "status": "custom"
+    },
+    {
+      "id": 371,
+      "name": "radar_dock_for_sale",
+      "symbol": 1498,
+      "status": "custom"
+    },
+    {
+      "id": 372,
+      "name": "radar_hangar_for_sale",
+      "symbol": 1360,
+      "status": "custom"
+    },
+    {
+      "id": 373,
+      "name": "radar_placeholder_6",
+      "symbol": 602,
+      "status": "transparent"
+    },
+    {
+      "id": 374,
+      "name": "radar_business",
+      "symbol": 443,
+      "status": "custom"
+    },
+    {
+      "id": 375,
+      "name": "radar_business_for_sale",
+      "symbol": 1682,
+      "status": "custom"
+    },
+    {
+      "id": 376,
+      "name": "radar_race_bike",
+      "symbol": 1026,
+      "status": "custom"
+    },
+    {
+      "id": 377,
+      "name": "radar_parachute",
+      "symbol": 1164,
+      "status": "custom"
+    },
+    {
+      "id": 378,
+      "name": "radar_team_deathmatch",
+      "symbol": 37,
+      "status": "custom"
+    },
+    {
+      "id": 379,
+      "name": "radar_race_foot",
+      "symbol": 1020,
+      "status": "custom"
+    },
+    {
+      "id": 380,
+      "name": "radar_vehicle_deathmatch",
+      "symbol": 789,
+      "status": "custom"
+    },
+    {
+      "id": 381,
+      "name": "radar_barry",
+      "symbol": 1765,
+      "status": "custom"
+    },
+    {
+      "id": 382,
+      "name": "radar_dom",
+      "symbol": 1492,
+      "status": "custom"
+    },
+    {
+      "id": 383,
+      "name": "radar_maryann",
+      "symbol": 1270,
+      "status": "custom"
+    },
+    {
+      "id": 384,
+      "name": "radar_cletus",
+      "symbol": 1590,
+      "status": "custom"
+    },
+    {
+      "id": 385,
+      "name": "radar_josh",
+      "symbol": 1310,
+      "status": "custom"
+    },
+    {
+      "id": 386,
+      "name": "radar_minute",
+      "symbol": 1252,
+      "status": "custom"
+    },
+    {
+      "id": 387,
+      "name": "radar_omega",
+      "symbol": 1180,
+      "status": "custom"
+    },
+    {
+      "id": 388,
+      "name": "radar_tonya",
+      "symbol": 839,
+      "status": "custom"
+    },
+    {
+      "id": 389,
+      "name": "radar_paparazzo",
+      "symbol": 1166,
+      "status": "custom"
+    },
+    {
+      "id": 390,
+      "name": "radar_aim",
+      "symbol": 731,
+      "status": "custom"
+    },
+    {
+      "id": 391,
+      "name": "radar_cratedrop_background",
+      "symbol": 703,
+      "status": "custom"
+    },
+    {
+      "id": 392,
+      "name": "radar_green_and_net_player1",
+      "symbol": 683,
+      "status": "custom"
+    },
+    {
+      "id": 393,
+      "name": "radar_green_and_net_player2",
+      "symbol": 682,
+      "status": "custom"
+    },
+    {
+      "id": 394,
+      "name": "radar_green_and_net_player3",
+      "symbol": 681,
+      "status": "custom"
+    },
+    {
+      "id": 395,
+      "name": "radar_green_and_friendly",
+      "symbol": 684,
+      "status": "custom"
+    },
+    {
+      "id": 396,
+      "name": "radar_net_player1_and_net_player2",
+      "symbol": 662,
+      "status": "custom"
+    },
+    {
+      "id": 397,
+      "name": "radar_net_player1_and_net_player3",
+      "symbol": 661,
+      "status": "custom"
+    },
+    {
+      "id": 398,
+      "name": "radar_creator",
+      "symbol": 702,
+      "status": "custom"
+    },
+    {
+      "id": 399,
+      "name": "radar_creator_direction",
+      "symbol": 700,
+      "status": "custom"
+    },
+    {
+      "id": 400,
+      "name": "radar_abigail",
+      "symbol": 1885,
+      "status": "custom"
+    },
+    {
+      "id": 401,
+      "name": "radar_blimp",
+      "symbol": 1702,
+      "status": "custom"
+    },
+    {
+      "id": 402,
+      "name": "radar_repair",
+      "symbol": 983,
+      "status": "custom"
+    },
+    {
+      "id": 403,
+      "name": "radar_testosterone",
+      "symbol": 843,
+      "status": "custom"
+    },
+    {
+      "id": 404,
+      "name": "radar_dinghy",
+      "symbol": 1502,
+      "status": "custom"
+    },
+    {
+      "id": 405,
+      "name": "radar_fanatic",
+      "symbol": 1460,
+      "status": "custom"
+    },
+    {
+      "id": 406,
+      "name": "radar_invisible",
+      "symbol": 672,
+      "status": "transparent"
+    },
+    {
+      "id": 407,
+      "name": "radar_info_icon",
+      "symbol": 674,
+      "status": "custom"
+    },
+    {
+      "id": 408,
+      "name": "radar_capture_the_flag",
+      "symbol": 1674,
+      "status": "custom"
+    },
+    {
+      "id": 409,
+      "name": "radar_last_team_standing",
+      "symbol": 1282,
+      "status": "custom"
+    },
+    {
+      "id": 410,
+      "name": "radar_boat",
+      "symbol": 1698,
+      "status": "custom"
+    },
+    {
+      "id": 411,
+      "name": "radar_capture_the_flag_base",
+      "symbol": 1672,
+      "status": "custom"
+    },
+    {
+      "id": 412,
+      "name": "radar_mp_crew",
+      "status": "shared-empty-symbol"
+    },
+    {
+      "id": 413,
+      "name": "radar_capture_the_flag_outline",
+      "symbol": 715,
+      "status": "custom"
+    },
+    {
+      "id": 414,
+      "name": "radar_capture_the_flag_base_nobag",
+      "symbol": 1670,
+      "status": "custom"
+    },
+    {
+      "id": 415,
+      "name": "radar_weapon_jerrycan",
+      "symbol": 487,
+      "status": "custom"
+    },
+    {
+      "id": 416,
+      "name": "radar_rp",
+      "symbol": 523,
+      "status": "custom"
+    },
+    {
+      "id": 417,
+      "name": "radar_level_inside",
+      "symbol": 722,
+      "status": "custom"
+    },
+    {
+      "id": 418,
+      "name": "radar_bounty_hit_inside",
+      "symbol": 723,
+      "status": "custom"
+    },
+    {
+      "id": 419,
+      "name": "radar_capture_the_usaflag",
+      "symbol": 1668,
+      "status": "custom"
+    },
+    {
+      "id": 420,
+      "name": "radar_capture_the_usaflag_outline",
+      "symbol": 1666,
+      "status": "custom"
+    },
+    {
+      "id": 421,
+      "name": "radar_tank",
+      "symbol": 867,
+      "status": "custom"
+    },
+    {
+      "id": 422,
+      "name": "radar_player_heli",
+      "symbol": 601,
+      "status": "custom"
+    },
+    {
+      "id": 423,
+      "name": "radar_player_plane",
+      "symbol": 1084,
+      "status": "custom"
+    },
+    {
+      "id": 424,
+      "name": "radar_player_jet",
+      "symbol": 1088,
+      "status": "custom"
+    },
+    {
+      "id": 425,
+      "name": "radar_centre_stroke",
+      "symbol": 708,
+      "status": "custom"
+    },
+    {
+      "id": 426,
+      "name": "radar_player_guncar",
+      "symbol": 1090,
+      "status": "custom"
+    },
+    {
+      "id": 427,
+      "name": "radar_player_boat",
+      "symbol": 1092,
+      "status": "custom"
+    },
+    {
+      "id": 428,
+      "name": "radar_mp_heist",
+      "symbol": 1246,
+      "status": "custom"
+    },
+    {
+      "id": 429,
+      "name": "radar_temp_1",
+      "symbol": 861,
+      "status": "transparent"
+    },
+    {
+      "id": 430,
+      "name": "radar_temp_2",
+      "symbol": 859,
+      "status": "transparent"
+    },
+    {
+      "id": 431,
+      "name": "radar_temp_3",
+      "symbol": 857,
+      "status": "transparent"
+    },
+    {
+      "id": 432,
+      "name": "radar_temp_4",
+      "symbol": 855,
+      "status": "transparent"
+    },
+    {
+      "id": 433,
+      "name": "radar_temp_5",
+      "symbol": 853,
+      "status": "transparent"
+    },
+    {
+      "id": 434,
+      "name": "radar_temp_6",
+      "symbol": 851,
+      "status": "transparent"
+    },
+    {
+      "id": 435,
+      "name": "radar_race_stunt",
+      "symbol": 1009,
+      "status": "custom"
+    },
+    {
+      "id": 436,
+      "name": "radar_hot_property",
+      "symbol": 1330,
+      "status": "custom"
+    },
+    {
+      "id": 437,
+      "name": "radar_urbanwarfare_versus",
+      "symbol": 799,
+      "status": "custom"
+    },
+    {
+      "id": 438,
+      "name": "radar_king_of_the_castle",
+      "symbol": 1292,
+      "status": "custom"
+    },
+    {
+      "id": 439,
+      "name": "radar_player_king",
+      "symbol": 1086,
+      "status": "custom"
+    },
+    {
+      "id": 440,
+      "name": "radar_dead_drop",
+      "symbol": 1512,
+      "status": "custom"
+    },
+    {
+      "id": 441,
+      "name": "radar_penned_in",
+      "symbol": 1152,
+      "status": "custom"
+    },
+    {
+      "id": 442,
+      "name": "radar_beast",
+      "symbol": 1724,
+      "status": "custom"
+    },
+    {
+      "id": 443,
+      "name": "radar_edge_pointer",
+      "symbol": 418,
+      "status": "custom"
+    },
+    {
+      "id": 444,
+      "name": "radar_edge_crosstheline",
+      "symbol": 420,
+      "status": "custom"
+    },
+    {
+      "id": 445,
+      "name": "radar_mp_lamar",
+      "symbol": 1544,
+      "status": "custom"
+    },
+    {
+      "id": 446,
+      "name": "radar_bennys",
+      "symbol": 1720,
+      "status": "custom"
+    },
+    {
+      "id": 447,
+      "name": "radar_corner_number_1",
+      "symbol": 1560,
+      "status": "custom"
+    },
+    {
+      "id": 448,
+      "name": "radar_corner_number_2",
+      "symbol": 1558,
+      "status": "custom"
+    },
+    {
+      "id": 449,
+      "name": "radar_corner_number_3",
+      "symbol": 1556,
+      "status": "custom"
+    },
+    {
+      "id": 450,
+      "name": "radar_corner_number_4",
+      "symbol": 1554,
+      "status": "custom"
+    },
+    {
+      "id": 451,
+      "name": "radar_corner_number_5",
+      "symbol": 1552,
+      "status": "custom"
+    },
+    {
+      "id": 452,
+      "name": "radar_corner_number_6",
+      "symbol": 1550,
+      "status": "custom"
+    },
+    {
+      "id": 453,
+      "name": "radar_corner_number_7",
+      "symbol": 1548,
+      "status": "custom"
+    },
+    {
+      "id": 454,
+      "name": "radar_corner_number_8",
+      "symbol": 1546,
+      "status": "custom"
+    },
+    {
+      "id": 455,
+      "name": "radar_yacht",
+      "symbol": 743,
+      "status": "custom"
+    },
+    {
+      "id": 456,
+      "name": "radar_finders_keepers",
+      "symbol": 1436,
+      "status": "custom"
+    },
+    {
+      "id": 457,
+      "name": "radar_assault_package",
+      "symbol": 1775,
+      "status": "custom"
+    },
+    {
+      "id": 458,
+      "name": "radar_hunt_the_boss",
+      "symbol": 1322,
+      "status": "custom"
+    },
+    {
+      "id": 459,
+      "name": "radar_sightseer",
+      "symbol": 947,
+      "status": "custom"
+    },
+    {
+      "id": 460,
+      "name": "radar_turreted_limo",
+      "symbol": 807,
+      "status": "custom"
+    },
+    {
+      "id": 461,
+      "name": "radar_belly_of_the_beast",
+      "symbol": 1722,
+      "status": "custom"
+    },
+    {
+      "id": 462,
+      "name": "radar_yacht_location",
+      "symbol": 741,
+      "status": "custom"
+    },
+    {
+      "id": 463,
+      "name": "radar_pickup_beast",
+      "symbol": 1146,
+      "status": "custom"
+    },
+    {
+      "id": 464,
+      "name": "radar_pickup_zoned",
+      "symbol": 1102,
+      "status": "custom"
+    },
+    {
+      "id": 465,
+      "name": "radar_pickup_random",
+      "symbol": 1116,
+      "status": "custom"
+    },
+    {
+      "id": 466,
+      "name": "radar_pickup_slow_time",
+      "symbol": 1110,
+      "status": "custom"
+    },
+    {
+      "id": 467,
+      "name": "radar_pickup_swap",
+      "symbol": 1108,
+      "status": "custom"
+    },
+    {
+      "id": 468,
+      "name": "radar_pickup_thermal",
+      "symbol": 1106,
+      "status": "custom"
+    },
+    {
+      "id": 469,
+      "name": "radar_pickup_weed",
+      "symbol": 1104,
+      "status": "custom"
+    },
+    {
+      "id": 470,
+      "name": "radar_weapon_railgun",
+      "symbol": 749,
+      "status": "custom"
+    },
+    {
+      "id": 471,
+      "name": "radar_seashark",
+      "symbol": 971,
+      "status": "custom"
+    },
+    {
+      "id": 472,
+      "name": "radar_pickup_hidden",
+      "symbol": 1126,
+      "status": "custom"
+    },
+    {
+      "id": 473,
+      "name": "radar_warehouse",
+      "symbol": 372,
+      "status": "custom"
+    },
+    {
+      "id": 474,
+      "name": "radar_warehouse_for_sale",
+      "symbol": 776,
+      "status": "custom"
+    },
+    {
+      "id": 475,
+      "name": "radar_office",
+      "symbol": 402,
+      "status": "custom"
+    },
+    {
+      "id": 476,
+      "name": "radar_office_for_sale",
+      "symbol": 1186,
+      "status": "custom"
+    },
+    {
+      "id": 477,
+      "name": "radar_truck",
+      "symbol": 809,
+      "status": "custom"
+    },
+    {
+      "id": 478,
+      "name": "radar_contraband",
+      "symbol": 1568,
+      "status": "custom"
+    },
+    {
+      "id": 479,
+      "name": "radar_trailer",
+      "symbol": 831,
+      "status": "custom"
+    },
+    {
+      "id": 480,
+      "name": "radar_vip",
+      "symbol": 778,
+      "status": "custom"
+    },
+    {
+      "id": 481,
+      "name": "radar_cargobob",
+      "symbol": 1644,
+      "status": "custom"
+    },
+    {
+      "id": 482,
+      "name": "radar_area_outline_blip",
+      "symbol": 446,
+      "status": "custom"
+    },
+    {
+      "id": 483,
+      "name": "radar_pickup_accelerator",
+      "symbol": 1150,
+      "status": "custom"
+    },
+    {
+      "id": 484,
+      "name": "radar_pickup_ghost",
+      "symbol": 1128,
+      "status": "custom"
+    },
+    {
+      "id": 485,
+      "name": "radar_pickup_detonator",
+      "symbol": 1140,
+      "status": "custom"
+    },
+    {
+      "id": 486,
+      "name": "radar_pickup_bomb",
+      "symbol": 1144,
+      "status": "custom"
+    },
+    {
+      "id": 487,
+      "name": "radar_pickup_armoured",
+      "symbol": 1148,
+      "status": "custom"
+    },
+    {
+      "id": 488,
+      "name": "radar_stunt",
+      "symbol": 885,
+      "status": "custom"
+    },
+    {
+      "id": 489,
+      "name": "radar_weapon_lives",
+      "symbol": 751,
+      "status": "custom"
+    },
+    {
+      "id": 490,
+      "name": "radar_stunt_premium",
+      "symbol": 39,
+      "status": "custom"
+    },
+    {
+      "id": 491,
+      "name": "radar_adversary",
+      "symbol": 1867,
+      "status": "custom"
+    },
+    {
+      "id": 492,
+      "name": "radar_biker_clubhouse",
+      "symbol": 1710,
+      "status": "custom"
+    },
+    {
+      "id": 493,
+      "name": "radar_biker_caged_in",
+      "symbol": 1712,
+      "status": "custom"
+    },
+    {
+      "id": 494,
+      "name": "radar_biker_turf_war",
+      "symbol": 1706,
+      "status": "custom"
+    },
+    {
+      "id": 495,
+      "name": "radar_biker_joust",
+      "symbol": 1708,
+      "status": "custom"
+    },
+    {
+      "id": 496,
+      "name": "radar_production_weed",
+      "symbol": 1052,
+      "status": "custom"
+    },
+    {
+      "id": 497,
+      "name": "radar_production_crack",
+      "symbol": 1060,
+      "status": "custom"
+    },
+    {
+      "id": 498,
+      "name": "radar_production_fake_id",
+      "symbol": 1058,
+      "status": "custom"
+    },
+    {
+      "id": 499,
+      "name": "radar_production_meth",
+      "symbol": 1056,
+      "status": "custom"
+    },
+    {
+      "id": 500,
+      "name": "radar_production_money",
+      "symbol": 1054,
+      "status": "custom"
+    },
+    {
+      "id": 501,
+      "name": "radar_package",
+      "symbol": 1170,
+      "status": "custom"
+    },
+    {
+      "id": 502,
+      "name": "radar_capture_1",
+      "symbol": 441,
+      "status": "custom"
+    },
+    {
+      "id": 503,
+      "name": "radar_capture_2",
+      "symbol": 439,
+      "status": "custom"
+    },
+    {
+      "id": 504,
+      "name": "radar_capture_3",
+      "symbol": 437,
+      "status": "custom"
+    },
+    {
+      "id": 505,
+      "name": "radar_capture_4",
+      "symbol": 435,
+      "status": "custom"
+    },
+    {
+      "id": 506,
+      "name": "radar_capture_5",
+      "symbol": 433,
+      "status": "custom"
+    },
+    {
+      "id": 507,
+      "name": "radar_capture_6",
+      "symbol": 432,
+      "status": "custom"
+    },
+    {
+      "id": 508,
+      "name": "radar_capture_7",
+      "symbol": 430,
+      "status": "custom"
+    },
+    {
+      "id": 509,
+      "name": "radar_capture_8",
+      "symbol": 428,
+      "status": "custom"
+    },
+    {
+      "id": 510,
+      "name": "radar_capture_9",
+      "symbol": 426,
+      "status": "custom"
+    },
+    {
+      "id": 511,
+      "name": "radar_capture_10",
+      "symbol": 424,
+      "status": "custom"
+    },
+    {
+      "id": 512,
+      "name": "radar_quad",
+      "symbol": 1032,
+      "status": "custom"
+    },
+    {
+      "id": 513,
+      "name": "radar_bus",
+      "symbol": 1684,
+      "status": "custom"
+    },
+    {
+      "id": 514,
+      "name": "radar_drugs_package",
+      "symbol": 1486,
+      "status": "custom"
+    },
+    {
+      "id": 515,
+      "name": "radar_pickup_jump",
+      "symbol": 1122,
+      "status": "custom"
+    },
+    {
+      "id": 516,
+      "name": "radar_adversary_4",
+      "symbol": 1865,
+      "status": "custom"
+    },
+    {
+      "id": 517,
+      "name": "radar_adversary_8",
+      "symbol": 1863,
+      "status": "custom"
+    },
+    {
+      "id": 518,
+      "name": "radar_adversary_10",
+      "symbol": 1861,
+      "status": "custom"
+    },
+    {
+      "id": 519,
+      "name": "radar_adversary_12",
+      "symbol": 1859,
+      "status": "custom"
+    },
+    {
+      "id": 520,
+      "name": "radar_adversary_16",
+      "symbol": 1857,
+      "status": "custom"
+    },
+    {
+      "id": 521,
+      "name": "radar_laptop",
+      "symbol": 1284,
+      "status": "custom"
+    },
+    {
+      "id": 522,
+      "name": "radar_pickup_deadline",
+      "symbol": 1142,
+      "status": "custom"
+    },
+    {
+      "id": 523,
+      "name": "radar_sports_car",
+      "symbol": 899,
+      "status": "custom"
+    },
+    {
+      "id": 524,
+      "name": "radar_warehouse_vehicle",
+      "symbol": 767,
+      "status": "custom"
+    },
+    {
+      "id": 525,
+      "name": "radar_reg_papers",
+      "symbol": 985,
+      "status": "custom"
+    },
+    {
+      "id": 526,
+      "name": "radar_police_station_dropoff",
+      "symbol": 1066,
+      "status": "custom"
+    },
+    {
+      "id": 527,
+      "name": "radar_junkyard",
+      "symbol": 1302,
+      "status": "custom"
+    },
+    {
+      "id": 528,
+      "name": "radar_ex_vech_1",
+      "symbol": 1480,
+      "status": "custom"
+    },
+    {
+      "id": 529,
+      "name": "radar_ex_vech_2",
+      "symbol": 1478,
+      "status": "custom"
+    },
+    {
+      "id": 530,
+      "name": "radar_ex_vech_3",
+      "symbol": 1476,
+      "status": "custom"
+    },
+    {
+      "id": 531,
+      "name": "radar_ex_vech_4",
+      "symbol": 1474,
+      "status": "custom"
+    },
+    {
+      "id": 532,
+      "name": "radar_ex_vech_5",
+      "symbol": 1472,
+      "status": "custom"
+    },
+    {
+      "id": 533,
+      "name": "radar_ex_vech_6",
+      "symbol": 1470,
+      "status": "custom"
+    },
+    {
+      "id": 534,
+      "name": "radar_ex_vech_7",
+      "symbol": 1468,
+      "status": "custom"
+    },
+    {
+      "id": 535,
+      "name": "radar_target_a",
+      "symbol": 519,
+      "status": "custom"
+    },
+    {
+      "id": 536,
+      "name": "radar_target_b",
+      "symbol": 517,
+      "status": "custom"
+    },
+    {
+      "id": 537,
+      "name": "radar_target_c",
+      "symbol": 515,
+      "status": "custom"
+    },
+    {
+      "id": 538,
+      "name": "radar_target_d",
+      "symbol": 513,
+      "status": "custom"
+    },
+    {
+      "id": 539,
+      "name": "radar_target_e",
+      "symbol": 511,
+      "status": "custom"
+    },
+    {
+      "id": 540,
+      "name": "radar_target_f",
+      "symbol": 509,
+      "status": "custom"
+    },
+    {
+      "id": 541,
+      "name": "radar_target_g",
+      "symbol": 507,
+      "status": "custom"
+    },
+    {
+      "id": 542,
+      "name": "radar_target_h",
+      "symbol": 505,
+      "status": "custom"
+    },
+    {
+      "id": 543,
+      "name": "radar_jugg",
+      "symbol": 1306,
+      "status": "custom"
+    },
+    {
+      "id": 544,
+      "name": "radar_pickup_repair",
+      "symbol": 1114,
+      "status": "custom"
+    },
+    {
+      "id": 545,
+      "name": "radar_steeringwheel",
+      "symbol": 893,
+      "status": "custom"
+    },
+    {
+      "id": 546,
+      "name": "radar_trophy",
+      "symbol": 811,
+      "status": "custom"
+    },
+    {
+      "id": 547,
+      "name": "radar_pickup_rocket_boost",
+      "symbol": 1112,
+      "status": "custom"
+    },
+    {
+      "id": 548,
+      "name": "radar_pickup_homing_rocket",
+      "symbol": 1124,
+      "status": "custom"
+    },
+    {
+      "id": 549,
+      "name": "radar_pickup_machinegun",
+      "symbol": 1120,
+      "status": "custom"
+    },
+    {
+      "id": 550,
+      "name": "radar_pickup_parachute",
+      "symbol": 1118,
+      "status": "custom"
+    },
+    {
+      "id": 551,
+      "name": "radar_pickup_time_5",
+      "symbol": 400,
+      "status": "custom"
+    },
+    {
+      "id": 552,
+      "name": "radar_pickup_time_10",
+      "symbol": 398,
+      "status": "custom"
+    },
+    {
+      "id": 553,
+      "name": "radar_pickup_time_15",
+      "symbol": 396,
+      "status": "custom"
+    },
+    {
+      "id": 554,
+      "name": "radar_pickup_time_20",
+      "symbol": 394,
+      "status": "custom"
+    },
+    {
+      "id": 555,
+      "name": "radar_pickup_time_30",
+      "symbol": 392,
+      "status": "custom"
+    },
+    {
+      "id": 556,
+      "name": "radar_supplies",
+      "symbol": 871,
+      "status": "custom"
+    },
+    {
+      "id": 557,
+      "name": "radar_property_bunker",
+      "symbol": 1046,
+      "status": "custom"
+    },
+    {
+      "id": 558,
+      "name": "radar_gr_wvm_1",
+      "symbol": 1390,
+      "status": "custom"
+    },
+    {
+      "id": 559,
+      "name": "radar_gr_wvm_2",
+      "symbol": 1388,
+      "status": "custom"
+    },
+    {
+      "id": 560,
+      "name": "radar_gr_wvm_3",
+      "symbol": 1386,
+      "status": "custom"
+    },
+    {
+      "id": 561,
+      "name": "radar_gr_wvm_4",
+      "symbol": 1384,
+      "status": "custom"
+    },
+    {
+      "id": 562,
+      "name": "radar_gr_wvm_5",
+      "symbol": 1382,
+      "status": "custom"
+    },
+    {
+      "id": 563,
+      "name": "radar_gr_wvm_6",
+      "symbol": 1380,
+      "status": "custom"
+    },
+    {
+      "id": 564,
+      "name": "radar_gr_covert_ops",
+      "symbol": 1396,
+      "status": "custom"
+    },
+    {
+      "id": 565,
+      "name": "radar_adversary_bunker",
+      "symbol": 1855,
+      "status": "custom"
+    },
+    {
+      "id": 566,
+      "name": "radar_gr_moc_upgrade",
+      "symbol": 1394,
+      "status": "custom"
+    },
+    {
+      "id": 567,
+      "name": "radar_gr_w_upgrade",
+      "symbol": 1392,
+      "status": "custom"
+    },
+    {
+      "id": 568,
+      "name": "radar_sm_cargo",
+      "symbol": 939,
+      "status": "custom"
+    },
+    {
+      "id": 569,
+      "name": "radar_sm_hangar",
+      "symbol": 937,
+      "status": "custom"
+    },
+    {
+      "id": 570,
+      "name": "radar_tf_checkpoint",
+      "symbol": 841,
+      "status": "custom"
+    },
+    {
+      "id": 571,
+      "name": "radar_race_tf",
+      "symbol": 1007,
+      "status": "custom"
+    },
+    {
+      "id": 572,
+      "name": "radar_sm_wp1",
+      "symbol": 935,
+      "status": "custom"
+    },
+    {
+      "id": 573,
+      "name": "radar_sm_wp2",
+      "symbol": 933,
+      "status": "custom"
+    },
+    {
+      "id": 574,
+      "name": "radar_sm_wp3",
+      "symbol": 931,
+      "status": "custom"
+    },
+    {
+      "id": 575,
+      "name": "radar_sm_wp4",
+      "symbol": 929,
+      "status": "custom"
+    },
+    {
+      "id": 576,
+      "name": "radar_sm_wp5",
+      "symbol": 927,
+      "status": "custom"
+    },
+    {
+      "id": 577,
+      "name": "radar_sm_wp6",
+      "symbol": 925,
+      "status": "custom"
+    },
+    {
+      "id": 578,
+      "name": "radar_sm_wp7",
+      "symbol": 923,
+      "status": "custom"
+    },
+    {
+      "id": 579,
+      "name": "radar_sm_wp8",
+      "symbol": 921,
+      "status": "custom"
+    },
+    {
+      "id": 580,
+      "name": "radar_sm_wp9",
+      "symbol": 919,
+      "status": "custom"
+    },
+    {
+      "id": 581,
+      "name": "radar_sm_wp10",
+      "symbol": 917,
+      "status": "custom"
+    },
+    {
+      "id": 582,
+      "name": "radar_sm_wp11",
+      "symbol": 915,
+      "status": "custom"
+    },
+    {
+      "id": 583,
+      "name": "radar_sm_wp12",
+      "symbol": 913,
+      "status": "custom"
+    },
+    {
+      "id": 584,
+      "name": "radar_sm_wp13",
+      "symbol": 911,
+      "status": "custom"
+    },
+    {
+      "id": 585,
+      "name": "radar_sm_wp14",
+      "symbol": 909,
+      "status": "custom"
+    },
+    {
+      "id": 586,
+      "name": "radar_nhp_bag",
+      "symbol": 1238,
+      "status": "custom"
+    },
+    {
+      "id": 587,
+      "name": "radar_nhp_chest",
+      "symbol": 1232,
+      "status": "custom"
+    },
+    {
+      "id": 588,
+      "name": "radar_nhp_orbit",
+      "symbol": 1220,
+      "status": "custom"
+    },
+    {
+      "id": 589,
+      "name": "radar_nhp_veh1",
+      "symbol": 1210,
+      "status": "custom"
+    },
+    {
+      "id": 590,
+      "name": "radar_nhp_base",
+      "symbol": 1236,
+      "status": "custom"
+    },
+    {
+      "id": 591,
+      "name": "radar_nhp_overlay",
+      "symbol": 1218,
+      "status": "custom"
+    },
+    {
+      "id": 592,
+      "name": "radar_nhp_turret",
+      "symbol": 1214,
+      "status": "custom"
+    },
+    {
+      "id": 593,
+      "name": "radar_nhp_mg_firewall",
+      "symbol": 1230,
+      "status": "custom"
+    },
+    {
+      "id": 594,
+      "name": "radar_nhp_mg_node",
+      "symbol": 1224,
+      "status": "custom"
+    },
+    {
+      "id": 595,
+      "name": "radar_nhp_wp1",
+      "symbol": 1208,
+      "status": "custom"
+    },
+    {
+      "id": 596,
+      "name": "radar_nhp_wp2",
+      "symbol": 1206,
+      "status": "custom"
+    },
+    {
+      "id": 597,
+      "name": "radar_nhp_wp3",
+      "symbol": 1204,
+      "status": "custom"
+    },
+    {
+      "id": 598,
+      "name": "radar_nhp_wp4",
+      "symbol": 1202,
+      "status": "custom"
+    },
+    {
+      "id": 599,
+      "name": "radar_nhp_wp5",
+      "symbol": 1200,
+      "status": "custom"
+    },
+    {
+      "id": 600,
+      "name": "radar_nhp_wp6",
+      "symbol": 1198,
+      "status": "custom"
+    },
+    {
+      "id": 601,
+      "name": "radar_nhp_wp7",
+      "symbol": 1196,
+      "status": "custom"
+    },
+    {
+      "id": 602,
+      "name": "radar_nhp_wp8",
+      "symbol": 1194,
+      "status": "custom"
+    },
+    {
+      "id": 603,
+      "name": "radar_nhp_wp9",
+      "symbol": 1192,
+      "status": "custom"
+    },
+    {
+      "id": 604,
+      "name": "radar_nhp_cctv",
+      "symbol": 1234,
+      "status": "custom"
+    },
+    {
+      "id": 605,
+      "name": "radar_nhp_starterpack",
+      "symbol": 1216,
+      "status": "custom"
+    },
+    {
+      "id": 606,
+      "name": "radar_nhp_turret_console",
+      "symbol": 1212,
+      "status": "custom"
+    },
+    {
+      "id": 607,
+      "name": "radar_nhp_mg_mir_rotate",
+      "symbol": 1228,
+      "status": "custom"
+    },
+    {
+      "id": 608,
+      "name": "radar_nhp_mg_mir_static",
+      "symbol": 1226,
+      "status": "custom"
+    },
+    {
+      "id": 609,
+      "name": "radar_nhp_mg_proxy",
+      "symbol": 1222,
+      "status": "custom"
+    },
+    {
+      "id": 610,
+      "name": "radar_acsr_race_target",
+      "symbol": 1873,
+      "status": "custom"
+    },
+    {
+      "id": 611,
+      "name": "radar_acsr_race_hotring",
+      "symbol": 1875,
+      "status": "custom"
+    },
+    {
+      "id": 612,
+      "name": "radar_acsr_wp1",
+      "symbol": 1871,
+      "status": "custom"
+    },
+    {
+      "id": 613,
+      "name": "radar_acsr_wp2",
+      "symbol": 1869,
+      "status": "custom"
+    },
+    {
+      "id": 614,
+      "name": "radar_bat_club_property",
+      "symbol": 1756,
+      "status": "custom"
+    },
+    {
+      "id": 615,
+      "name": "radar_bat_cargo",
+      "symbol": 1760,
+      "status": "custom"
+    },
+    {
+      "id": 616,
+      "name": "radar_bat_truck",
+      "symbol": 1740,
+      "status": "custom"
+    },
+    {
+      "id": 617,
+      "name": "radar_bat_hack_jewel",
+      "symbol": 1750,
+      "status": "custom"
+    },
+    {
+      "id": 618,
+      "name": "radar_bat_hack_gold",
+      "symbol": 1752,
+      "status": "custom"
+    },
+    {
+      "id": 619,
+      "name": "radar_bat_keypad",
+      "symbol": 1746,
+      "status": "custom"
+    },
+    {
+      "id": 620,
+      "name": "radar_bat_hack_target",
+      "symbol": 1748,
+      "status": "custom"
+    },
+    {
+      "id": 621,
+      "name": "radar_pickup_dtb_health",
+      "symbol": 1130,
+      "status": "custom"
+    },
+    {
+      "id": 622,
+      "name": "radar_pickup_dtb_blast_increase",
+      "symbol": 1136,
+      "status": "custom"
+    },
+    {
+      "id": 623,
+      "name": "radar_pickup_dtb_blast_decrease",
+      "symbol": 1138,
+      "status": "custom"
+    },
+    {
+      "id": 624,
+      "name": "radar_pickup_dtb_bomb_increase",
+      "symbol": 1132,
+      "status": "custom"
+    },
+    {
+      "id": 625,
+      "name": "radar_pickup_dtb_bomb_decrease",
+      "symbol": 1134,
+      "status": "custom"
+    },
+    {
+      "id": 626,
+      "name": "radar_bat_rival_club",
+      "symbol": 1742,
+      "status": "custom"
+    },
+    {
+      "id": 627,
+      "name": "radar_bat_drone",
+      "symbol": 1754,
+      "status": "custom"
+    },
+    {
+      "id": 628,
+      "name": "radar_bat_cash_reg",
+      "symbol": 1758,
+      "status": "custom"
+    },
+    {
+      "id": 629,
+      "name": "radar_cctv",
+      "symbol": 1614,
+      "status": "custom"
+    },
+    {
+      "id": 630,
+      "name": "radar_bat_assassinate",
+      "symbol": 1761,
+      "status": "custom"
+    },
+    {
+      "id": 631,
+      "name": "radar_bat_pbus",
+      "symbol": 1744,
+      "status": "custom"
+    },
+    {
+      "id": 632,
+      "name": "radar_bat_wp1",
+      "symbol": 1738,
+      "status": "custom"
+    },
+    {
+      "id": 633,
+      "name": "radar_bat_wp2",
+      "symbol": 1736,
+      "status": "custom"
+    },
+    {
+      "id": 634,
+      "name": "radar_bat_wp3",
+      "symbol": 1734,
+      "status": "custom"
+    },
+    {
+      "id": 635,
+      "name": "radar_bat_wp4",
+      "symbol": 1732,
+      "status": "custom"
+    },
+    {
+      "id": 636,
+      "name": "radar_bat_wp5",
+      "symbol": 1730,
+      "status": "custom"
+    },
+    {
+      "id": 637,
+      "name": "radar_bat_wp6",
+      "symbol": 1728,
+      "status": "custom"
+    },
+    {
+      "id": 638,
+      "name": "radar_blimp_2",
+      "symbol": 1700,
+      "status": "custom"
+    },
+    {
+      "id": 639,
+      "name": "radar_oppressor_2",
+      "symbol": 1178,
+      "status": "custom"
+    },
+    {
+      "id": 640,
+      "name": "radar_bat_wp7",
+      "symbol": 1726,
+      "status": "custom"
+    },
+    {
+      "id": 641,
+      "name": "radar_arena_series",
+      "symbol": 1812,
+      "status": "custom"
+    },
+    {
+      "id": 642,
+      "name": "radar_arena_premium",
+      "symbol": 1822,
+      "status": "custom"
+    },
+    {
+      "id": 643,
+      "name": "radar_arena_workshop",
+      "symbol": 1787,
+      "status": "custom"
+    },
+    {
+      "id": 644,
+      "name": "radar_race_wars",
+      "symbol": 1005,
+      "status": "custom"
+    },
+    {
+      "id": 645,
+      "name": "radar_arena_turret",
+      "symbol": 1789,
+      "status": "custom"
+    },
+    {
+      "id": 646,
+      "name": "radar_arena_rc_car",
+      "symbol": 1820,
+      "status": "custom"
+    },
+    {
+      "id": 647,
+      "name": "radar_arena_rc_workshop",
+      "symbol": 1818,
+      "status": "custom"
+    },
+    {
+      "id": 648,
+      "name": "radar_arena_trap_fire",
+      "symbol": 1805,
+      "status": "custom"
+    },
+    {
+      "id": 649,
+      "name": "radar_arena_trap_flip",
+      "symbol": 1803,
+      "status": "custom"
+    },
+    {
+      "id": 650,
+      "name": "radar_arena_trap_sea",
+      "symbol": 1795,
+      "status": "custom"
+    },
+    {
+      "id": 651,
+      "name": "radar_arena_trap_turn",
+      "symbol": 1793,
+      "status": "custom"
+    },
+    {
+      "id": 652,
+      "name": "radar_arena_trap_pit",
+      "symbol": 1799,
+      "status": "custom"
+    },
+    {
+      "id": 653,
+      "name": "radar_arena_trap_mine",
+      "symbol": 1801,
+      "status": "custom"
+    },
+    {
+      "id": 654,
+      "name": "radar_arena_trap_bomb",
+      "symbol": 1808,
+      "status": "custom"
+    },
+    {
+      "id": 655,
+      "name": "radar_arena_trap_wall",
+      "symbol": 1791,
+      "status": "custom"
+    },
+    {
+      "id": 656,
+      "name": "radar_arena_trap_brd",
+      "symbol": 1806,
+      "status": "custom"
+    },
+    {
+      "id": 657,
+      "name": "radar_arena_trap_sbrd",
+      "symbol": 1797,
+      "status": "custom"
+    },
+    {
+      "id": 658,
+      "name": "radar_arena_bruiser",
+      "symbol": 1838,
+      "status": "custom"
+    },
+    {
+      "id": 659,
+      "name": "radar_arena_brutus",
+      "symbol": 1836,
+      "status": "custom"
+    },
+    {
+      "id": 660,
+      "name": "radar_arena_cerberus",
+      "symbol": 1834,
+      "status": "custom"
+    },
+    {
+      "id": 661,
+      "name": "radar_arena_deathbike",
+      "symbol": 1832,
+      "status": "custom"
+    },
+    {
+      "id": 662,
+      "name": "radar_arena_dominator",
+      "symbol": 1830,
+      "status": "custom"
+    },
+    {
+      "id": 663,
+      "name": "radar_arena_impaler",
+      "symbol": 1828,
+      "status": "custom"
+    },
+    {
+      "id": 664,
+      "name": "radar_arena_imperator",
+      "symbol": 1826,
+      "status": "custom"
+    },
+    {
+      "id": 665,
+      "name": "radar_arena_issi",
+      "symbol": 1824,
+      "status": "custom"
+    },
+    {
+      "id": 666,
+      "name": "radar_arena_sasquatch",
+      "symbol": 1816,
+      "status": "custom"
+    },
+    {
+      "id": 667,
+      "name": "radar_arena_scarab",
+      "symbol": 1814,
+      "status": "custom"
+    },
+    {
+      "id": 668,
+      "name": "radar_arena_slamvan",
+      "symbol": 1810,
+      "status": "custom"
+    },
+    {
+      "id": 669,
+      "name": "radar_arena_zr380",
+      "symbol": 1785,
+      "status": "custom"
+    },
+    {
+      "id": 670,
+      "name": "radar_ap",
+      "symbol": 1841,
+      "status": "custom"
+    },
+    {
+      "id": 671,
+      "name": "radar_comic_store",
+      "symbol": 1580,
+      "status": "custom"
+    },
+    {
+      "id": 672,
+      "name": "radar_cop_car",
+      "symbol": 1564,
+      "status": "custom"
+    },
+    {
+      "id": 673,
+      "name": "radar_rc_time_trials",
+      "symbol": 987,
+      "status": "custom"
+    },
+    {
+      "id": 674,
+      "name": "radar_king_of_the_hill",
+      "symbol": 1290,
+      "status": "custom"
+    },
+    {
+      "id": 675,
+      "name": "radar_king_of_the_hill_teams",
+      "symbol": 1288,
+      "status": "custom"
+    },
+    {
+      "id": 676,
+      "name": "radar_rucksack",
+      "symbol": 977,
+      "status": "custom"
+    },
+    {
+      "id": 677,
+      "name": "radar_shipping_container",
+      "symbol": 955,
+      "status": "custom"
+    },
+    {
+      "id": 678,
+      "name": "radar_agatha",
+      "symbol": 1851,
+      "status": "custom"
+    },
+    {
+      "id": 679,
+      "name": "radar_casino",
+      "symbol": 1632,
+      "status": "custom"
+    },
+    {
+      "id": 680,
+      "name": "radar_casino_table_games",
+      "symbol": 1622,
+      "status": "custom"
+    },
+    {
+      "id": 681,
+      "name": "radar_casino_wheel",
+      "symbol": 1620,
+      "status": "custom"
+    },
+    {
+      "id": 682,
+      "name": "radar_casino_concierge",
+      "symbol": 1628,
+      "status": "custom"
+    },
+    {
+      "id": 683,
+      "name": "radar_casino_chips",
+      "symbol": 1630,
+      "status": "custom"
+    },
+    {
+      "id": 684,
+      "name": "radar_casino_horse_racing",
+      "symbol": 1626,
+      "status": "custom"
+    },
+    {
+      "id": 685,
+      "name": "radar_adversary_featured",
+      "symbol": 1853,
+      "status": "custom"
+    },
+    {
+      "id": 686,
+      "name": "radar_roulette_1",
+      "symbol": 384,
+      "status": "custom"
+    },
+    {
+      "id": 687,
+      "name": "radar_roulette_2",
+      "symbol": 578,
+      "status": "custom"
+    },
+    {
+      "id": 688,
+      "name": "radar_roulette_3",
+      "symbol": 577,
+      "status": "custom"
+    },
+    {
+      "id": 689,
+      "name": "radar_roulette_4",
+      "symbol": 576,
+      "status": "custom"
+    },
+    {
+      "id": 690,
+      "name": "radar_roulette_5",
+      "symbol": 575,
+      "status": "custom"
+    },
+    {
+      "id": 691,
+      "name": "radar_roulette_6",
+      "symbol": 574,
+      "status": "custom"
+    },
+    {
+      "id": 692,
+      "name": "radar_roulette_7",
+      "symbol": 573,
+      "status": "custom"
+    },
+    {
+      "id": 693,
+      "name": "radar_roulette_8",
+      "symbol": 572,
+      "status": "custom"
+    },
+    {
+      "id": 694,
+      "name": "radar_roulette_9",
+      "symbol": 571,
+      "status": "custom"
+    },
+    {
+      "id": 695,
+      "name": "radar_roulette_10",
+      "symbol": 570,
+      "status": "custom"
+    },
+    {
+      "id": 696,
+      "name": "radar_roulette_11",
+      "symbol": 569,
+      "status": "custom"
+    },
+    {
+      "id": 697,
+      "name": "radar_roulette_12",
+      "symbol": 568,
+      "status": "custom"
+    },
+    {
+      "id": 698,
+      "name": "radar_roulette_13",
+      "symbol": 567,
+      "status": "custom"
+    },
+    {
+      "id": 699,
+      "name": "radar_roulette_14",
+      "symbol": 566,
+      "status": "custom"
+    },
+    {
+      "id": 700,
+      "name": "radar_roulette_15",
+      "symbol": 565,
+      "status": "custom"
+    },
+    {
+      "id": 701,
+      "name": "radar_roulette_16",
+      "symbol": 564,
+      "status": "custom"
+    },
+    {
+      "id": 702,
+      "name": "radar_roulette_17",
+      "symbol": 563,
+      "status": "custom"
+    },
+    {
+      "id": 703,
+      "name": "radar_roulette_18",
+      "symbol": 562,
+      "status": "custom"
+    },
+    {
+      "id": 704,
+      "name": "radar_roulette_19",
+      "symbol": 561,
+      "status": "custom"
+    },
+    {
+      "id": 705,
+      "name": "radar_roulette_20",
+      "symbol": 560,
+      "status": "custom"
+    },
+    {
+      "id": 706,
+      "name": "radar_roulette_21",
+      "symbol": 559,
+      "status": "custom"
+    },
+    {
+      "id": 707,
+      "name": "radar_roulette_22",
+      "symbol": 558,
+      "status": "custom"
+    },
+    {
+      "id": 708,
+      "name": "radar_roulette_23",
+      "symbol": 557,
+      "status": "custom"
+    },
+    {
+      "id": 709,
+      "name": "radar_roulette_24",
+      "symbol": 556,
+      "status": "custom"
+    },
+    {
+      "id": 710,
+      "name": "radar_roulette_25",
+      "symbol": 555,
+      "status": "custom"
+    },
+    {
+      "id": 711,
+      "name": "radar_roulette_26",
+      "symbol": 554,
+      "status": "custom"
+    },
+    {
+      "id": 712,
+      "name": "radar_roulette_27",
+      "symbol": 553,
+      "status": "custom"
+    },
+    {
+      "id": 713,
+      "name": "radar_roulette_28",
+      "symbol": 550,
+      "status": "custom"
+    },
+    {
+      "id": 714,
+      "name": "radar_roulette_29",
+      "symbol": 547,
+      "status": "custom"
+    },
+    {
+      "id": 715,
+      "name": "radar_roulette_30",
+      "symbol": 544,
+      "status": "custom"
+    },
+    {
+      "id": 716,
+      "name": "radar_roulette_31",
+      "symbol": 541,
+      "status": "custom"
+    },
+    {
+      "id": 717,
+      "name": "radar_roulette_32",
+      "symbol": 540,
+      "status": "custom"
+    },
+    {
+      "id": 718,
+      "name": "radar_roulette_33",
+      "symbol": 537,
+      "status": "custom"
+    },
+    {
+      "id": 719,
+      "name": "radar_roulette_34",
+      "symbol": 536,
+      "status": "custom"
+    },
+    {
+      "id": 720,
+      "name": "radar_roulette_35",
+      "symbol": 533,
+      "status": "custom"
+    },
+    {
+      "id": 721,
+      "name": "radar_roulette_36",
+      "symbol": 528,
+      "status": "custom"
+    },
+    {
+      "id": 722,
+      "name": "radar_roulette_0",
+      "symbol": 581,
+      "status": "custom"
+    },
+    {
+      "id": 723,
+      "name": "radar_roulette_00",
+      "symbol": 580,
+      "status": "custom"
+    },
+    {
+      "id": 724,
+      "name": "radar_limo",
+      "symbol": 1278,
+      "status": "custom"
+    },
+    {
+      "id": 725,
+      "name": "radar_weapon_alien",
+      "symbol": 763,
+      "status": "custom"
+    },
+    {
+      "id": 726,
+      "name": "radar_race_open_wheel",
+      "symbol": 1015,
+      "status": "custom"
+    },
+    {
+      "id": 727,
+      "name": "radar_rappel",
+      "symbol": 166,
+      "status": "custom"
+    },
+    {
+      "id": 728,
+      "name": "radar_swap_car",
+      "symbol": 143,
+      "status": "custom"
+    },
+    {
+      "id": 729,
+      "name": "radar_scuba_gear",
+      "symbol": 156,
+      "status": "custom"
+    },
+    {
+      "id": 730,
+      "name": "radar_cpanel_1",
+      "symbol": 273,
+      "status": "custom"
+    },
+    {
+      "id": 731,
+      "name": "radar_cpanel_2",
+      "symbol": 271,
+      "status": "custom"
+    },
+    {
+      "id": 732,
+      "name": "radar_cpanel_3",
+      "symbol": 269,
+      "status": "custom"
+    },
+    {
+      "id": 733,
+      "name": "radar_cpanel_4",
+      "symbol": 267,
+      "status": "custom"
+    },
+    {
+      "id": 734,
+      "name": "radar_snow_truck",
+      "symbol": 151,
+      "status": "custom"
+    },
+    {
+      "id": 735,
+      "name": "radar_buggy_1",
+      "symbol": 284,
+      "status": "custom"
+    },
+    {
+      "id": 736,
+      "name": "radar_buggy_2",
+      "symbol": 282,
+      "status": "custom"
+    },
+    {
+      "id": 737,
+      "name": "radar_zhaba",
+      "symbol": 138,
+      "status": "custom"
+    },
+    {
+      "id": 738,
+      "name": "radar_gerald",
+      "symbol": 213,
+      "status": "custom"
+    },
+    {
+      "id": 739,
+      "name": "radar_ron",
+      "symbol": 160,
+      "status": "custom"
+    },
+    {
+      "id": 740,
+      "name": "radar_arcade",
+      "symbol": 290,
+      "status": "custom"
+    },
+    {
+      "id": 741,
+      "name": "radar_drone_controls",
+      "symbol": 1488,
+      "status": "custom"
+    },
+    {
+      "id": 742,
+      "name": "radar_rc_tank",
+      "symbol": 989,
+      "status": "custom"
+    },
+    {
+      "id": 743,
+      "name": "radar_stairs",
+      "symbol": 148,
+      "status": "custom"
+    },
+    {
+      "id": 744,
+      "name": "radar_camera_2",
+      "symbol": 1676,
+      "status": "custom"
+    },
+    {
+      "id": 745,
+      "name": "radar_winky",
+      "symbol": 745,
+      "status": "custom"
+    },
+    {
+      "id": 746,
+      "name": "radar_mini_sub",
+      "symbol": 1254,
+      "status": "custom"
+    },
+    {
+      "id": 747,
+      "name": "radar_kart_retro",
+      "symbol": 1298,
+      "status": "custom"
+    },
+    {
+      "id": 748,
+      "name": "radar_kart_modern",
+      "symbol": 1300,
+      "status": "custom"
+    },
+    {
+      "id": 749,
+      "name": "radar_military_quad",
+      "symbol": 1258,
+      "status": "custom"
+    },
+    {
+      "id": 750,
+      "name": "radar_military_truck",
+      "symbol": 1256,
+      "status": "custom"
+    },
+    {
+      "id": 751,
+      "name": "radar_ship_wheel",
+      "symbol": 957,
+      "status": "custom"
+    },
+    {
+      "id": 752,
+      "name": "radar_ufo",
+      "symbol": 805,
+      "status": "custom"
+    },
+    {
+      "id": 753,
+      "name": "radar_seasparrow2",
+      "symbol": 969,
+      "status": "custom"
+    },
+    {
+      "id": 754,
+      "name": "radar_dinghy2",
+      "symbol": 1500,
+      "status": "custom"
+    },
+    {
+      "id": 755,
+      "name": "radar_patrol_boat",
+      "symbol": 1156,
+      "status": "custom"
+    },
+    {
+      "id": 756,
+      "name": "radar_retro_sports_car",
+      "symbol": 981,
+      "status": "custom"
+    },
+    {
+      "id": 757,
+      "name": "radar_squadee",
+      "symbol": 897,
+      "status": "custom"
+    },
+    {
+      "id": 758,
+      "name": "radar_folding_wing_jet",
+      "symbol": 1430,
+      "status": "custom"
+    },
+    {
+      "id": 759,
+      "name": "radar_valkyrie2",
+      "symbol": 795,
+      "status": "custom"
+    },
+    {
+      "id": 760,
+      "name": "radar_sub2",
+      "symbol": 875,
+      "status": "custom"
+    },
+    {
+      "id": 761,
+      "name": "radar_bolt_cutters",
+      "symbol": 1694,
+      "status": "custom"
+    },
+    {
+      "id": 762,
+      "name": "radar_rappel_gear",
+      "symbol": 993,
+      "status": "custom"
+    },
+    {
+      "id": 763,
+      "name": "radar_keycard",
+      "symbol": 1296,
+      "status": "custom"
+    },
+    {
+      "id": 764,
+      "name": "radar_password",
+      "symbol": 1160,
+      "status": "custom"
+    },
+    {
+      "id": 765,
+      "name": "radar_island_heist_prep",
+      "symbol": 1318,
+      "status": "custom"
+    },
+    {
+      "id": 766,
+      "name": "radar_island_party",
+      "symbol": 1316,
+      "status": "custom"
+    },
+    {
+      "id": 767,
+      "name": "radar_control_tower",
+      "symbol": 1566,
+      "status": "custom"
+    },
+    {
+      "id": 768,
+      "name": "radar_underwater_gate",
+      "symbol": 801,
+      "status": "custom"
+    },
+    {
+      "id": 769,
+      "name": "radar_power_switch",
+      "symbol": 1064,
+      "status": "custom"
+    },
+    {
+      "id": 770,
+      "name": "radar_compound_gate",
+      "symbol": 1574,
+      "status": "custom"
+    },
+    {
+      "id": 771,
+      "name": "radar_rappel_point",
+      "symbol": 991,
+      "status": "custom"
+    },
+    {
+      "id": 772,
+      "name": "radar_keypad",
+      "symbol": 1294,
+      "status": "custom"
+    },
+    {
+      "id": 773,
+      "name": "radar_sub_controls",
+      "symbol": 881,
+      "status": "custom"
+    },
+    {
+      "id": 774,
+      "name": "radar_sub_periscope",
+      "symbol": 877,
+      "status": "custom"
+    },
+    {
+      "id": 775,
+      "name": "radar_sub_missile",
+      "symbol": 879,
+      "status": "custom"
+    },
+    {
+      "id": 776,
+      "name": "radar_painting",
+      "symbol": 1168,
+      "status": "custom"
+    },
+    {
+      "id": 777,
+      "name": "radar_car_meet",
+      "symbol": 1664,
+      "status": "custom"
+    },
+    {
+      "id": 778,
+      "name": "radar_car_test_area",
+      "symbol": 1650,
+      "status": "custom"
+    },
+    {
+      "id": 779,
+      "name": "radar_auto_shop_property",
+      "symbol": 1773,
+      "status": "custom"
+    },
+    {
+      "id": 780,
+      "name": "radar_docks_export",
+      "symbol": 1496,
+      "status": "custom"
+    },
+    {
+      "id": 781,
+      "name": "radar_prize_car",
+      "symbol": 1062,
+      "status": "custom"
+    },
+    {
+      "id": 782,
+      "name": "radar_test_car",
+      "symbol": 845,
+      "status": "custom"
+    },
+    {
+      "id": 783,
+      "name": "radar_car_robbery_board",
+      "symbol": 1659,
+      "status": "custom"
+    },
+    {
+      "id": 784,
+      "name": "radar_car_robbery_prep",
+      "symbol": 1657,
+      "status": "custom"
+    },
+    {
+      "id": 785,
+      "name": "radar_street_race_series",
+      "symbol": 889,
+      "status": "custom"
+    },
+    {
+      "id": 786,
+      "name": "radar_pursuit_series",
+      "symbol": 1034,
+      "status": "custom"
+    },
+    {
+      "id": 787,
+      "name": "radar_car_meet_organiser",
+      "symbol": 1662,
+      "status": "custom"
+    },
+    {
+      "id": 788,
+      "name": "radar_securoserv",
+      "symbol": 963,
+      "status": "custom"
+    },
+    {
+      "id": 789,
+      "name": "radar_bounty_collectibles",
+      "symbol": 1690,
+      "status": "custom"
+    },
+    {
+      "id": 790,
+      "name": "radar_movie_collectibles",
+      "symbol": 1248,
+      "status": "custom"
+    },
+    {
+      "id": 791,
+      "name": "radar_trailer_ramp",
+      "symbol": 829,
+      "status": "custom"
+    },
+    {
+      "id": 792,
+      "name": "radar_race_organiser",
+      "symbol": 1013,
+      "status": "custom"
+    },
+    {
+      "id": 793,
+      "name": "radar_chalkboard_list",
+      "symbol": 1608,
+      "status": "custom"
+    },
+    {
+      "id": 794,
+      "name": "radar_export_vehicle",
+      "symbol": 1464,
+      "status": "custom"
+    },
+    {
+      "id": 795,
+      "name": "radar_train",
+      "symbol": 827,
+      "status": "custom"
+    },
+    {
+      "id": 796,
+      "name": "radar_heist_diamond",
+      "symbol": 1356,
+      "status": "custom"
+    },
+    {
+      "id": 797,
+      "name": "radar_heist_doomsday",
+      "symbol": 1352,
+      "status": "custom"
+    },
+    {
+      "id": 798,
+      "name": "radar_heist_island",
+      "symbol": 1348,
+      "status": "custom"
+    },
+    {
+      "id": 799,
+      "name": "radar_slamvan2",
+      "symbol": 941,
+      "status": "custom"
+    },
+    {
+      "id": 800,
+      "name": "radar_crusader",
+      "symbol": 1526,
+      "status": "custom"
+    },
+    {
+      "id": 801,
+      "name": "radar_construction_outfit",
+      "symbol": 1570,
+      "status": "custom"
+    },
+    {
+      "id": 802,
+      "name": "radar_overlay_jammed",
+      "symbol": 1176,
+      "status": "custom"
+    },
+    {
+      "id": 803,
+      "name": "radar_heist_island_unavailable",
+      "symbol": 1347,
+      "status": "custom"
+    },
+    {
+      "id": 804,
+      "name": "radar_heist_diamond_unavailable",
+      "symbol": 1355,
+      "status": "custom"
+    },
+    {
+      "id": 805,
+      "name": "radar_heist_doomsday_unavailable",
+      "symbol": 1351,
+      "status": "custom"
+    },
+    {
+      "id": 806,
+      "status": "native-hsw-preserved",
+      "name": "radar_hsw_race_series"
+    },
+    {
+      "id": 807,
+      "status": "native-hsw-preserved",
+      "name": "radar_hsw_time_trial"
+    },
+    {
+      "id": 808,
+      "status": "native-hsw-preserved",
+      "name": "radar_hsw_test_vehicle"
+    },
+    {
+      "id": 809,
+      "name": "radar_featured_series",
+      "symbol": 1452,
+      "status": "custom"
+    },
+    {
+      "id": 810,
+      "name": "radar_vehicle_for_sale",
+      "symbol": 787,
+      "status": "custom"
+    },
+    {
+      "id": 811,
+      "name": "radar_van_keys",
+      "symbol": 791,
+      "status": "custom"
+    },
+    {
+      "id": 812,
+      "name": "radar_suv_service",
+      "symbol": 869,
+      "status": "custom"
+    },
+    {
+      "id": 813,
+      "name": "radar_security_contract",
+      "symbol": 967,
+      "status": "custom"
+    },
+    {
+      "id": 814,
+      "name": "radar_safe",
+      "symbol": 973,
+      "status": "custom"
+    },
+    {
+      "id": 815,
+      "name": "radar_ped_r",
+      "symbol": 604,
+      "status": "custom"
+    },
+    {
+      "id": 816,
+      "name": "radar_ped_e",
+      "symbol": 608,
+      "status": "custom"
+    },
+    {
+      "id": 817,
+      "name": "radar_payphone",
+      "symbol": 1154,
+      "status": "custom"
+    },
+    {
+      "id": 818,
+      "name": "radar_patriot3",
+      "symbol": 1158,
+      "status": "custom"
+    },
+    {
+      "id": 819,
+      "name": "radar_music_studio",
+      "symbol": 1242,
+      "status": "custom"
+    },
+    {
+      "id": 820,
+      "name": "radar_jubilee",
+      "symbol": 1308,
+      "status": "custom"
+    },
+    {
+      "id": 821,
+      "name": "radar_granger2",
+      "symbol": 1378,
+      "status": "custom"
+    },
+    {
+      "id": 822,
+      "name": "radar_explosive_charge",
+      "symbol": 1466,
+      "status": "custom"
+    },
+    {
+      "id": 823,
+      "name": "radar_deity",
+      "symbol": 1506,
+      "status": "custom"
+    },
+    {
+      "id": 824,
+      "name": "radar_d_champion",
+      "symbol": 1518,
+      "status": "custom"
+    },
+    {
+      "id": 825,
+      "name": "radar_buffalo4",
+      "symbol": 1686,
+      "status": "custom"
+    },
+    {
+      "id": 826,
+      "name": "radar_agency",
+      "symbol": 1849,
+      "status": "custom"
+    },
+    {
+      "id": 827,
+      "name": "radar_biker_bar",
+      "symbol": 1714,
+      "status": "custom"
+    },
+    {
+      "id": 828,
+      "name": "radar_simeon_overlay",
+      "symbol": 1652,
+      "status": "custom"
+    },
+    {
+      "id": 829,
+      "name": "radar_junk_skydive",
+      "symbol": 1304,
+      "status": "custom"
+    },
+    {
+      "id": 830,
+      "name": "radar_luxury_car_showroom",
+      "symbol": 1274,
+      "status": "custom"
+    },
+    {
+      "id": 831,
+      "name": "radar_car_showroom",
+      "symbol": 1655,
+      "status": "custom"
+    },
+    {
+      "id": 832,
+      "name": "radar_car_showroom_simeon",
+      "symbol": 1654,
+      "status": "custom"
+    },
+    {
+      "id": 833,
+      "name": "radar_flaming_skull",
+      "symbol": 1434,
+      "status": "custom"
+    },
+    {
+      "id": 834,
+      "name": "radar_weapon_ammo",
+      "symbol": 761,
+      "status": "custom"
+    },
+    {
+      "id": 835,
+      "name": "radar_community_series",
+      "symbol": 1578,
+      "status": "custom"
+    },
+    {
+      "id": 836,
+      "name": "radar_cayo_series",
+      "symbol": 1616,
+      "status": "custom"
+    },
+    {
+      "id": 837,
+      "name": "radar_clubhouse_contract",
+      "symbol": 1586,
+      "status": "custom"
+    },
+    {
+      "id": 838,
+      "name": "radar_agent_ulp",
+      "symbol": 1847,
+      "status": "custom"
+    },
+    {
+      "id": 839,
+      "name": "radar_acid",
+      "symbol": 1883,
+      "status": "custom"
+    },
+    {
+      "id": 840,
+      "name": "radar_acid_lab",
+      "symbol": 1879,
+      "status": "custom"
+    },
+    {
+      "id": 841,
+      "name": "radar_dax_overlay",
+      "symbol": 770,
+      "status": "custom"
+    },
+    {
+      "id": 842,
+      "name": "radar_dead_drop_package",
+      "symbol": 1510,
+      "status": "custom"
+    },
+    {
+      "id": 843,
+      "name": "radar_downtown_cab",
+      "symbol": 1490,
+      "status": "custom"
+    },
+    {
+      "id": 844,
+      "name": "radar_gun_van",
+      "symbol": 1374,
+      "status": "custom"
+    },
+    {
+      "id": 845,
+      "name": "radar_stash_house",
+      "symbol": 895,
+      "status": "custom"
+    },
+    {
+      "id": 846,
+      "name": "radar_tractor",
+      "symbol": 833,
+      "status": "custom"
+    },
+    {
+      "id": 847,
+      "name": "radar_warehouse_juggalo",
+      "symbol": 772,
+      "status": "custom"
+    },
+    {
+      "id": 848,
+      "name": "radar_warehouse_juggalo_dax",
+      "symbol": 771,
+      "status": "custom"
+    },
+    {
+      "id": 849,
+      "name": "radar_weapon_crowbar",
+      "symbol": 499,
+      "status": "custom"
+    },
+    {
+      "id": 850,
+      "name": "radar_duffel_bag",
+      "symbol": 1484,
+      "status": "custom"
+    },
+    {
+      "id": 851,
+      "name": "radar_oil_tanker",
+      "symbol": 1182,
+      "status": "custom"
+    },
+    {
+      "id": 852,
+      "name": "radar_acid_lab_tent",
+      "symbol": 1877,
+      "status": "custom"
+    },
+    {
+      "id": 853,
+      "name": "radar_van_burrito",
+      "symbol": 793,
+      "status": "custom"
+    },
+    {
+      "id": 854,
+      "name": "radar_acid_boost",
+      "symbol": 1881,
+      "status": "custom"
+    },
+    {
+      "id": 855,
+      "name": "radar_ped_gang_leader",
+      "symbol": 606,
+      "status": "custom"
+    },
+    {
+      "id": 856,
+      "name": "radar_multistorey_garage",
+      "symbol": 1244,
+      "status": "custom"
+    },
+    {
+      "id": 857,
+      "name": "radar_seized_asset_sales",
+      "symbol": 961,
+      "status": "custom"
+    },
+    {
+      "id": 858,
+      "name": "radar_cayo_attrition",
+      "symbol": 1618,
+      "status": "custom"
+    },
+    {
+      "id": 859,
+      "name": "radar_bicycle",
+      "symbol": 1718,
+      "status": "custom"
+    },
+    {
+      "id": 860,
+      "name": "radar_bicycle_trial",
+      "symbol": 1716,
+      "status": "custom"
+    },
+    {
+      "id": 861,
+      "name": "radar_raiju",
+      "symbol": 999,
+      "status": "custom"
+    },
+    {
+      "id": 862,
+      "name": "radar_conada2",
+      "symbol": 1572,
+      "status": "custom"
+    },
+    {
+      "id": 863,
+      "name": "radar_overlay_ready_for_sell",
+      "symbol": 1172,
+      "status": "custom"
+    },
+    {
+      "id": 864,
+      "name": "radar_overlay_missing_supplies",
+      "symbol": 1174,
+      "status": "custom"
+    },
+    {
+      "id": 865,
+      "name": "radar_streamer216",
+      "symbol": 891,
+      "status": "custom"
+    },
+    {
+      "id": 866,
+      "name": "radar_signal_jammer",
+      "symbol": 945,
+      "status": "custom"
+    },
+    {
+      "id": 867,
+      "name": "radar_salvage_yard",
+      "symbol": 158,
+      "status": "custom"
+    },
+    {
+      "id": 868,
+      "name": "radar_robbery_prep_equipment",
+      "symbol": 164,
+      "status": "custom"
+    },
+    {
+      "id": 869,
+      "name": "radar_robbery_prep_overlay",
+      "symbol": 162,
+      "status": "custom"
+    },
+    {
+      "id": 870,
+      "name": "radar_yusuf",
+      "symbol": 735,
+      "status": "custom"
+    },
+    {
+      "id": 871,
+      "name": "radar_vincent",
+      "symbol": 784,
+      "status": "custom"
+    },
+    {
+      "id": 872,
+      "name": "radar_vinewood_garage",
+      "symbol": 782,
+      "status": "custom"
+    },
+    {
+      "id": 873,
+      "name": "radar_lstb",
+      "symbol": 1276,
+      "status": "custom"
+    },
+    {
+      "id": 874,
+      "name": "radar_cctv_workstation",
+      "symbol": 1612,
+      "status": "custom"
+    },
+    {
+      "id": 875,
+      "name": "radar_hacking_device",
+      "symbol": 1370,
+      "status": "custom"
+    },
+    {
+      "id": 876,
+      "name": "radar_race_drag",
+      "symbol": 1024,
+      "status": "custom"
+    },
+    {
+      "id": 877,
+      "name": "radar_race_drift",
+      "symbol": 1022,
+      "status": "custom"
+    },
+    {
+      "id": 878,
+      "name": "radar_casino_prep",
+      "symbol": 1624,
+      "status": "custom"
+    },
+    {
+      "id": 879,
+      "name": "radar_planning_wall",
+      "symbol": 172,
+      "status": "custom"
+    },
+    {
+      "id": 880,
+      "name": "radar_weapon_crate",
+      "symbol": 757,
+      "status": "custom"
+    },
+    {
+      "id": 881,
+      "name": "radar_weapon_snowball",
+      "symbol": 467,
+      "status": "custom"
+    },
+    {
+      "id": 882,
+      "name": "radar_train_signals_green",
+      "symbol": 825,
+      "status": "custom"
+    },
+    {
+      "id": 883,
+      "name": "radar_train_signals_red",
+      "symbol": 823,
+      "status": "custom"
+    },
+    {
+      "id": 884,
+      "name": "radar_office_transporter",
+      "symbol": 1184,
+      "status": "custom"
+    },
+    {
+      "id": 885,
+      "name": "radar_yankton_survival",
+      "symbol": 739,
+      "status": "custom"
+    },
+    {
+      "id": 886,
+      "name": "radar_daily_bounty",
+      "symbol": 1516,
+      "status": "custom"
+    },
+    {
+      "id": 887,
+      "name": "radar_bounty_target",
+      "symbol": 1688,
+      "status": "custom"
+    },
+    {
+      "id": 888,
+      "name": "radar_filming_schedule",
+      "symbol": 1444,
+      "status": "custom"
+    },
+    {
+      "id": 889,
+      "name": "radar_pizza_this",
+      "symbol": 1100,
+      "status": "custom"
+    },
+    {
+      "id": 890,
+      "name": "radar_aircraft_carrier",
+      "symbol": 1845,
+      "status": "custom"
+    },
+    {
+      "id": 891,
+      "name": "radar_weapon_emp",
+      "symbol": 497,
+      "status": "custom"
+    },
+    {
+      "id": 892,
+      "name": "radar_maude_eccles",
+      "symbol": 1266,
+      "status": "custom"
+    },
+    {
+      "id": 893,
+      "name": "radar_bail_bonds_office",
+      "symbol": 1771,
+      "status": "custom"
+    },
+    {
+      "id": 894,
+      "name": "radar_weapon_emp_mine",
+      "symbol": 495,
+      "status": "custom"
+    },
+    {
+      "id": 895,
+      "name": "radar_zombie_disease",
+      "symbol": 465,
+      "status": "custom"
+    },
+    {
+      "id": 896,
+      "name": "radar_zombie_proximity",
+      "symbol": 461,
+      "status": "custom"
+    },
+    {
+      "id": 897,
+      "name": "radar_zombie_fire",
+      "symbol": 463,
+      "status": "custom"
+    },
+    {
+      "id": 898,
+      "name": "radar_animal_possessed",
+      "symbol": 729,
+      "status": "custom"
+    },
+    {
+      "id": 899,
+      "name": "radar_mobile_phone",
+      "symbol": 1250,
+      "status": "custom"
+    },
+    {
+      "id": 900,
+      "name": "radar_garment_factory",
+      "symbol": 1408,
+      "status": "custom"
+    },
+    {
+      "id": 901,
+      "name": "radar_garment_factory_for_sale",
+      "symbol": 1404,
+      "status": "custom"
+    },
+    {
+      "id": 902,
+      "name": "radar_garment_factory_equipment",
+      "symbol": 217,
+      "status": "custom"
+    },
+    {
+      "id": 903,
+      "name": "radar_field_hangar",
+      "symbol": 1450,
+      "status": "custom"
+    },
+    {
+      "id": 904,
+      "name": "radar_field_hangar_for_sale",
+      "symbol": 1446,
+      "status": "custom"
+    },
+    {
+      "id": 905,
+      "name": "radar_cargobob_ch53",
+      "symbol": 1642,
+      "status": "custom"
+    },
+    {
+      "id": 906,
+      "name": "radar_chopper_lift_ammo",
+      "symbol": 1602,
+      "status": "custom"
+    },
+    {
+      "id": 907,
+      "name": "radar_chopper_lift_armor",
+      "symbol": 1600,
+      "status": "custom"
+    },
+    {
+      "id": 908,
+      "name": "radar_chopper_lift_explosives",
+      "symbol": 1598,
+      "status": "custom"
+    },
+    {
+      "id": 909,
+      "name": "radar_chopper_lift_upgrade",
+      "symbol": 1596,
+      "status": "custom"
+    },
+    {
+      "id": 910,
+      "name": "radar_chopper_lift_weapon",
+      "symbol": 1594,
+      "status": "custom"
+    },
+    {
+      "id": 911,
+      "name": "radar_cargo_ship",
+      "symbol": 1646,
+      "status": "custom"
+    },
+    {
+      "id": 912,
+      "name": "radar_submarine_missile",
+      "symbol": 873,
+      "status": "custom"
+    },
+    {
+      "id": 913,
+      "name": "radar_propeller_engine",
+      "symbol": 1050,
+      "status": "custom"
+    },
+    {
+      "id": 914,
+      "name": "radar_shark",
+      "symbol": 959,
+      "status": "custom"
+    },
+    {
+      "id": 915,
+      "name": "radar_fast_travel",
+      "symbol": 1458,
+      "status": "custom"
+    },
+    {
+      "id": 916,
+      "name": "radar_plane_duster2",
+      "symbol": 1096,
+      "status": "custom"
+    },
+    {
+      "id": 917,
+      "name": "radar_plane_titan2",
+      "symbol": 1094,
+      "status": "custom"
+    },
+    {
+      "id": 918,
+      "name": "radar_collectible",
+      "symbol": 1584,
+      "status": "custom"
+    },
+    {
+      "id": 919,
+      "name": "radar_field_hangar_discount",
+      "symbol": 1448,
+      "status": "custom"
+    },
+    {
+      "id": 920,
+      "name": "radar_garment_factory_discount",
+      "symbol": 1406,
+      "status": "custom"
+    },
+    {
+      "id": 921,
+      "name": "radar_weapon_gusenberg_sweeper",
+      "symbol": 491,
+      "status": "custom"
+    },
+    {
+      "id": 922,
+      "name": "radar_weapon_tear_gas",
+      "symbol": 52922,
+      "status": "custom"
+    },
+    {
+      "id": 923,
+      "name": "radar_dog",
+      "symbol": 52923,
+      "status": "custom"
+    },
+    {
+      "id": 924,
+      "name": "radar_bobcat_security",
+      "symbol": 52924,
+      "status": "custom"
+    },
+    {
+      "id": 925,
+      "name": "radar_smoke_shop",
+      "symbol": 52925,
+      "status": "custom"
+    },
+    {
+      "id": 926,
+      "name": "radar_smoke_shop_for_sale",
+      "symbol": 52926,
+      "status": "custom"
+    },
+    {
+      "id": 927,
+      "name": "radar_smoke_shop_attention",
+      "symbol": 52927,
+      "status": "custom"
+    },
+    {
+      "id": 928,
+      "name": "radar_helitours",
+      "symbol": 52928,
+      "status": "custom"
+    },
+    {
+      "id": 929,
+      "name": "radar_helitours_for_sale",
+      "symbol": 52929,
+      "status": "custom"
+    },
+    {
+      "id": 930,
+      "name": "radar_helitours_attention",
+      "symbol": 52930,
+      "status": "custom"
+    },
+    {
+      "id": 931,
+      "name": "radar_car_wash_business",
+      "symbol": 52931,
+      "status": "custom"
+    },
+    {
+      "id": 932,
+      "name": "radar_car_wash_business_for_sale",
+      "symbol": 52932,
+      "status": "custom"
+    },
+    {
+      "id": 933,
+      "name": "radar_car_wash_business_attention",
+      "symbol": 52933,
+      "status": "custom"
+    },
+    {
+      "id": 934,
+      "name": "radar_attention",
+      "symbol": 52934,
+      "status": "custom"
+    },
+    {
+      "id": 935,
+      "name": "radar_alarm",
+      "symbol": 52935,
+      "status": "custom"
+    },
+    {
+      "id": 936,
+      "name": "radar_helitours_discount",
+      "symbol": 52936,
+      "status": "custom"
+    },
+    {
+      "id": 937,
+      "name": "radar_smoke_shop_discount",
+      "symbol": 52937,
+      "status": "custom"
+    },
+    {
+      "id": 938,
+      "name": "radar_car_wash_business_discount",
+      "symbol": 52938,
+      "status": "custom"
+    },
+    {
+      "id": 939,
+      "name": "radar_real_estate",
+      "symbol": 52939,
+      "status": "custom"
+    },
+    {
+      "id": 940,
+      "name": "radar_medical_courier",
+      "symbol": 52940,
+      "status": "custom"
+    },
+    {
+      "id": 941,
+      "name": "radar_gruppe_sechs",
+      "symbol": 52941,
+      "status": "custom"
+    },
+    {
+      "id": 942,
+      "name": "radar_fire_station",
+      "symbol": 52942,
+      "status": "custom"
+    },
+    {
+      "id": 943,
+      "name": "radar_fire_truck",
+      "symbol": 52943,
+      "status": "custom"
+    },
+    {
+      "id": 944,
+      "name": "radar_alpha_mail",
+      "symbol": 52944,
+      "status": "custom"
+    },
+    {
+      "id": 945,
+      "name": "radar_ls_meteor",
+      "symbol": 52945,
+      "status": "custom"
+    },
+    {
+      "id": 946,
+      "name": "radar_four20_survival",
+      "symbol": 52946,
+      "status": "custom"
+    },
+    {
+      "id": 947,
+      "name": "radar_community_mission_series",
+      "symbol": 52947,
+      "status": "custom"
+    },
+    {
+      "id": 948,
+      "name": "radar_property_mansion",
+      "symbol": 52948,
+      "status": "custom"
+    },
+    {
+      "id": 949,
+      "name": "radar_ai_keypad",
+      "symbol": 52949,
+      "status": "custom"
+    },
+    {
+      "id": 950,
+      "name": "radar_taxi_self_drive",
+      "symbol": 52950,
+      "status": "custom"
+    },
+    {
+      "id": 951,
+      "name": "radar_train_subway",
+      "symbol": 52951,
+      "status": "custom"
+    },
+    {
+      "id": 952,
+      "name": "radar_trashbag",
+      "symbol": 52952,
+      "status": "custom"
+    },
+    {
+      "id": 953,
+      "name": "radar_mission_creator",
+      "symbol": 52953,
+      "status": "custom"
+    },
+    {
+      "id": 954,
+      "name": "radar_cat",
+      "symbol": 52954,
+      "status": "custom"
+    },
+    {
+      "id": 955,
+      "name": "radar_mansion_ai_m",
+      "symbol": 52955,
+      "status": "custom"
+    },
+    {
+      "id": 956,
+      "name": "radar_mansion_ai_f",
+      "symbol": 52956,
+      "status": "custom"
+    },
+    {
+      "id": 957,
+      "name": "radar_mansion_ai_gang",
+      "symbol": 52957,
+      "status": "custom"
+    },
+    {
+      "id": 958,
+      "name": "radar_heist_art_unavailable",
+      "symbol": 52958,
+      "status": "custom"
+    },
+    {
+      "id": 959,
+      "name": "radar_heist_art",
+      "symbol": 52959,
+      "status": "custom"
+    },
+    {
+      "id": 960,
+      "name": "radar_property_mansion_art_heist",
+      "symbol": 52960,
+      "status": "custom"
+    },
+    {
+      "id": 961,
+      "name": "radar_art_heist_prep",
+      "symbol": 52961,
+      "status": "custom"
+    },
+    {
+      "id": 962,
+      "name": "radar_manhole_key",
+      "symbol": 52962,
+      "status": "custom"
+    },
+    {
+      "id": 963,
+      "name": "radar_buyers_request",
+      "symbol": 52963,
+      "status": "custom"
+    },
+    {
+      "id": 964,
+      "name": "radar_armored_caracara",
+      "symbol": 52964,
+      "status": "custom"
+    },
+    {
+      "id": 965,
+      "name": "radar_witness",
+      "symbol": 52965,
+      "status": "custom"
+    },
+    {
+      "id": 966,
+      "name": "radar_vanta_fishing",
+      "symbol": 52966,
+      "status": "custom"
+    },
+    {
+      "id": 967,
+      "name": "radar_vanta_merchant",
+      "symbol": 52967,
+      "status": "custom"
+    }
+  ]
+}

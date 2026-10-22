@@ -1,0 +1,20 @@
+{
+  "styles": [
+    "classic",
+    "cyan",
+    "rp"
+  ],
+  "official": 966,
+  "custom": [
+    {
+      "id": 966,
+      "meaning": "Pêche",
+      "glyph": "fish"
+    },
+    {
+      "id": 967,
+      "meaning": "Marchand",
+      "glyph": "bag"
+    }
+  ]
+}
