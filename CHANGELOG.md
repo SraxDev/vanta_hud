@@ -18,7 +18,7 @@ Public repository preparation.
 
 - `stream/minimap.gfx` (modified GTA file) is excluded by `.gitignore`; README and `THIRD_PARTY.md` explain it. It stays in your local folder.
 - Default `Config.Framework` in the repository: `'standalone'`.
-- Checked: vanta-check. Not checked: HUD behaviour without `minimap.gfx` in game (deduced from reading the code).
+- Checked: vanta-check. Checked in game by the author: the HUD behaves the same without `minimap.gfx`.
 
 # 1.12.1
 
