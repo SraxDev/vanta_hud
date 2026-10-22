@@ -34,7 +34,9 @@ window.VantaMoney = function createMoney(ui) {
     element.className = 'money-delta ' + (amount > 0 ? 'gain' : 'loss') + ' on';
     element.dataset.kind = kind;
     clearTimeout(deltaTimer);
-    deltaTimer = setTimeout(() => { element.className = 'money-delta'; }, DELTA_MS);
+    deltaTimer = setTimeout(() => {
+      element.className = 'money-delta';
+    }, DELTA_MS);
   }
 
   function update(data) {
@@ -52,7 +54,7 @@ window.VantaMoney = function createMoney(ui) {
       bank: asNumber(data.bank),
       job: String(data.job || '').slice(0, 40),
       grade: String(data.grade || '').slice(0, 40),
-      hidden: false
+      hidden: false,
     };
 
     const cashChanged = lastShown.cash !== null && next.cash !== null && next.cash !== lastShown.cash;

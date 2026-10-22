@@ -8,7 +8,7 @@ window.VantaExtras = (() => {
     // visible if the option is on, the HUD shown, outside menus and cinema
     canShow(option) {
       return this.options[option] && this.hudVisible && !this.menuOpen && !this.cinema;
-    }
+    },
   };
 
   const compass = window.VantaCompass(ui);
@@ -30,7 +30,7 @@ window.VantaExtras = (() => {
       ui.options = {
         compass: value.compass !== false,
         moneyHud: value.moneyHud !== false,
-        weaponHud: value.weaponHud !== false
+        weaponHud: value.weaponHud !== false,
       };
       paintAll();
     },
@@ -53,6 +53,6 @@ window.VantaExtras = (() => {
     pose: (data) => compass.pose(data && data.cameraHeading),
     economy: (data) => money.update(data),
     weapon: (data) => weapon.update(data),
-    relayout: () => weapon.relayout()
+    relayout: () => weapon.relayout(),
   };
 })();

@@ -35,7 +35,7 @@ Hunger/thirst and cash/job are optional. Pick your framework in `Config.Framewor
 
 After an update: `refresh`, then `restart vanta_hud`.
 
-`stream/minimap.gfx` (blip symbols on the native minimap) is not included in the repository: it is a modified GTA file. From reading the code, the HUD, its map and its blips work without it; only the replacement of the symbols on the native minimap is missing. If you add it to `stream/`, players must reconnect for it to apply.
+`stream/minimap.gfx` (blip symbols on the native minimap) is not included in the repository: it is a modified GTA file. The HUD, its map and its blips work without it; you just keep the vanilla symbols on the native radar. If you add it to `stream/`, players must reconnect for it to apply.
 
 ## Language
 

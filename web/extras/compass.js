@@ -1,7 +1,16 @@
 'use strict';
 window.VantaCompass = function createCompass(ui) {
   const PX_PER_DEGREE = 2.4;
-  const CARDINALS = { 0: 'N', 45: 'NE', 90: 'E', 135: 'SE', 180: 'S', 225: t("SW"), 270: t("W"), 315: t("NW") };
+  const CARDINALS = {
+    0: 'N',
+    45: 'NE',
+    90: 'E',
+    135: 'SE',
+    180: 'S',
+    225: t('SW'),
+    270: t('W'),
+    315: t('NW'),
+  };
   const POSE_TIMEOUT_MS = 1500;
 
   let bearing = null;
@@ -40,8 +49,10 @@ window.VantaCompass = function createCompass(ui) {
     if (!visible) return;
 
     const half = root.clientWidth / 2 || 180;
-    document.getElementById('compass-ribbon').style.left = Math.round(half - (360 + bearing) * PX_PER_DEGREE) + 'px';
-    document.getElementById('compass-degrees').textContent = String(Math.round(bearing) % 360).padStart(3, '0') + '°';
+    document.getElementById('compass-ribbon').style.left =
+      Math.round(half - (360 + bearing) * PX_PER_DEGREE) + 'px';
+    document.getElementById('compass-degrees').textContent =
+      String(Math.round(bearing) % 360).padStart(3, '0') + '°';
     document.getElementById('compass-place').textContent = place;
   }
 
@@ -69,7 +80,8 @@ window.VantaCompass = function createCompass(ui) {
     // sans flux de pose on prend le cap du personnage
     fallback(heading) {
       if (typeof heading !== 'number') return;
-      if (bearing === null || performance.now() - lastPoseAt > POSE_TIMEOUT_MS) setBearing(toBearing(heading));
-    }
+      if (bearing === null || performance.now() - lastPoseAt > POSE_TIMEOUT_MS)
+        setBearing(toBearing(heading));
+    },
   };
 };

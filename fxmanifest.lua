@@ -2,7 +2,7 @@ fx_version 'cerulean'
 game 'gta5'
 author 'Vanta'
 description 'Standalone roleplay HUD: custom minimap with GPS, vehicle gauge, compass, weapon HUD and quick menu'
-version '1.13.0'
+version '1.13.1'
 
 client_scripts { 'config.lua', 'locales/*.lua', 'client/locale.lua', 'client/bridge.lua', 'client/framework.lua', 'client/blips.lua', 'client/navigation.lua', 'client/map3d.lua', 'client/frontend_theme.lua', 'client/context.lua', 'client/weapon.lua', 'client/main.lua' }
 ui_page 'web/index.html'

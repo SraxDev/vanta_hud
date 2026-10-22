@@ -183,7 +183,7 @@ local function radarLayout(reset)
         CreateThread(function()
             Wait(180)
             if generation ~= radarRefresh or IsPauseMenuActive() then return end
-            -- jamais de radar agrandi ici, le HUD n'utilise que le compact
+            -- never the big radar here, the HUD only uses the compact one
             SetBigmapActive(false, false)
         end)
     end
@@ -284,7 +284,7 @@ local function callback(name, fn)
         if bucket.tokens < 1 then cb({ ok = false, error = T('Action too fast.') }) return end
         bucket.tokens = bucket.tokens - 1
         local ok, response = pcall(fn, type(data) == 'table' and data or {})
-        if not ok then print(('[vanta_hud] %s : %s'):format(name, response)) end
+        if not ok then print(('[vanta_hud] %s: %s'):format(name, response)) end
         cb(ok and (response or { ok = true }) or { ok = false, error = T('Action failed.') })
     end)
 end
@@ -460,7 +460,7 @@ RegisterCommand('hudprofile', function(_, args)
     notify(T('Profile %d (%s) loaded.', slot, profileNames[slot]))
 end, false)
 RegisterCommand('hudgps', function()
-    print(('[vanta_hud] GPS %s : option=%s, interface=%s, point=%s, donnees=%s'):format(
+    print(('[vanta_hud] GPS %s: option=%s, interface=%s, point=%s, data=%s'):format(
         GetResourceMetadata(resource, 'version', 0) or '?', tostring(settings.gps), tostring(uiReady and not manuallyHidden and not menuOpen),
         tostring(IsWaypointActive()), json.encode(HudNavigation.Read(true))))
 end, false)

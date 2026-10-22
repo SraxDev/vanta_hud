@@ -1,28 +1,25 @@
-# Licences and provenance
+# Third-party content
 
-## Barlow Condensed Bold Italic
+The code and the original icons of vanta_hud are under the MIT licence (`LICENSE`). The following is not.
 
-https://github.com/google/fonts/tree/main/ofl/barlowcondensed
-SIL Open Font License 1.1, text included in web/assets/fonts/OFL.txt.
+## Barlow Condensed font
 
-## GTA V minimap
+From [google/fonts](https://github.com/google/fonts/tree/main/ofl/barlowcondensed), SIL Open Font License 1.1. See `web/assets/fonts/OFL.txt`.
 
-stream/minimap.gfx is a modified version of GTA V's minimap.gfx; it is not redistributed in the public repository (excluded by .gitignore). The functions, animations and GTA elements kept in that file remain Rockstar Games elements, outside Vanta's MIT licence. The modification keeps the other parts of the minimap and replaces the blip symbols with an imported, swappable Vanta atlas, with an extended list of native names.
+## Blip atlases
 
-The original icons of the Vanta catalogue and the code written for this resource are under MIT. Identifiers and names come from https://docs.fivem.net/docs/game-references/blips/.
+`web/assets/blips/classic.png`, `cyan.png` and `rp.png` redraw the blip silhouettes published by Cfx.re ([docs](https://docs.fivem.net/docs/game-references/blips/)), with our own framing, colours and sizes. The original GTA V designs and names belong to Rockstar Games.
 
-JPEXS Free Flash Decompiler 26.3.0 was used to read and compile the GFx; that tool is not shipped with the resource. https://github.com/jindrapetrik/jpexs-decompiler
+Earlier versions used the sheet from [RMSCRIPTS-DEV/rm-custom-blips](https://github.com/RMSCRIPTS-DEV/rm-custom-blips); its licence is kept in `RM-CUSTOM-BLIPS-LICENSE.txt`.
 
-## Historical sources 0.2
+## Weapon icons
 
-web/assets/blips/classic.png, cyan.png and rp.png were historical sheets, unused by version 0.3. They contain original GTA artwork outside six cells, which is not covered by MIT.
-Historical source: https://github.com/RMSCRIPTS-DEV/rm-custom-blips/blob/main/sheets/blips_texturesheet_ng.png
-The source repository's licence is kept in RM-CUSTOM-BLIPS-LICENSE.txt for provenance.
+`web/weapons/WEAPON_*.png` come from [ox_inventory](https://github.com/overextended/ox_inventory) (Overextended), GPL-3.0 or later. See `licenses/WEAPON-ICONS-OX_INVENTORY.txt`. The weapons themselves are GTA V content (Rockstar Games). Without these files the weapon HUD shows a generic silhouette.
 
-## Recognisable silhouettes 0.4.5
+## Map atlas and road network
 
-web/assets/blips/classic.png, cyan.png and rp.png are now the active atlases. They adapt the reference silhouettes published by Cfx.re at https://docs.fivem.net/docs/game-references/blips/ and https://docs-backend.fivem.net/blips/ . The native GTA drawings and their names remain attributed to their rights holders and are not covered by the MIT licence of the Vanta code. Centring, size, brightness, palettes and frames are adapted for this HUD. The Vanta icons stay distinct in design/blip-visual-provenance.json.
+See `MAP2D.md`, `licenses/MAP-ATLAS-SOURCE.txt` and `licenses/ROUTING-SOURCE.txt`. Both are derived from GTA V data (Rockstar Games).
 
-## Weapon icons (ox_inventory)
+## stream/minimap.gfx
 
-web/weapons/WEAPON_*.png come from **ox_inventory** (Overextended), folder web/images (https://github.com/overextended/ox_inventory), published under GPL-3.0 or later; see licenses/WEAPON-ICONS-OX_INVENTORY.txt. The images depict GTA V weapons, whose rights remain with Rockstar Games. Without these files the weapon HUD shows a fallback silhouette.
+Not included in this repository. It is a modified GTA V `minimap.gfx` (Rockstar Games) where the blip symbols are replaced by our atlas, edited with [JPEXS Free Flash Decompiler](https://github.com/jindrapetrik/jpexs-decompiler). The HUD works without it; only the symbols on the native radar stay vanilla.

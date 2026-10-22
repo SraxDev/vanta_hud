@@ -1,17 +1,1131 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; font-src 'self'; script-src 'self'; connect-src 'self' https:; object-src 'none'; base-uri 'none'; frame-src 'none'; form-action 'none';">
-<title>HUD and quick menu</title><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="polish.css"><link rel="stylesheet" href="visual.css"><link rel="stylesheet" href="extras.css"></head><body>
-<svg class="symbol-library" aria-hidden="true"><defs>
-<symbol id="heart" viewBox="0 0 24 24"><path fill="currentColor" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" d="M12 21S2 15 2 8a5 5 0 0 1 10-2 5 5 0 0 1 10 2c0 7-10 13-10 13Z"/></symbol>
-<symbol id="shield" viewBox="0 0 24 24"><path fill="currentColor" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" d="m12 3 8 3-1 8c-1 4-7 7-7 7s-6-3-7-7L4 6Z"/></symbol>
-<symbol id="food" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 2v6q0 3 3 3t3-3V2M7 2v20M20 2q-7 5-5 11h5M20 2v20"/></g></symbol>
-<symbol id="drop" viewBox="0 0 24 24"><path fill="currentColor" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" d="M12 3S5 11 5 15a7 7 0 0 0 14 0c0-4-7-12-7-12Z"/></symbol>
-<symbol id="mic" viewBox="0 0 24 24"><g stroke="currentColor" fill="none" stroke-width="1.8" stroke-linecap="round"><rect x="8" y="2" width="8" height="13" rx="4"/><path d="M5 10v2a7 7 0 0 0 14 0v-2M12 19v3M8 22h8"/></g></symbol>
-<symbol id="icon-fuel" viewBox="0 0 24 24"><g stroke="currentColor" fill="none" stroke-width="1.7" stroke-linejoin="round"><path d="M3 22V3h11v19M1 22h15M5 5h7v6H5ZM14 11h3v7q0 3 3 3t2-3V7l-5-5M19 4v4h3"/></g></symbol>
-<symbol id="icon-belt" viewBox="0 0 24 24"><circle cx="12" cy="4" r="2.4" fill="currentColor"/><path d="M8.1 8.1Q12 6.5 15.9 8.1L17.2 16.8H6.8Z" fill="currentColor" opacity=".32"/><path d="M8.1 8.2 6.8 16.8M15.9 8.2l1.3 8.6M8.4 19.4 7.7 22M15.6 19.4l.7 2.6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><path d="M17.4 7.5 7.1 17.8M5.8 18h12.4" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><rect x="10.1" y="16.3" width="3.8" height="3.3" rx=".7" fill="currentColor"/></symbol>
-<symbol id="navigation" viewBox="0 0 24 24"><path fill="currentColor" d="m12 2 10 20-10-6-10 6Z"/></symbol>
-<symbol id="engine" viewBox="0 0 24 24"><path d="M7 5h8M11 5v3M5 10V8h11l3 3h2v8h-4l-2 2H6v-3H3v-8ZM1 11v6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/></symbol><symbol id="ui-play" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m7 3 14 9-14 9Z" fill="currentColor" stroke="none"/></g></symbol><symbol id="ui-map" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m2 5 6-3 8 3 6-3v17l-6 3-8-3-6 3ZM8 2v17m8-14v17"/></g></symbol><symbol id="ui-settings" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m9 2 1-1h4l1 3 3 1 3-1 2 4-2 2v4l2 2-2 4-3-1-3 1-1 3h-4l-1-3-3-1-3 1-2-4 2-2v-4L0 8l2-4 3 1 3-1Z" transform="translate(1 0) scale(.92)"/><circle cx="12" cy="12" r="4"/></g></symbol><symbol id="ui-gamesettings" viewBox="0 0 24 24"><use href="#ui-settings"/></symbol><symbol id="ui-inventory" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="15" rx="1"/><path d="M8 6V3h8v3M3 12h18M10 12v3h4v-3"/></g></symbol><symbol id="ui-phone" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="1.5" width="12" height="21" rx="2"/><path d="M10 4h4M11 20h2"/></g></symbol><symbol id="ui-monitor" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="1"/><path d="M12 17v5M7 22h10"/></g></symbol><symbol id="ui-opacity" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2S5 10 5 15a7 7 0 0 0 14 0c0-5-7-13-7-13Z"/><path d="M12 6v15"/></g></symbol><symbol id="ui-palette" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 0 20h2c3 0 3-4 0-4h-1c-2 0-2-4 0-4h5c6 0 5-12-6-12Z"/><circle cx="7" cy="8" r=".8"/><circle cx="12" cy="6" r=".8"/><circle cx="17" cy="8" r=".8"/><circle cx="6" cy="13" r=".8"/></g></symbol><symbol id="ui-text" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h18M12 3v18M8 21h8M3 3v4m18-4v4"/></g></symbol><symbol id="ui-contrast" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 1 0 18Z" fill="currentColor" stroke="none"/></g></symbol><symbol id="ui-position" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1v22M1 12h22M8 5l4-4 4 4M8 19l4 4 4-4M5 8l-4 4 4 4m14-8 4 4-4 4"/></g></symbol><symbol id="ui-car" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m5 6 2-4h10l2 4 3 3v10H2V9ZM2 11h20M6 19v3m12-3v3M5 15h3m8 0h3M5 6h14"/></g></symbol><symbol id="ui-gauge" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18a10 10 0 1 1 18 0ZM12 14l6-6M5 11l2 1m10 0 2-1M11 5v2"/><circle cx="12" cy="15" r="2"/></g></symbol><symbol id="ui-fuel" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 22V3h11v19M1 22h15M5 5h7v6H5ZM14 11h3v7q0 3 3 3t2-3V7l-5-5M19 4v4h3"/></g></symbol><symbol id="ui-shield" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 9 4-2 10-7 6-7-6L3 6Z"/><path d="m8 12 3 3 5-6"/></g></symbol><symbol id="ui-voice" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="2" width="8" height="13" rx="4"/><path d="M5 10v2a7 7 0 0 0 14 0v-2M12 19v3M8 22h8"/></g></symbol><symbol id="ui-muted" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m3 3 18 18M8 7V6a4 4 0 0 1 8 0v6M8 11v1a4 4 0 0 0 7 2M5 10v2a7 7 0 0 0 12 5m2-5v-2M12 19v3M8 22h8"/></g></symbol><symbol id="ui-radio" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v13M8 22h8M7 6a8 8 0 0 0 0 12m10-12a8 8 0 0 1 0 12M4 3a12 12 0 0 0 0 18M20 3a12 12 0 0 1 0 18"/><circle cx="12" cy="12" r="2" fill="currentColor"/></g></symbol><symbol id="ui-run" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="15" cy="3" r="2" fill="currentColor"/><path d="m10 8 3-2 3 5h5M6 10l4-2 2 7-5 6M12 15l5 3v4M3 6h4M1 12h4"/></g></symbol><symbol id="ui-bicycle" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="17" r="4"/><circle cx="19" cy="17" r="4"/><path d="m5 17 5-9 6 9H5l4-6m7 6-4-12H9M12 5h4m-8 3h4"/></g></symbol><symbol id="ui-altitude" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m1 21 8-17 5 10 3-6 6 13ZM6 10l3 3 3-3m4 1 1 2 2-1"/></g></symbol><symbol id="ui-wave" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 8q3-4 6 0t6 0 6 0 4 0M1 15q3-4 6 0t6 0 6 0 4 0"/></g></symbol><symbol id="ui-info" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 10v7M12 6v1"/></g></symbol><symbol id="ui-success" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m6 12 4 4 8-9"/></g></symbol><symbol id="ui-warning" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 11 20H1Z"/><path d="M12 9v5M12 17v1"/></g></symbol><symbol id="ui-error" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m8 8 8 8m0-8-8 8"/></g></symbol><symbol id="ui-right" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 21V9h14M14 3l6 6-6 6" stroke-width="3"/></g></symbol><symbol id="ui-left" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21V9H5m5-6L4 9l6 6" stroke-width="3"/></g></symbol><symbol id="ui-straight" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22V3M5 10l7-7 7 7" stroke-width="3"/></g></symbol><symbol id="ui-uturn" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19 22V9a7 7 0 0 0-14 0v7m-4-5 4 5 4-5" stroke-width="2.8"/></g></symbol><symbol id="ui-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="3"/></g></symbol><symbol id="ui-clock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 3"/></g></symbol><symbol id="ui-star" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 3 6 7 1-5 5 1 8-6-4-6 4 1-8-5-5 7-1Z"/></g></symbol><symbol id="ui-reset" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9a9 9 0 1 1 0 7M3 3v6h6"/></g></symbol><symbol id="ui-undo" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m7 4-6 6 6 6M1 10h13a7 7 0 0 1 0 14" transform="translate(1 -2) scale(.9)"/></g></symbol></defs></svg>
-<main id="hud" hidden aria-label="Game information"><div id="map-cluster" class="hud-group"><div id="gps-panel" class="gps-panel" hidden aria-label="GPS guidance"><span id="gps-arrow" aria-hidden="true">↑</span><div class="gps-copy"><strong id="gps-direction"></strong><small id="gps-step"></small><small id="gps-destination" class="gps-destination"></small></div><div id="gps-manoeuvre" class="gps-manoeuvre" hidden><b id="gps-turn"></b><small>ESTIMATED</small></div><div class="gps-remaining"><b id="gps-distance"></b><small>REMAINING</small></div></div><div id="location" class="address"><span class="heading-arrow">➤</span><div><strong id="street">GREAT OCEAN HIGHWAY</strong><small id="zone">PALETO FOREST</small></div><time id="clock">19:53</time><span id="direction" class="compass">SW</span></div><div class="hud-instrument"><svg class="ui-frame ui-frame-instrument" aria-hidden="true" viewBox="0 0 1000 1000" preserveAspectRatio="none"><path class="frame-outline" d="M1 1H999V964L968 999H32L1 964Z"/><path class="frame-accent" d="M1 48V1H100M900 999H968L999 964V900"/></svg><div id="map-frame" class="minimap" aria-hidden="true"><div id="preview-map"></div></div><div class="vitals"><div id="health" class="vital meter health" role="meter" aria-label="Health" aria-valuemin="0" aria-valuemax="100"><svg class="icon" aria-hidden="true"><use href="#heart"/></svg><div class="vital-core"><div class="vital-caption"><span>HEALTH</span><b id="health-value" class="health-value">78</b></div><span class="track"><i class="health-fill"></i></span></div></div><div id="armour" class="vital meter armour" role="meter" aria-label="Armour" aria-valuemin="0" aria-valuemax="100"><svg class="icon" aria-hidden="true"><use href="#shield"/></svg><div class="vital-core"><div class="vital-caption"><span>ARMOUR</span><b id="armour-value">35</b></div><span class="track"><i></i></span></div></div></div><div class="needs"><div id="hunger" class="need meter hunger" role="meter" aria-label="Hunger" aria-valuemin="0" aria-valuemax="100" title="Hunger"><svg class="icon" aria-hidden="true"><use href="#food"/></svg><div class="need-core"><div class="need-heading"><span>HUNGER</span><b id="hunger-value" class="hunger-value">64</b></div><span class="track"><i class="hunger-fill"></i></span></div></div><div id="thirst" class="need meter thirst" role="meter" aria-label="Thirst" aria-valuemin="0" aria-valuemax="100" title="Thirst"><svg class="icon" aria-hidden="true"><use href="#drop"/></svg><div class="need-core"><div class="need-heading"><span>THIRST</span><b id="thirst-value">76</b></div><span class="track"><i></i></span></div></div><div id="voice" class="voice" aria-label="Voice range"><svg class="icon" aria-hidden="true"><use href="#mic"/></svg><span class="voice-bars"><i></i><i class="active"></i><i class="active"></i></span></div></div></div></div><div id="context-strip" class="context-strip" hidden aria-live="polite"><span id="context-symbol"></span><div><strong id="context-title-live"></strong><span class="track"><i id="context-fill"></i></span></div><b id="context-value"></b></div><div id="voice-detail" class="voice-detail" hidden><svg class="icon" aria-hidden="true"><use href="#mic"/></svg><span id="voice-detail-label"></span><b id="voice-detail-value"></b></div><div id="vehicle-context"><div id="vehicle" class="vehicle" hidden aria-label="Vehicle gauge"><svg class="ui-frame ui-frame-panel" aria-hidden="true" viewBox="0 0 1000 1000" preserveAspectRatio="none"><path class="frame-outline" d="M1 48 35 1H965L999 35V965L965 999H35L1 965Z"/><path class="frame-accent" d="M1 110V48L35 1H125M875 999H965L999 965V875"/></svg><div class="speed-line"><div id="speed" class="speed"><span>00</span>0</div><span id="speed-unit" class="speed-unit">KM/H</span><div class="gear"><strong id="gear">N</strong><span>GEAR</span></div></div><div id="rpm" class="rpm" role="meter" aria-label="Engine RPM" aria-valuemin="0" aria-valuemax="100"><i class="active"></i><i class="active"></i><i class="active"></i><i class="active"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><span class="rpm-caption">RPM</span></div><div class="vehicle-extra" hidden><svg class="icon" aria-hidden="true"><use href="#ui-altitude"/></svg><span>GROUND ALT.</span><strong></strong></div><div class="cycle-effort" hidden><svg class="icon" aria-hidden="true"><use href="#ui-bicycle"/></svg><span class="track"><i></i></span><strong></strong></div><div class="vehicle-bottom vehicle-row"><div id="fuel" class="meter fuel" role="meter" aria-label="Fuel" aria-valuemin="0" aria-valuemax="100"><svg class="icon" aria-hidden="true"><use href="#icon-fuel"/></svg><span class="track"><i></i></span><b id="fuel-value">68 %</b></div><span id="belt" class="belt" title="Seatbelt"><svg class="icon" aria-hidden="true"><use href="#icon-belt"/></svg><small class="belt-check" aria-hidden="true">✓</small></span></div></div><div id="vehicle-state" class="vehicle-state" hidden></div><div id="vehicle-alerts" class="vehicle-alerts" hidden aria-live="polite"><div id="fuel-alert" class="driving-alert" hidden><svg class="icon" aria-hidden="true"><use href="#icon-fuel"/></svg><span id="fuel-alert-text"></span><b id="fuel-alert-value"></b></div><div id="engine-alert" class="driving-alert" hidden><svg class="icon" aria-hidden="true"><use href="#engine"/></svg><span id="engine-alert-text"></span><b id="engine-alert-value" class="detailed-value"></b></div><div id="damage-alert" class="driving-alert" hidden><svg class="icon" aria-hidden="true"><use href="#engine"/></svg><span id="damage-alert-text"></span><b id="damage-alert-value" class="detailed-value"></b></div></div></div></main>
-<section id="quick-menu" hidden role="dialog" aria-modal="true" aria-labelledby="menu-title"><div class="menu-backdrop"></div><div class="menu-stage"><div class="menu-screen"><div class="pause-shade"></div><div class="paper-edge"></div><div class="paper"></div><div class="menu-content"><header class="menu-title"><span>YOUR SESSION</span><h1 id="menu-title">QUICK MENU</h1><div class="title-line"><i></i></div></header><nav id="menu-list" class="menu-actions" aria-label="Menu actions"><button data-action="resume" class="selected"><span class="action-index">01</span><svg class="action-symbol icon" aria-hidden="true"><use href="#ui-play"/></svg><span class="action-text"><strong>RESUME</strong><small>Back to the city</small></span><span class="action-arrow">›</span></button><button data-action="map" class=""><span class="action-index">02</span><svg class="action-symbol icon" aria-hidden="true"><use href="#ui-map"/></svg><span class="action-text"><strong>MAP</strong><small>Places, activities and routes</small></span><span class="action-arrow">›</span></button><button data-action="settings" class=""><span class="action-index">03</span><svg class="action-symbol icon" aria-hidden="true"><use href="#ui-monitor"/></svg><span class="action-text"><strong>INTERFACE</strong><small>Your HUD, your way</small></span><span class="action-arrow">›</span></button><button data-action="gamesettings" class=""><span class="action-index">04</span><svg class="action-symbol icon" aria-hidden="true"><use href="#ui-settings"/></svg><span class="action-text"><strong>SETTINGS</strong><small>Game sound, graphics and controls</small></span><span class="action-arrow">›</span></button><button data-action="phone" class=""><span class="action-index">05</span><svg class="action-symbol icon" aria-hidden="true"><use href="#ui-phone"/></svg><span class="action-text"><strong>PHONE</strong><small>Contacts and messages</small></span><span class="action-arrow">›</span><span class="unavailable">Unavailable</span></button></nav><footer class="menu-location"><span class="location-mark">↗</span><div><strong id="menu-zone">PALETO FOREST</strong><small id="menu-street">Great Ocean Highway</small></div><time id="menu-clock">19:53</time></footer></div><aside class="context-card"><span class="eyebrow">QUICK ACCESS</span><h2 id="context-title">BACK TO THE GAME</h2><p id="context-copy">Pick your session up where you left it.</p><span class="context-rule"></span><div class="favorite-heading">QUICK ACCESS <small>1 / 2 / 3 · LEFT / RIGHT + X</small></div><div class="favorite-list"><button id="menu-favorite" class="menu-favorite"><span>FAVOURITE SHORTCUT</span><div class="favorite-main"><svg class="icon" aria-hidden="true"><use id="favorite-icon" href="#ui-map"/></svg><strong id="favorite-label">MAP</strong></div><kbd>1 / F</kbd></button><button id="menu-favorite-2" class="menu-favorite"><span>FAVOURITE 2</span><div class="favorite-main"><svg class="icon" aria-hidden="true"><use id="favorite-icon-2" href="#ui-star"/></svg><strong id="favorite-label-2"></strong></div><kbd>2</kbd></button><button id="menu-favorite-3" class="menu-favorite"><span>FAVOURITE 3</span><div class="favorite-main"><svg class="icon" aria-hidden="true"><use id="favorite-icon-3" href="#ui-star"/></svg><strong id="favorite-label-3"></strong></div><kbd>3</kbd></button></div></aside><footer class="controls"><span><kbd>↑ ↓</kbd> NAVIGATE</span><span><kbd>↵</kbd> CHOOSE</span><button data-go="hud"><kbd>ESC</kbd> RESUME</button></footer></div><section id="settings-panel" hidden aria-label="HUD settings"><div class="settings-surface"></div><header class="settings-header"><span class="session-save" role="status" aria-live="polite"><i></i> <span id="save-status" role="status">CHANGES SAVED</span></span></header><nav class="settings-tabs" aria-label="Categories"><button id="tab-prev" class="tab-key" aria-label="Previous tab">Q</button><div id="settings-tabs" role="tablist" aria-label="Settings categories"></div><button id="tab-next" class="tab-key" aria-label="Next tab">E</button></nav><header class="settings-title"><div><span class="eyebrow">CUSTOMISE THE EXPERIENCE</span><h1 id="settings-title">INTERFACE</h1></div><span id="settings-category-label">01 / 05</span></header><div class="settings-grid"><div class="settings-main"><p id="category-description" hidden></p><div class="list-heading"><span id="settings-section-label">HUD PRESENTATION</span><small>← → ADJUST</small></div><div id="preset-toolbar" class="preset-toolbar" aria-label="Display presets"><div><button data-preset="minimal" aria-pressed="false">MINIMAL</button><button data-preset="balanced" aria-pressed="false">BALANCED</button><button data-preset="detailed" aria-pressed="false">DETAILED</button></div><span id="preset-status">CUSTOM</span></div><div id="settings-rows" role="tabpanel" aria-label="Preferences"></div><div id="style-cards" class="style-cards" role="group" aria-label="Choose a blip style" hidden></div><button id="catalog-open" class="catalog-open" hidden>BROWSE THE 968 BLIPS <span>ID · NAME · REAL PREVIEW</span></button><div class="settings-reset"><div class="settings-actions"><button id="settings-undo" disabled title="Restore all settings from when you opened the menu">CANCEL CHANGES</button><button id="settings-reset-category">RESET THIS TAB</button><button id="settings-reset">RESET ALL</button></div><span id="setting-count">01 / 06</span></div></div><aside class="settings-detail"><div class="list-heading"><span>IN-GAME PREVIEW</span><small>UPDATED LIVE</small></div><div class="experience-tools"><button id="layout-open">↔ PLACE THE HUD</button><label>SITUATION <select id="preview-scenario" aria-label="Preview situation"><option value="live">Current</option><option value="health">Low health</option><option value="fuel">Fuel / engine</option><option value="radio">Radio call</option><option value="night">At night</option></select></label></div><div class="preview-toolbar" aria-label="Preview context"><div class="preview-modes"><button data-preview-mode="live" aria-pressed="true">CURRENT</button><button data-preview-mode="foot" aria-pressed="false">ON FOOT</button><button data-preview-mode="vehicle" aria-pressed="false">IN A VEHICLE</button></div><select id="preview-vehicle-kind" aria-label="Preview vehicle type" hidden><option value="0">Car</option><option value="8">Motorbike</option><option value="13">Bicycle</option><option value="14">Boat</option><option value="15">Helicopter</option><option value="16">Plane</option></select></div><div id="preview-simulation" class="preview-simulation" hidden>SIMULATED PREVIEW · NO EFFECT ON THE CHARACTER</div><div id="settings-preview" class="preview-window" aria-label="Illustrative HUD preview"><div class="preview-world"></div><div id="preview-signal" class="preview-signal" hidden></div><div class="mini-stage"><div class="hud-group"><div class="address"><span class="heading-arrow">➤</span><div><strong>GREAT OCEAN HIGHWAY</strong><small>PALETO FOREST</small></div><time>19:53</time><span class="compass">SW</span></div><div class="hud-instrument"><svg class="ui-frame ui-frame-instrument" aria-hidden="true" viewBox="0 0 1000 1000" preserveAspectRatio="none"><path class="frame-outline" d="M1 1H999V964L968 999H32L1 964Z"/><path class="frame-accent" d="M1 48V1H100M900 999H968L999 964V900"/></svg><div class="minimap"><div class="map-art"></div><div class="map-north">N</div><span class="map-player">▲</span><img class="map-point p1" src="assets/blips/classic-fishing.png" alt="Fishing"><img class="map-point p2" src="assets/blips/classic-merchant.png" alt="Merchant"></div><div class="vitals"><div class="vital health"><svg class="icon" aria-hidden="true"><use href="#heart"/></svg><div class="vital-core"><div class="vital-caption"><span>HEALTH</span><b class="health-value">78</b></div><span class="track"><i class="health-fill" style="width:78%"></i></span></div></div><div class="vital armour"><svg class="icon" aria-hidden="true"><use href="#shield"/></svg><div class="vital-core"><div class="vital-caption"><span>ARMOUR</span><b>35</b></div><span class="track"><i style="width:35%"></i></span></div></div></div><div class="needs"><div class="need hunger" title="Hunger"><svg class="icon" aria-hidden="true"><use href="#food"/></svg><div class="need-core"><div class="need-heading"><span>HUNGER</span><b class="hunger-value">64</b></div><span class="track"><i class="hunger-fill" style="width:64%"></i></span></div></div><div class="need thirst" title="Thirst"><svg class="icon" aria-hidden="true"><use href="#drop"/></svg><div class="need-core"><div class="need-heading"><span>THIRST</span><b>76</b></div><span class="track"><i style="width:76%"></i></span></div></div><div class="voice"><svg class="icon" aria-hidden="true"><use href="#mic"/></svg><span class="voice-bars"><i></i><i class="on"></i><i class="on"></i></span></div></div></div></div><div class="vehicle"><svg class="ui-frame ui-frame-panel" aria-hidden="true" viewBox="0 0 1000 1000" preserveAspectRatio="none"><path class="frame-outline" d="M1 48 35 1H965L999 35V965L965 999H35L1 965Z"/><path class="frame-accent" d="M1 110V48L35 1H125M875 999H965L999 965V875"/></svg><div class="speed-line"><div class="speed"><span>00</span>0</div><span class="speed-unit">KM/H</span><div class="gear"><strong>N</strong><span>GEAR</span></div></div><div class="rpm"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><span class="rpm-caption">RPM</span></div><div class="vehicle-extra" hidden><svg class="icon" aria-hidden="true"><use href="#ui-altitude"/></svg><span>GROUND ALT.</span><strong></strong></div><div class="cycle-effort" hidden><svg class="icon" aria-hidden="true"><use href="#ui-bicycle"/></svg><span class="track"><i></i></span><strong></strong></div><div class="vehicle-bottom"><svg class="icon" aria-hidden="true"><use href="#icon-fuel"/></svg><span class="track"><i style="width:68%"></i></span><b>68<span>%</span></b><span class="belt"><svg class="icon" aria-hidden="true"><use href="#icon-belt"/></svg><small class="belt-check" aria-hidden="true">✓</small></span></div></div></div><div id="preview-context" class="preview-context" hidden></div><span class="preview-label">YOUR INTERFACE</span></div><div id="blip-samples" hidden></div><div class="detail-copy"><span class="eyebrow" id="detail-kicker">SIZE AND READABILITY</span><h2 id="detail-title">HUD SIZE</h2><p id="detail-description">Set the size of the map and indicators together. The gauge keeps its own independent setting.</p><div class="detail-note"><span>i</span><p id="detail-hint">A compact size leaves more room for driving and interactions.</p></div></div></aside></div><footer class="settings-footer"><span class="preview-disclaimer">ILLUSTRATIVE PREVIEW · CHARACTER DATA</span><div class="controls"><span><kbd>↑ ↓</kbd> SELECT</span><span><kbd>← →</kbd> ADJUST</span><button id="settings-close"><kbd>ESC</kbd> BACK</button></div></footer><section id="blip-catalog" class="blip-catalog" hidden role="dialog" aria-modal="true" aria-labelledby="catalog-title"><header><div><span class="eyebrow">MAP AND MINIMAP</span><h2 id="catalog-title">BLIP CATALOGUE</h2></div><button id="catalog-close">ESC · BACK</button></header><div class="catalog-toolbar"><input id="catalog-search" placeholder="Search by name or identifier" aria-label="Search for a blip"><select id="catalog-category" aria-label="Filter by category"><option value="">All categories</option><option value="services">Services</option><option value="properties">Buildings</option><option value="activities">Activities</option><option value="vehicles">Vehicles</option><option value="weapons">Weapons</option><option value="navigation">Navigation</option><option value="objects">Items</option><option value="technology">Technology</option><option value="people">Characters</option><option value="missions">Missions</option></select><span id="catalog-count"></span></div><p>The original transparent entries are kept. The style is the one selected in your settings.</p><div id="catalog-grid" class="catalog-grid"></div></section></section></div></section>
-<section id="layout-editor" hidden role="dialog" aria-modal="true" aria-labelledby="layout-title"><div class="layout-safe" aria-hidden="true"></div><div class="layout-centre-x" aria-hidden="true"></div><div class="layout-centre-y" aria-hidden="true"></div><header class="layout-toolbar"><div><span class="eyebrow">CUSTOMISE THE PLACEMENT</span><h1 id="layout-title">YOUR HUD, YOUR SPACE</h1></div><nav aria-label="Instrument to move"><button data-layout-target="map" aria-pressed="true">MAP AND GAUGES</button><button data-layout-target="vehicle" aria-pressed="false">GAUGE</button><button id="layout-snap" aria-pressed="true">ALIGNMENT</button><button id="layout-reset">DEFAULT PLACEMENT</button></nav></header><div id="layout-map" class="layout-handle" tabindex="0" role="button" aria-label="Move the map and gauges"><span>↔ MAP AND GAUGES</span></div><div id="layout-vehicle" class="layout-handle" tabindex="-1" role="button" aria-label="Move the gauge"><span>↔ GAUGE</span><small>GAUGE POSITION</small></div><footer class="layout-footer"><div><b id="layout-position"></b><p id="layout-feedback" role="status"></p><small id="layout-overlap" hidden>The two instruments overlap.</small><small>Mouse: drag · Arrows: 1 px · Shift: 10 px · Gamepad: LB/RB, D-pad, A/B</small></div><button id="layout-cancel">ESC · CANCEL</button><button id="layout-save">ENTER · CONFIRM</button></footer></section><div id="compass" hidden aria-label="Compass"><div id="compass-ribbon"></div><span id="compass-mark"></span><span id="compass-degrees"></span><span id="compass-place"></span></div><aside id="money-hud" hidden aria-label="Cash and job"><div class="row"><span>CASH</span><b id="money-cash"></b></div><div class="row"><span>BANK</span><b id="money-bank"></b></div><div class="row job" id="money-job-row"><span>JOB</span><b id="money-job"></b></div><div id="money-delta" class="money-delta" aria-live="polite"></div></aside><aside id="weapon-hud" hidden aria-label="Weapon"><div class="whead"><span id="weapon-name"></span><small id="weapon-state"></small></div><div class="wmain"><div id="weapon-icon"><img id="weapon-img" alt="" hidden><svg viewBox="0 0 64 32" aria-hidden="true"><path id="weapon-shape"/></svg></div><div class="ammo"><b id="weapon-clip"></b><span id="weapon-reserve"></span></div></div><div id="weapon-pips"></div></aside><div id="cinema-top" aria-hidden="true"></div><div id="cinema-bottom" aria-hidden="true"></div><aside id="notifications" role="region" aria-label="Notifications" aria-live="polite" aria-relevant="additions"></aside><script src="locales/fr.js"></script><script src="i18n.js"></script><script src="blip-catalog.js"></script><script src="map-atlas.js"></script><script src="map2d.js"></script><script src="controls.js"></script><script src="extras/compass.js"></script><script src="extras/money.js"></script><script src="extras/weapon.js"></script><script src="extras.js"></script><script src="app.js"></script></body></html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; font-src 'self'; script-src 'self'; connect-src 'self' https:; object-src 'none'; base-uri 'none'; frame-src 'none'; form-action 'none';"
+    />
+    <title>HUD and quick menu</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="polish.css" />
+    <link rel="stylesheet" href="visual.css" />
+    <link rel="stylesheet" href="extras.css" />
+  </head>
+  <body>
+    <svg class="symbol-library" aria-hidden="true">
+      <defs>
+        <symbol id="heart" viewBox="0 0 24 24">
+          <path
+            fill="currentColor"
+            stroke="currentColor"
+            stroke-width="1.7"
+            stroke-linejoin="round"
+            d="M12 21S2 15 2 8a5 5 0 0 1 10-2 5 5 0 0 1 10 2c0 7-10 13-10 13Z"
+          />
+        </symbol>
+        <symbol id="shield" viewBox="0 0 24 24">
+          <path
+            fill="currentColor"
+            stroke="currentColor"
+            stroke-width="1.7"
+            stroke-linejoin="round"
+            d="m12 3 8 3-1 8c-1 4-7 7-7 7s-6-3-7-7L4 6Z"
+          />
+        </symbol>
+        <symbol id="food" viewBox="0 0 24 24">
+          <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <path d="M4 2v6q0 3 3 3t3-3V2M7 2v20M20 2q-7 5-5 11h5M20 2v20" />
+          </g>
+        </symbol>
+        <symbol id="drop" viewBox="0 0 24 24">
+          <path
+            fill="currentColor"
+            stroke="currentColor"
+            stroke-width="1.7"
+            stroke-linejoin="round"
+            d="M12 3S5 11 5 15a7 7 0 0 0 14 0c0-4-7-12-7-12Z"
+          />
+        </symbol>
+        <symbol id="mic" viewBox="0 0 24 24">
+          <g stroke="currentColor" fill="none" stroke-width="1.8" stroke-linecap="round">
+            <rect x="8" y="2" width="8" height="13" rx="4" />
+            <path d="M5 10v2a7 7 0 0 0 14 0v-2M12 19v3M8 22h8" />
+          </g>
+        </symbol>
+        <symbol id="icon-fuel" viewBox="0 0 24 24">
+          <g stroke="currentColor" fill="none" stroke-width="1.7" stroke-linejoin="round">
+            <path d="M3 22V3h11v19M1 22h15M5 5h7v6H5ZM14 11h3v7q0 3 3 3t2-3V7l-5-5M19 4v4h3" />
+          </g>
+        </symbol>
+        <symbol id="icon-belt" viewBox="0 0 24 24">
+          <circle cx="12" cy="4" r="2.4" fill="currentColor" />
+          <path d="M8.1 8.1Q12 6.5 15.9 8.1L17.2 16.8H6.8Z" fill="currentColor" opacity=".32" />
+          <path
+            d="M8.1 8.2 6.8 16.8M15.9 8.2l1.3 8.6M8.4 19.4 7.7 22M15.6 19.4l.7 2.6"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.7"
+            stroke-linecap="round"
+          />
+          <path
+            d="M17.4 7.5 7.1 17.8M5.8 18h12.4"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.5"
+            stroke-linecap="round"
+          />
+          <rect x="10.1" y="16.3" width="3.8" height="3.3" rx=".7" fill="currentColor" />
+        </symbol>
+        <symbol id="navigation" viewBox="0 0 24 24">
+          <path fill="currentColor" d="m12 2 10 20-10-6-10 6Z" />
+        </symbol>
+        <symbol id="engine" viewBox="0 0 24 24">
+          <path
+            d="M7 5h8M11 5v3M5 10V8h11l3 3h2v8h-4l-2 2H6v-3H3v-8ZM1 11v6"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linejoin="round"
+            stroke-linecap="round"
+          />
+        </symbol>
+        <symbol id="ui-play" viewBox="0 0 24 24">
+          <g
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="m7 3 14 9-14 9Z" fill="currentColor" stroke="none" />
+          </g>
+        </symbol>
+        <symbol id="ui-map" viewBox="0 0 24 24">
+          <g
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="m2 5 6-3 8 3 6-3v17l-6 3-8-3-6 3ZM8 2v17m8-14v17" />
+          </g>
+        </symbol>
+        <symbol id="ui-settings" viewBox="0 0 24 24">
+          <g
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path
+              d="m9 2 1-1h4l1 3 3 1 3-1 2 4-2 2v4l2 2-2 4-3-1-3 1-1 3h-4l-1-3-3-1-3 1-2-4 2-2v-4L0 8l2-4 3 1 3-1Z"
+              transform="translate(1 0) scale(.92)"
+            />
+            <circle cx="12" cy="12" r="4" />
+          </g>
+        </symbol>
+        <symbol id="ui-gamesettings" viewBox="0 0 24 24"><use href="#ui-settings" /></symbol>
+        <symbol id="ui-inventory" viewBox="0 0 24 24">
+          <g
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <rect x="3" y="6" width="18" height="15" rx="1" />
+            <path d="M8 6V3h8v3M3 12h18M10 12v3h4v-3" />
+          </g>
+        </symbol>
+        <symbol id="ui-phone" viewBox="0 0 24 24">
+          <g
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <rect x="6" y="1.5" width="12" height="21" rx="2" />
+            <path d="M10 4h4M11 20h2" />
+          </g>
+        </symbol>
+        <symbol id="ui-monitor" viewBox="0 0 24 24">
+          <g
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <rect x="2" y="3" width="20" height="14" rx="1" />
+            <path d="M12 17v5M7 22h10" />
+          </g>
+        </symbol>
+        <symbol id="ui-opacity" viewBox="0 0 24 24">
+          <g
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M12 2S5 10 5 15a7 7 0 0 0 14 0c0-5-7-13-7-13Z" />
+            <path d="M12 6v15" />
+          </g>
+        </symbol>
+        <symbol id="ui-palette" viewBox="0 0 24 24">
+          <g
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M12 2a10 10 0 1 0 0 20h2c3 0 3-4 0-4h-1c-2 0-2-4 0-4h5c6 0 5-12-6-12Z" />
+            <circle cx="7" cy="8" r=".8" />
+            <circle cx="12" cy="6" r=".8" />
+            <circle cx="17" cy="8" r=".8" />
+            <circle cx="6" cy="13" r=".8" />
+          </g>
+        </symbol>
+        <symbol id="ui-text" viewBox="0 0 24 24">
+          <g
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M3 3h18M12 3v18M8 21h8M3 3v4m18-4v4" />
+          </g>
+        </symbol>
+        <symbol id="ui-contrast" viewBox="0 0 24 24">
+          <g
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <circle cx="12" cy="12" r="9" />
+            <path d="M12 3a9 9 0 0 1 0 18Z" fill="currentColor" stroke="none" />
+          </g>
+        </symbol>
+        <symbol id="ui-position" viewBox="0 0 24 24">
+          <g
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M12 1v22M1 12h22M8 5l4-4 4 4M8 19l4 4 4-4M5 8l-4 4 4 4m14-8 4 4-4 4" />
+          </g>
+        </symbol>
+        <symbol id="ui-car" viewBox="0 0 24 24">
+          <g
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="m5 6 2-4h10l2 4 3 3v10H2V9ZM2 11h20M6 19v3m12-3v3M5 15h3m8 0h3M5 6h14" />
+          </g>
+        </symbol>
+        <symbol id="ui-gauge" viewBox="0 0 24 24">
+          <g
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M3 18a10 10 0 1 1 18 0ZM12 14l6-6M5 11l2 1m10 0 2-1M11 5v2" />
+            <circle cx="12" cy="15" r="2" />
+          </g>
+        </symbol>
+        <symbol id="ui-fuel" viewBox="0 0 24 24">
+          <g
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M3 22V3h11v19M1 22h15M5 5h7v6H5ZM14 11h3v7q0 3 3 3t2-3V7l-5-5M19 4v4h3" />
+          </g>
+        </symbol>
+        <symbol id="ui-shield" viewBox="0 0 24 24">
+          <g
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="m12 2 9 4-2 10-7 6-7-6L3 6Z" />
+            <path d="m8 12 3 3 5-6" />
+          </g>
+        </symbol>
+        <symbol id="ui-voice" viewBox="0 0 24 24">
+          <g
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <rect x="8" y="2" width="8" height="13" rx="4" />
+            <path d="M5 10v2a7 7 0 0 0 14 0v-2M12 19v3M8 22h8" />
+          </g>
+        </symbol>
+        <symbol id="ui-muted" viewBox="0 0 24 24">
+          <g
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path
+              d="m3 3 18 18M8 7V6a4 4 0 0 1 8 0v6M8 11v1a4 4 0 0 0 7 2M5 10v2a7 7 0 0 0 12 5m2-5v-2M12 19v3M8 22h8"
+            />
+          </g>
+        </symbol>
+        <symbol id="ui-radio" viewBox="0 0 24 24">
+          <g
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path
+              d="M12 9v13M8 22h8M7 6a8 8 0 0 0 0 12m10-12a8 8 0 0 1 0 12M4 3a12 12 0 0 0 0 18M20 3a12 12 0 0 1 0 18"
+            />
+            <circle cx="12" cy="12" r="2" fill="currentColor" />
+          </g>
+        </symbol>
+        <symbol id="ui-run" viewBox="0 0 24 24">
+          <g
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <circle cx="15" cy="3" r="2" fill="currentColor" />
+            <path d="m10 8 3-2 3 5h5M6 10l4-2 2 7-5 6M12 15l5 3v4M3 6h4M1 12h4" />
+          </g>
+        </symbol>
+        <symbol id="ui-bicycle" viewBox="0 0 24 24">
+          <g
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <circle cx="5" cy="17" r="4" />
+            <circle cx="19" cy="17" r="4" />
+            <path d="m5 17 5-9 6 9H5l4-6m7 6-4-12H9M12 5h4m-8 3h4" />
+          </g>
+        </symbol>
+        <symbol id="ui-altitude" viewBox="0 0 24 24">
+          <g
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="m1 21 8-17 5 10 3-6 6 13ZM6 10l3 3 3-3m4 1 1 2 2-1" />
+          </g>
+        </symbol>
+        <symbol id="ui-wave" viewBox="0 0 24 24">
+          <g
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M1 8q3-4 6 0t6 0 6 0 4 0M1 15q3-4 6 0t6 0 6 0 4 0" />
+          </g>
+        </symbol>
+        <symbol id="ui-info" viewBox="0 0 24 24">
+          <g
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <circle cx="12" cy="12" r="10" />
+            <path d="M12 10v7M12 6v1" />
+          </g>
+        </symbol>
+        <symbol id="ui-success" viewBox="0 0 24 24">
+          <g
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <circle cx="12" cy="12" r="10" />
+            <path d="m6 12 4 4 8-9" />
+          </g>
+        </symbol>
+        <symbol id="ui-warning" viewBox="0 0 24 24">
+          <g
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="m12 2 11 20H1Z" />
+            <path d="M12 9v5M12 17v1" />
+          </g>
+        </symbol>
+        <symbol id="ui-error" viewBox="0 0 24 24">
+          <g
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <circle cx="12" cy="12" r="10" />
+            <path d="m8 8 8 8m0-8-8 8" />
+          </g>
+        </symbol>
+        <symbol id="ui-right" viewBox="0 0 24 24">
+          <g
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M5 21V9h14M14 3l6 6-6 6" stroke-width="3" />
+          </g>
+        </symbol>
+        <symbol id="ui-left" viewBox="0 0 24 24">
+          <g
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M19 21V9H5m5-6L4 9l6 6" stroke-width="3" />
+          </g>
+        </symbol>
+        <symbol id="ui-straight" viewBox="0 0 24 24">
+          <g
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M12 22V3M5 10l7-7 7 7" stroke-width="3" />
+          </g>
+        </symbol>
+        <symbol id="ui-uturn" viewBox="0 0 24 24">
+          <g
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M19 22V9a7 7 0 0 0-14 0v7m-4-5 4 5 4-5" stroke-width="2.8" />
+          </g>
+        </symbol>
+        <symbol id="ui-pin" viewBox="0 0 24 24">
+          <g
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z" />
+            <circle cx="12" cy="10" r="3" />
+          </g>
+        </symbol>
+        <symbol id="ui-clock" viewBox="0 0 24 24">
+          <g
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <circle cx="12" cy="12" r="10" />
+            <path d="M12 6v6l4 3" />
+          </g>
+        </symbol>
+        <symbol id="ui-star" viewBox="0 0 24 24">
+          <g
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="m12 2 3 6 7 1-5 5 1 8-6-4-6 4 1-8-5-5 7-1Z" />
+          </g>
+        </symbol>
+        <symbol id="ui-reset" viewBox="0 0 24 24">
+          <g
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M3 9a9 9 0 1 1 0 7M3 3v6h6" />
+          </g>
+        </symbol>
+        <symbol id="ui-undo" viewBox="0 0 24 24">
+          <g
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="m7 4-6 6 6 6M1 10h13a7 7 0 0 1 0 14" transform="translate(1 -2) scale(.9)" />
+          </g>
+        </symbol>
+      </defs>
+    </svg>
+    <main id="hud" hidden aria-label="Game information">
+      <div id="map-cluster" class="hud-group">
+        <div id="gps-panel" class="gps-panel" hidden aria-label="GPS guidance">
+          <span id="gps-arrow" aria-hidden="true">↑</span>
+          <div class="gps-copy">
+            <strong id="gps-direction"></strong><small id="gps-step"></small
+            ><small id="gps-destination" class="gps-destination"></small>
+          </div>
+          <div id="gps-manoeuvre" class="gps-manoeuvre" hidden>
+            <b id="gps-turn"></b><small>ESTIMATED</small>
+          </div>
+          <div class="gps-remaining"><b id="gps-distance"></b><small>REMAINING</small></div>
+        </div>
+        <div id="location" class="address">
+          <span class="heading-arrow">➤</span>
+          <div><strong id="street">GREAT OCEAN HIGHWAY</strong><small id="zone">PALETO FOREST</small></div>
+          <time id="clock">19:53</time><span id="direction" class="compass">SW</span>
+        </div>
+        <div class="hud-instrument">
+          <svg
+            class="ui-frame ui-frame-instrument"
+            aria-hidden="true"
+            viewBox="0 0 1000 1000"
+            preserveAspectRatio="none"
+          >
+            <path class="frame-outline" d="M1 1H999V964L968 999H32L1 964Z" />
+            <path class="frame-accent" d="M1 48V1H100M900 999H968L999 964V900" />
+          </svg>
+          <div id="map-frame" class="minimap" aria-hidden="true"><div id="preview-map"></div></div>
+          <div class="vitals">
+            <div
+              id="health"
+              class="vital meter health"
+              role="meter"
+              aria-label="Health"
+              aria-valuemin="0"
+              aria-valuemax="100"
+            >
+              <svg class="icon" aria-hidden="true"><use href="#heart" /></svg>
+              <div class="vital-core">
+                <div class="vital-caption">
+                  <span>HEALTH</span><b id="health-value" class="health-value">78</b>
+                </div>
+                <span class="track"><i class="health-fill"></i></span>
+              </div>
+            </div>
+            <div
+              id="armour"
+              class="vital meter armour"
+              role="meter"
+              aria-label="Armour"
+              aria-valuemin="0"
+              aria-valuemax="100"
+            >
+              <svg class="icon" aria-hidden="true"><use href="#shield" /></svg>
+              <div class="vital-core">
+                <div class="vital-caption"><span>ARMOUR</span><b id="armour-value">35</b></div>
+                <span class="track"><i></i></span>
+              </div>
+            </div>
+          </div>
+          <div class="needs">
+            <div
+              id="hunger"
+              class="need meter hunger"
+              role="meter"
+              aria-label="Hunger"
+              aria-valuemin="0"
+              aria-valuemax="100"
+              title="Hunger"
+            >
+              <svg class="icon" aria-hidden="true"><use href="#food" /></svg>
+              <div class="need-core">
+                <div class="need-heading">
+                  <span>HUNGER</span><b id="hunger-value" class="hunger-value">64</b>
+                </div>
+                <span class="track"><i class="hunger-fill"></i></span>
+              </div>
+            </div>
+            <div
+              id="thirst"
+              class="need meter thirst"
+              role="meter"
+              aria-label="Thirst"
+              aria-valuemin="0"
+              aria-valuemax="100"
+              title="Thirst"
+            >
+              <svg class="icon" aria-hidden="true"><use href="#drop" /></svg>
+              <div class="need-core">
+                <div class="need-heading"><span>THIRST</span><b id="thirst-value">76</b></div>
+                <span class="track"><i></i></span>
+              </div>
+            </div>
+            <div id="voice" class="voice" aria-label="Voice range">
+              <svg class="icon" aria-hidden="true"><use href="#mic" /></svg
+              ><span class="voice-bars"><i></i><i class="active"></i><i class="active"></i></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="context-strip" class="context-strip" hidden aria-live="polite">
+        <span id="context-symbol"></span>
+        <div>
+          <strong id="context-title-live"></strong><span class="track"><i id="context-fill"></i></span>
+        </div>
+        <b id="context-value"></b>
+      </div>
+      <div id="voice-detail" class="voice-detail" hidden>
+        <svg class="icon" aria-hidden="true"><use href="#mic" /></svg><span id="voice-detail-label"></span
+        ><b id="voice-detail-value"></b>
+      </div>
+      <div id="vehicle-context">
+        <div id="vehicle" class="vehicle" hidden aria-label="Vehicle gauge">
+          <svg
+            class="ui-frame ui-frame-panel"
+            aria-hidden="true"
+            viewBox="0 0 1000 1000"
+            preserveAspectRatio="none"
+          >
+            <path class="frame-outline" d="M1 48 35 1H965L999 35V965L965 999H35L1 965Z" />
+            <path class="frame-accent" d="M1 110V48L35 1H125M875 999H965L999 965V875" />
+          </svg>
+          <div class="speed-line">
+            <div id="speed" class="speed"><span>00</span>0</div>
+            <span id="speed-unit" class="speed-unit">KM/H</span>
+            <div class="gear"><strong id="gear">N</strong><span>GEAR</span></div>
+          </div>
+          <div
+            id="rpm"
+            class="rpm"
+            role="meter"
+            aria-label="Engine RPM"
+            aria-valuemin="0"
+            aria-valuemax="100"
+          >
+            <i class="active"></i><i class="active"></i><i class="active"></i><i class="active"></i
+            ><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i
+            ><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i
+            ><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i
+            ><i class=""></i><i class=""></i><span class="rpm-caption">RPM</span>
+          </div>
+          <div class="vehicle-extra" hidden>
+            <svg class="icon" aria-hidden="true"><use href="#ui-altitude" /></svg><span>GROUND ALT.</span
+            ><strong></strong>
+          </div>
+          <div class="cycle-effort" hidden>
+            <svg class="icon" aria-hidden="true"><use href="#ui-bicycle" /></svg
+            ><span class="track"><i></i></span><strong></strong>
+          </div>
+          <div class="vehicle-bottom vehicle-row">
+            <div
+              id="fuel"
+              class="meter fuel"
+              role="meter"
+              aria-label="Fuel"
+              aria-valuemin="0"
+              aria-valuemax="100"
+            >
+              <svg class="icon" aria-hidden="true"><use href="#icon-fuel" /></svg
+              ><span class="track"><i></i></span><b id="fuel-value">68 %</b>
+            </div>
+            <span id="belt" class="belt" title="Seatbelt"
+              ><svg class="icon" aria-hidden="true"><use href="#icon-belt" /></svg
+              ><small class="belt-check" aria-hidden="true">✓</small></span
+            >
+          </div>
+        </div>
+        <div id="vehicle-state" class="vehicle-state" hidden></div>
+        <div id="vehicle-alerts" class="vehicle-alerts" hidden aria-live="polite">
+          <div id="fuel-alert" class="driving-alert" hidden>
+            <svg class="icon" aria-hidden="true"><use href="#icon-fuel" /></svg
+            ><span id="fuel-alert-text"></span><b id="fuel-alert-value"></b>
+          </div>
+          <div id="engine-alert" class="driving-alert" hidden>
+            <svg class="icon" aria-hidden="true"><use href="#engine" /></svg
+            ><span id="engine-alert-text"></span><b id="engine-alert-value" class="detailed-value"></b>
+          </div>
+          <div id="damage-alert" class="driving-alert" hidden>
+            <svg class="icon" aria-hidden="true"><use href="#engine" /></svg
+            ><span id="damage-alert-text"></span><b id="damage-alert-value" class="detailed-value"></b>
+          </div>
+        </div>
+      </div>
+    </main>
+    <section id="quick-menu" hidden role="dialog" aria-modal="true" aria-labelledby="menu-title">
+      <div class="menu-backdrop"></div>
+      <div class="menu-stage">
+        <div class="menu-screen">
+          <div class="pause-shade"></div>
+          <div class="paper-edge"></div>
+          <div class="paper"></div>
+          <div class="menu-content">
+            <header class="menu-title">
+              <span>YOUR SESSION</span>
+              <h1 id="menu-title">QUICK MENU</h1>
+              <div class="title-line"><i></i></div>
+            </header>
+            <nav id="menu-list" class="menu-actions" aria-label="Menu actions">
+              <button data-action="resume" class="selected">
+                <span class="action-index">01</span
+                ><svg class="action-symbol icon" aria-hidden="true"><use href="#ui-play" /></svg
+                ><span class="action-text"><strong>RESUME</strong><small>Back to the city</small></span
+                ><span class="action-arrow">›</span></button
+              ><button data-action="map" class="">
+                <span class="action-index">02</span
+                ><svg class="action-symbol icon" aria-hidden="true"><use href="#ui-map" /></svg
+                ><span class="action-text"
+                  ><strong>MAP</strong><small>Places, activities and routes</small></span
+                ><span class="action-arrow">›</span></button
+              ><button data-action="settings" class="">
+                <span class="action-index">03</span
+                ><svg class="action-symbol icon" aria-hidden="true"><use href="#ui-monitor" /></svg
+                ><span class="action-text"><strong>INTERFACE</strong><small>Your HUD, your way</small></span
+                ><span class="action-arrow">›</span></button
+              ><button data-action="gamesettings" class="">
+                <span class="action-index">04</span
+                ><svg class="action-symbol icon" aria-hidden="true"><use href="#ui-settings" /></svg
+                ><span class="action-text"
+                  ><strong>SETTINGS</strong><small>Game sound, graphics and controls</small></span
+                ><span class="action-arrow">›</span></button
+              ><button data-action="phone" class="">
+                <span class="action-index">05</span
+                ><svg class="action-symbol icon" aria-hidden="true"><use href="#ui-phone" /></svg
+                ><span class="action-text"><strong>PHONE</strong><small>Contacts and messages</small></span
+                ><span class="action-arrow">›</span><span class="unavailable">Unavailable</span>
+              </button>
+            </nav>
+            <footer class="menu-location">
+              <span class="location-mark">↗</span>
+              <div>
+                <strong id="menu-zone">PALETO FOREST</strong
+                ><small id="menu-street">Great Ocean Highway</small>
+              </div>
+              <time id="menu-clock">19:53</time>
+            </footer>
+          </div>
+          <aside class="context-card">
+            <span class="eyebrow">QUICK ACCESS</span>
+            <h2 id="context-title">BACK TO THE GAME</h2>
+            <p id="context-copy">Pick your session up where you left it.</p>
+            <span class="context-rule"></span>
+            <div class="favorite-heading">QUICK ACCESS <small>1 / 2 / 3 · LEFT / RIGHT + X</small></div>
+            <div class="favorite-list">
+              <button id="menu-favorite" class="menu-favorite">
+                <span>FAVOURITE SHORTCUT</span>
+                <div class="favorite-main">
+                  <svg class="icon" aria-hidden="true"><use id="favorite-icon" href="#ui-map" /></svg
+                  ><strong id="favorite-label">MAP</strong>
+                </div>
+                <kbd>1 / F</kbd></button
+              ><button id="menu-favorite-2" class="menu-favorite">
+                <span>FAVOURITE 2</span>
+                <div class="favorite-main">
+                  <svg class="icon" aria-hidden="true"><use id="favorite-icon-2" href="#ui-star" /></svg
+                  ><strong id="favorite-label-2"></strong>
+                </div>
+                <kbd>2</kbd></button
+              ><button id="menu-favorite-3" class="menu-favorite">
+                <span>FAVOURITE 3</span>
+                <div class="favorite-main">
+                  <svg class="icon" aria-hidden="true"><use id="favorite-icon-3" href="#ui-star" /></svg
+                  ><strong id="favorite-label-3"></strong>
+                </div>
+                <kbd>3</kbd>
+              </button>
+            </div>
+          </aside>
+          <footer class="controls">
+            <span><kbd>↑ ↓</kbd> NAVIGATE</span><span><kbd>↵</kbd> CHOOSE</span
+            ><button data-go="hud"><kbd>ESC</kbd> RESUME</button>
+          </footer>
+        </div>
+        <section id="settings-panel" hidden aria-label="HUD settings">
+          <div class="settings-surface"></div>
+          <header class="settings-header">
+            <span class="session-save" role="status" aria-live="polite"
+              ><i></i> <span id="save-status" role="status">CHANGES SAVED</span></span
+            >
+          </header>
+          <nav class="settings-tabs" aria-label="Categories">
+            <button id="tab-prev" class="tab-key" aria-label="Previous tab">Q</button>
+            <div id="settings-tabs" role="tablist" aria-label="Settings categories"></div>
+            <button id="tab-next" class="tab-key" aria-label="Next tab">E</button>
+          </nav>
+          <header class="settings-title">
+            <div>
+              <span class="eyebrow">CUSTOMISE THE EXPERIENCE</span>
+              <h1 id="settings-title">INTERFACE</h1>
+            </div>
+            <span id="settings-category-label">01 / 05</span>
+          </header>
+          <div class="settings-grid">
+            <div class="settings-main">
+              <p id="category-description" hidden></p>
+              <div class="list-heading">
+                <span id="settings-section-label">HUD PRESENTATION</span><small>← → ADJUST</small>
+              </div>
+              <div id="preset-toolbar" class="preset-toolbar" aria-label="Display presets">
+                <div>
+                  <button data-preset="minimal" aria-pressed="false">MINIMAL</button
+                  ><button data-preset="balanced" aria-pressed="false">BALANCED</button
+                  ><button data-preset="detailed" aria-pressed="false">DETAILED</button>
+                </div>
+                <span id="preset-status">CUSTOM</span>
+              </div>
+              <div id="settings-rows" role="tabpanel" aria-label="Preferences"></div>
+              <div
+                id="style-cards"
+                class="style-cards"
+                role="group"
+                aria-label="Choose a blip style"
+                hidden
+              ></div>
+              <button id="catalog-open" class="catalog-open" hidden>
+                BROWSE THE 968 BLIPS <span>ID · NAME · REAL PREVIEW</span>
+              </button>
+              <div class="settings-reset">
+                <div class="settings-actions">
+                  <button
+                    id="settings-undo"
+                    disabled
+                    title="Restore all settings from when you opened the menu"
+                  >
+                    CANCEL CHANGES</button
+                  ><button id="settings-reset-category">RESET THIS TAB</button
+                  ><button id="settings-reset">RESET ALL</button>
+                </div>
+                <span id="setting-count">01 / 06</span>
+              </div>
+            </div>
+            <aside class="settings-detail">
+              <div class="list-heading"><span>IN-GAME PREVIEW</span><small>UPDATED LIVE</small></div>
+              <div class="experience-tools">
+                <button id="layout-open">↔ PLACE THE HUD</button
+                ><label
+                  >SITUATION
+                  <select id="preview-scenario" aria-label="Preview situation">
+                    <option value="live">Current</option>
+                    <option value="health">Low health</option>
+                    <option value="fuel">Fuel / engine</option>
+                    <option value="radio">Radio call</option>
+                    <option value="night">At night</option>
+                  </select></label
+                >
+              </div>
+              <div class="preview-toolbar" aria-label="Preview context">
+                <div class="preview-modes">
+                  <button data-preview-mode="live" aria-pressed="true">CURRENT</button
+                  ><button data-preview-mode="foot" aria-pressed="false">ON FOOT</button
+                  ><button data-preview-mode="vehicle" aria-pressed="false">IN A VEHICLE</button>
+                </div>
+                <select id="preview-vehicle-kind" aria-label="Preview vehicle type" hidden>
+                  <option value="0">Car</option>
+                  <option value="8">Motorbike</option>
+                  <option value="13">Bicycle</option>
+                  <option value="14">Boat</option>
+                  <option value="15">Helicopter</option>
+                  <option value="16">Plane</option>
+                </select>
+              </div>
+              <div id="preview-simulation" class="preview-simulation" hidden>
+                SIMULATED PREVIEW · NO EFFECT ON THE CHARACTER
+              </div>
+              <div id="settings-preview" class="preview-window" aria-label="Illustrative HUD preview">
+                <div class="preview-world"></div>
+                <div id="preview-signal" class="preview-signal" hidden></div>
+                <div class="mini-stage">
+                  <div class="hud-group">
+                    <div class="address">
+                      <span class="heading-arrow">➤</span>
+                      <div><strong>GREAT OCEAN HIGHWAY</strong><small>PALETO FOREST</small></div>
+                      <time>19:53</time><span class="compass">SW</span>
+                    </div>
+                    <div class="hud-instrument">
+                      <svg
+                        class="ui-frame ui-frame-instrument"
+                        aria-hidden="true"
+                        viewBox="0 0 1000 1000"
+                        preserveAspectRatio="none"
+                      >
+                        <path class="frame-outline" d="M1 1H999V964L968 999H32L1 964Z" />
+                        <path class="frame-accent" d="M1 48V1H100M900 999H968L999 964V900" />
+                      </svg>
+                      <div class="minimap">
+                        <div class="map-art"></div>
+                        <div class="map-north">N</div>
+                        <span class="map-player">▲</span
+                        ><img class="map-point p1" src="assets/blips/classic-fishing.png" alt="Fishing" /><img
+                          class="map-point p2"
+                          src="assets/blips/classic-merchant.png"
+                          alt="Merchant"
+                        />
+                      </div>
+                      <div class="vitals">
+                        <div class="vital health">
+                          <svg class="icon" aria-hidden="true"><use href="#heart" /></svg>
+                          <div class="vital-core">
+                            <div class="vital-caption"><span>HEALTH</span><b class="health-value">78</b></div>
+                            <span class="track"><i class="health-fill" style="width: 78%"></i></span>
+                          </div>
+                        </div>
+                        <div class="vital armour">
+                          <svg class="icon" aria-hidden="true"><use href="#shield" /></svg>
+                          <div class="vital-core">
+                            <div class="vital-caption"><span>ARMOUR</span><b>35</b></div>
+                            <span class="track"><i style="width: 35%"></i></span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="needs">
+                        <div class="need hunger" title="Hunger">
+                          <svg class="icon" aria-hidden="true"><use href="#food" /></svg>
+                          <div class="need-core">
+                            <div class="need-heading"><span>HUNGER</span><b class="hunger-value">64</b></div>
+                            <span class="track"><i class="hunger-fill" style="width: 64%"></i></span>
+                          </div>
+                        </div>
+                        <div class="need thirst" title="Thirst">
+                          <svg class="icon" aria-hidden="true"><use href="#drop" /></svg>
+                          <div class="need-core">
+                            <div class="need-heading"><span>THIRST</span><b>76</b></div>
+                            <span class="track"><i style="width: 76%"></i></span>
+                          </div>
+                        </div>
+                        <div class="voice">
+                          <svg class="icon" aria-hidden="true"><use href="#mic" /></svg
+                          ><span class="voice-bars"><i></i><i class="on"></i><i class="on"></i></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="vehicle">
+                    <svg
+                      class="ui-frame ui-frame-panel"
+                      aria-hidden="true"
+                      viewBox="0 0 1000 1000"
+                      preserveAspectRatio="none"
+                    >
+                      <path class="frame-outline" d="M1 48 35 1H965L999 35V965L965 999H35L1 965Z" />
+                      <path class="frame-accent" d="M1 110V48L35 1H125M875 999H965L999 965V875" />
+                    </svg>
+                    <div class="speed-line">
+                      <div class="speed"><span>00</span>0</div>
+                      <span class="speed-unit">KM/H</span>
+                      <div class="gear"><strong>N</strong><span>GEAR</span></div>
+                    </div>
+                    <div class="rpm">
+                      <i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i
+                      ><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i
+                      ><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i
+                      ><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i
+                      ><i class=""></i><i class=""></i><i class=""></i><i class=""></i
+                      ><span class="rpm-caption">RPM</span>
+                    </div>
+                    <div class="vehicle-extra" hidden>
+                      <svg class="icon" aria-hidden="true"><use href="#ui-altitude" /></svg
+                      ><span>GROUND ALT.</span><strong></strong>
+                    </div>
+                    <div class="cycle-effort" hidden>
+                      <svg class="icon" aria-hidden="true"><use href="#ui-bicycle" /></svg
+                      ><span class="track"><i></i></span><strong></strong>
+                    </div>
+                    <div class="vehicle-bottom">
+                      <svg class="icon" aria-hidden="true"><use href="#icon-fuel" /></svg
+                      ><span class="track"><i style="width: 68%"></i></span><b>68<span>%</span></b
+                      ><span class="belt"
+                        ><svg class="icon" aria-hidden="true"><use href="#icon-belt" /></svg
+                        ><small class="belt-check" aria-hidden="true">✓</small></span
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div id="preview-context" class="preview-context" hidden></div>
+                <span class="preview-label">YOUR INTERFACE</span>
+              </div>
+              <div id="blip-samples" hidden></div>
+              <div class="detail-copy">
+                <span class="eyebrow" id="detail-kicker">SIZE AND READABILITY</span>
+                <h2 id="detail-title">HUD SIZE</h2>
+                <p id="detail-description">
+                  Set the size of the map and indicators together. The gauge keeps its own independent
+                  setting.
+                </p>
+                <div class="detail-note">
+                  <span>i</span>
+                  <p id="detail-hint">A compact size leaves more room for driving and interactions.</p>
+                </div>
+              </div>
+            </aside>
+          </div>
+          <footer class="settings-footer">
+            <span class="preview-disclaimer">ILLUSTRATIVE PREVIEW · CHARACTER DATA</span>
+            <div class="controls">
+              <span><kbd>↑ ↓</kbd> SELECT</span><span><kbd>← →</kbd> ADJUST</span
+              ><button id="settings-close"><kbd>ESC</kbd> BACK</button>
+            </div>
+          </footer>
+          <section
+            id="blip-catalog"
+            class="blip-catalog"
+            hidden
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="catalog-title"
+          >
+            <header>
+              <div>
+                <span class="eyebrow">MAP AND MINIMAP</span>
+                <h2 id="catalog-title">BLIP CATALOGUE</h2>
+              </div>
+              <button id="catalog-close">ESC · BACK</button>
+            </header>
+            <div class="catalog-toolbar">
+              <input
+                id="catalog-search"
+                placeholder="Search by name or identifier"
+                aria-label="Search for a blip"
+              /><select id="catalog-category" aria-label="Filter by category">
+                <option value="">All categories</option>
+                <option value="services">Services</option>
+                <option value="properties">Buildings</option>
+                <option value="activities">Activities</option>
+                <option value="vehicles">Vehicles</option>
+                <option value="weapons">Weapons</option>
+                <option value="navigation">Navigation</option>
+                <option value="objects">Items</option>
+                <option value="technology">Technology</option>
+                <option value="people">Characters</option>
+                <option value="missions">Missions</option></select
+              ><span id="catalog-count"></span>
+            </div>
+            <p>The original transparent entries are kept. The style is the one selected in your settings.</p>
+            <div id="catalog-grid" class="catalog-grid"></div>
+          </section>
+        </section>
+      </div>
+    </section>
+    <section id="layout-editor" hidden role="dialog" aria-modal="true" aria-labelledby="layout-title">
+      <div class="layout-safe" aria-hidden="true"></div>
+      <div class="layout-centre-x" aria-hidden="true"></div>
+      <div class="layout-centre-y" aria-hidden="true"></div>
+      <header class="layout-toolbar">
+        <div>
+          <span class="eyebrow">CUSTOMISE THE PLACEMENT</span>
+          <h1 id="layout-title">YOUR HUD, YOUR SPACE</h1>
+        </div>
+        <nav aria-label="Instrument to move">
+          <button data-layout-target="map" aria-pressed="true">MAP AND GAUGES</button
+          ><button data-layout-target="vehicle" aria-pressed="false">GAUGE</button
+          ><button id="layout-snap" aria-pressed="true">ALIGNMENT</button
+          ><button id="layout-reset">DEFAULT PLACEMENT</button>
+        </nav>
+      </header>
+      <div
+        id="layout-map"
+        class="layout-handle"
+        tabindex="0"
+        role="button"
+        aria-label="Move the map and gauges"
+      >
+        <span>↔ MAP AND GAUGES</span>
+      </div>
+      <div id="layout-vehicle" class="layout-handle" tabindex="-1" role="button" aria-label="Move the gauge">
+        <span>↔ GAUGE</span><small>GAUGE POSITION</small>
+      </div>
+      <footer class="layout-footer">
+        <div>
+          <b id="layout-position"></b>
+          <p id="layout-feedback" role="status"></p>
+          <small id="layout-overlap" hidden>The two instruments overlap.</small
+          ><small>Mouse: drag · Arrows: 1 px · Shift: 10 px · Gamepad: LB/RB, D-pad, A/B</small>
+        </div>
+        <button id="layout-cancel">ESC · CANCEL</button><button id="layout-save">ENTER · CONFIRM</button>
+      </footer>
+    </section>
+    <div id="compass" hidden aria-label="Compass">
+      <div id="compass-ribbon"></div>
+      <span id="compass-mark"></span><span id="compass-degrees"></span><span id="compass-place"></span>
+    </div>
+    <aside id="money-hud" hidden aria-label="Cash and job">
+      <div class="row"><span>CASH</span><b id="money-cash"></b></div>
+      <div class="row"><span>BANK</span><b id="money-bank"></b></div>
+      <div class="row job" id="money-job-row"><span>JOB</span><b id="money-job"></b></div>
+      <div id="money-delta" class="money-delta" aria-live="polite"></div>
+    </aside>
+    <aside id="weapon-hud" hidden aria-label="Weapon">
+      <div class="whead"><span id="weapon-name"></span><small id="weapon-state"></small></div>
+      <div class="wmain">
+        <div id="weapon-icon">
+          <img id="weapon-img" alt="" hidden /><svg viewBox="0 0 64 32" aria-hidden="true">
+            <path id="weapon-shape" />
+          </svg>
+        </div>
+        <div class="ammo"><b id="weapon-clip"></b><span id="weapon-reserve"></span></div>
+      </div>
+      <div id="weapon-pips"></div>
+    </aside>
+    <div id="cinema-top" aria-hidden="true"></div>
+    <div id="cinema-bottom" aria-hidden="true"></div>
+    <aside
+      id="notifications"
+      role="region"
+      aria-label="Notifications"
+      aria-live="polite"
+      aria-relevant="additions"
+    ></aside>
+    <script src="locales/fr.js"></script>
+    <script src="i18n.js"></script>
+    <script src="blip-catalog.js"></script>
+    <script src="map-atlas.js"></script>
+    <script src="map2d.js"></script>
+    <script src="controls.js"></script>
+    <script src="extras/compass.js"></script>
+    <script src="extras/money.js"></script>
+    <script src="extras/weapon.js"></script>
+    <script src="extras.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,21 +1,9 @@
-# Local backups made before updates
 backups/
 releases/
 
-# Old 3D map, no longer loaded by the HUD (the 2D map replaces it)
-web/map3d.js
-web/vendor/
-web/assets/map3d/
-tools/map3d/
-MAP3D.md
-licenses/MAP3D-UPSTREAM-GPL-3.0.txt
-licenses/THREE-MIT.txt
-
-# Modified GTA file, not redistributed in the repository (see THIRD_PARTY.md)
+# Modified GTA file, not redistributed (see THIRD_PARTY.md)
 stream/minimap.gfx
 
-# Misc
 *.log
 .DS_Store
 Thumbs.db
-web/assets/map2d/

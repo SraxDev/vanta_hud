@@ -14,7 +14,7 @@ window.VantaWeaponHud = function createWeaponHud(ui) {
     sniper: 'M2 13h46v3H30l-2 4h-6l1-4H6zM44 12h18v2H44zM18 8h14v3H18z',
     heavy: 'M4 9h40l8-2v6H44l-4 3H10l-6-3zM22 16h8v9h-8z',
     melee: 'M30 2l4 4-18 18-6 2 2-6zM6 26l6-2-4 6z',
-    thrown: 'M24 8h8v4a10 10 0 11-8 0zM26 2h4v6h-4z'
+    thrown: 'M24 8h8v4a10 10 0 11-8 0zM26 2h4v6h-4z',
   };
 
   const $ = (id) => document.getElementById(id);
@@ -37,7 +37,10 @@ window.VantaWeaponHud = function createWeaponHud(ui) {
       const rect = element.getBoundingClientRect();
       if (!(rect.width > 0 && rect.height > 0 && rect.right > innerWidth * 0.55)) continue;
       if (rect.top < top) top = rect.top;
-      if (element.id === 'vehicle') { right = rect.right; width = rect.width; }
+      if (element.id === 'vehicle') {
+        right = rect.right;
+        width = rect.width;
+      }
     }
 
     const unit = innerHeight / 1080;
@@ -71,8 +74,14 @@ window.VantaWeaponHud = function createWeaponHud(ui) {
     wrapper.classList.remove('photo');
     if (!name) return;
 
-    image.onload = () => { image.hidden = false; wrapper.classList.add('photo'); };
-    image.onerror = () => { image.hidden = true; wrapper.classList.remove('photo'); };
+    image.onload = () => {
+      image.hidden = false;
+      wrapper.classList.add('photo');
+    };
+    image.onerror = () => {
+      image.hidden = true;
+      wrapper.classList.remove('photo');
+    };
     image.src = 'weapons/' + name + '.png';
   }
 
@@ -97,7 +106,16 @@ window.VantaWeaponHud = function createWeaponHud(ui) {
     if (!visible) return;
     place(root);
 
-    const key = [weapon.name, weapon.icon, weapon.kind, weapon.clipSize, weapon.clip, weapon.reserve, weapon.melee, weapon.reloading].join('|');
+    const key = [
+      weapon.name,
+      weapon.icon,
+      weapon.kind,
+      weapon.clipSize,
+      weapon.clip,
+      weapon.reserve,
+      weapon.melee,
+      weapon.reloading,
+    ].join('|');
     if (key === lastKey && !wasHidden) return;
     lastKey = key;
 
@@ -106,7 +124,7 @@ window.VantaWeaponHud = function createWeaponHud(ui) {
     const reserve = Number.isFinite(weapon.reserve) ? weapon.reserve : 0;
     const melee = weapon.melee === true;
 
-    $('weapon-name').textContent = String(weapon.name || t("WEAPON")).slice(0, 32);
+    $('weapon-name').textContent = String(weapon.name || t('WEAPON')).slice(0, 32);
     $('weapon-shape').setAttribute('d', SHAPES[weapon.kind] || SHAPES.pistol);
     paintIcon(weapon.icon);
 
@@ -122,10 +140,10 @@ window.VantaWeaponHud = function createWeaponHud(ui) {
     root.classList.toggle('low', low || (noClip && !empty));
 
     let state = '';
-    if (weapon.reloading) state = t("RELOADING");
-    else if (empty) state = t("OUT OF AMMO");
-    else if (noClip) state = t("MAGAZINE EMPTY");
-    else if (low) state = t("LOW AMMO");
+    if (weapon.reloading) state = t('RELOADING');
+    else if (empty) state = t('OUT OF AMMO');
+    else if (noClip) state = t('MAGAZINE EMPTY');
+    else if (low) state = t('LOW AMMO');
     $('weapon-state').textContent = state;
   }
 
@@ -153,6 +171,6 @@ window.VantaWeaponHud = function createWeaponHud(ui) {
       wasInVehicle = inVehicle;
       clearTimeout(settleTimer);
       settleTimer = setTimeout(relayout, 450);
-    }
+    },
   };
 };
