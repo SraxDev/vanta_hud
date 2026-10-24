@@ -71,6 +71,8 @@ CreateThread(function()
         Wait(Config.CustomMap.enabled and 2000 or 500)
     end
 end)
+-- native stand-ins for Vanta icons when minimap.gfx is not streamed (same as shared/blip_info.lua)
+local fallbackSprite = { [966] = 356, [967] = 52 }
 exports('GetBlipSprite', function(kind)
     return Config.Blips.slots[kind]
 end)
@@ -82,12 +84,15 @@ CreateThread(function()
         if sprite and point.coords then
             local b = AddBlipForCoord(point.coords.x, point.coords.y, point.coords.z)
             SetBlipSprite(b, sprite)
+            local icon = GetBlipSprite(b) ~= sprite and fallbackSprite[sprite] and sprite or nil
+            if icon then SetBlipSprite(b, fallbackSprite[sprite]) end
             SetBlipColour(b, point.colour or 0)
             SetBlipScale(b, point.scale or 0.7)
             SetBlipAsShortRange(b, true)
             BeginTextCommandSetBlipName('STRING')
             AddTextComponentSubstringPlayerName(point.name or point.kind)
             EndTextCommandSetBlipName(b)
+            TriggerEvent('vanta_hud:blipInfo', b, { label = tostring(point.name or point.kind), icon = icon })
             owned[#owned + 1] = b
         end
     end

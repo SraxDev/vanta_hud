@@ -23,7 +23,7 @@ The minimap gets the player position about 30 times per second while moving and 
 ## Limitations
 
 - Only the stock map: Cayo Perico, MLOs and roads added or closed by your server are not on the atlas or in the road network.
-- Area blips (radius blips) are shown as icons, their exact shape is not reproduced.
+- Blip names, radius and area blips are only known when the resource that creates them includes `@vanta_hud/shared/blip_info.lua` (GTA has no native to read their size).
 - If WebGL fails, or outside the stock map, the HUD falls back to the native GTA radar.
 
 ## Sources

@@ -37,6 +37,29 @@ async function load() {
       f: new Uint8Array(g.flags),
       n,
     };
+    // Parking lots and private drives are islands in the node data: label the pieces so a
+    // route never snaps to one it cannot leave.
+    const comp = new Int32Array(n).fill(-1),
+      sizes = [],
+      stack = [];
+    for (let i = 0; i < n; i++) {
+      if (comp[i] >= 0) continue;
+      let size = 0;
+      comp[i] = sizes.length;
+      stack.push(i);
+      while (stack.length) {
+        const v = stack.pop();
+        size++;
+        for (let e = graph.o[v]; e < graph.o[v + 1]; e++)
+          if (comp[graph.e[e]] < 0) {
+            comp[graph.e[e]] = comp[i];
+            stack.push(graph.e[e]);
+          }
+      }
+      sizes.push(size);
+    }
+    graph.comp = comp;
+    graph.main = sizes.indexOf(Math.max(...sizes));
     grid = new Map();
     for (let i = 0; i < n; i++) {
       const k = Math.floor(graph.p[i * 3] / 200) + ':' + Math.floor(graph.p[i * 3 + 1] / 200);
@@ -49,7 +72,7 @@ async function load() {
 }
 const position = (id) => ({ x: graph.p[id * 3], y: graph.p[id * 3 + 1], z: graph.p[id * 3 + 2] });
 const distance = (a, b) => Math.hypot(a.x - b.x, a.y - b.y, a.z - b.z);
-function nearest(point) {
+function nearest(point, comp = -1) {
   const x = Math.floor(point.x / 200),
     y = Math.floor(point.y / 200);
   let best = null;
@@ -57,6 +80,7 @@ function nearest(point) {
     for (let yy = y - radius; yy <= y + radius; yy++)
       for (let xx = x - radius; xx <= x + radius; xx++)
         for (const a of grid.get(xx + ':' + yy) || []) {
+          if (comp >= 0 && graph.comp[a] !== comp) continue;
           const p = position(a);
           for (let e = graph.o[a]; e < graph.o[a + 1]; e++) {
             const b = graph.e[e],
@@ -115,8 +139,12 @@ class Heap {
   }
 }
 function plan(start, end, foot) {
-  const a = nearest(start),
+  let a = nearest(start),
     b = nearest(end);
+  if (a && b && graph.comp[a.a] !== graph.comp[b.a]) {
+    a = graph.comp[a.a] === graph.main ? a : nearest(start, graph.main);
+    b = graph.comp[b.a] === graph.main ? b : nearest(end, graph.main);
+  }
   if (!a || !b) return { points: [], status: 'off-road' };
   const n = graph.n,
     score = new Float64Array(n).fill(Infinity),
@@ -137,7 +165,7 @@ function plan(start, end, foot) {
   let reached = -1,
     best = Infinity,
     visited = 0;
-  const deadline = performance.now() + 350;
+  const deadline = performance.now() + 1500;
   while (heap.a.length && visited < n) {
     const [id, estimate] = heap.pop();
     if (estimate >= best) break;
@@ -195,7 +223,9 @@ self.onmessage = async (event) => {
     return;
   try {
     await load();
-    self.postMessage({ id: job.id, ...plan(job.start, job.end, job.mode === 'foot') });
+    let result = plan(job.start, job.end, job.mode === 'foot');
+    if (job.mode === 'vehicle' && result.status === 'no-road') result = plan(job.start, job.end, true);
+    self.postMessage({ id: job.id, ...result });
   } catch (error) {
     graphPromise = null;
     self.postMessage({ id: job.id, points: [], status: 'unavailable' });

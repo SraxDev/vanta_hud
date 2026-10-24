@@ -16,7 +16,7 @@ local function point(distance, slot)
         ok, found, position = pcall(routePoint, true, distance, slot)
     end
     if not ok or not found or found == 0 or not position then
-        -- pointeur de sortie explicite, compatible avec les anciens alias de natives
+        -- explicit out pointer, works with the older native aliases too
         ok, found, position = pcall(Citizen.InvokeNative, 0xF3162836C28F9DA5,
             Citizen.PointerValueVector(), true, distance, slot,
             Citizen.ReturnResultAnyway(), Citizen.ResultAsInteger())
@@ -98,7 +98,7 @@ function HudNavigation.MapRoute(enabled)
 end
 
 local function blipDistance()
-    -- sur certains artefacts ces natives n'existaient que sous alias de hash
+    -- some server artifacts only expose these natives by hash
     local ok, found = pcall(Citizen.InvokeNative, 0x869DAACBBE9FA006, Citizen.ResultAsInteger())
     if not ok or (found ~= true and found ~= 1) then return nil end
     local success, distance = pcall(Citizen.InvokeNative, 0xBBB45C3CF5C8AA85, Citizen.ResultAsInteger())
@@ -117,7 +117,7 @@ local function waypointDistance()
     end
     local dx, dy = origin.x - target.x, origin.y - target.y
     local direct = math.sqrt(dx * dx + dy * dy)
-    -- distance provisoire, en attendant celle du worker (navigationMeta)
+    -- straight-line distance until the road worker sends the real one (navigationMeta)
     return direct, 'direct'
 end
 

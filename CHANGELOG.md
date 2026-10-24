@@ -1,5 +1,25 @@
 # Changelog
 
+## 1.14.1
+
+- Compass: the heading under the minimap showed French letters (NO, O, SO) in English. It now follows `Config.Locale`.
+- Weapon HUD: an unknown weapon showed "ARME" in English; it now shows "WEAPON" (or "ARME" in French).
+- ESX adapter: a stale ESX object after restarting `es_extended` could throw inside the HUD loop and freeze the HUD until a restart. Those calls are now protected and the object is fetched again.
+- Settings callback: a request without settings no longer resets everything to defaults.
+- Blips from `Config.Blips.locations` get their name on the custom map and a native icon when `minimap.gfx` is missing.
+- Remaining French comments translated.
+- Checked: Lua syntax, `node --check`, NUI preview in English and French (compass letters, no console error). Not checked in game: ESX restart while connected.
+
+## 1.14.0
+
+- Mission search areas (radius and area blips) are now drawn on the minimap and the big map, in the blip's colour.
+- The map shows the real blip names ("Fishing merchant" instead of the icon name, e.g. "LEVEL").
+- Vanta icons (fishing spot, merchant) no longer turn into a white dot when `stream/minimap.gfx` is missing: the game gets a native icon and the HUD still draws the Vanta one.
+- GTA cannot tell a script a blip's name or a zone's size, so these three points need `client_script '@vanta_hud/shared/blip_info.lua'` in the resource that creates the blips (see README).
+- GPS: setting a waypoint on some blips (garages, shops, hospital...) placed the point but drew no route. The road data has small disconnected pieces (car parks, private drives) and the route snapped to them. It now falls back to the main road network, and in a vehicle it ignores one-way lanes when they leave no legal path.
+- Fixed `event esx:setAccountMoney was not safe for net`: framework events are registered with `RegisterNetEvent`.
+- Checked: Lua syntax, `node --check`, manifests, route worker run offline on 26 trips (all found except Cayo Perico, which is not in the road data), radius zone and blip name rendered in the browser preview, `blip_info.lua` run against stubbed natives. Not checked in game yet.
+
 ## 1.13.1
 
 - Cleaned up the repository: removed unused assets, design sources, old build tools and internal notes.

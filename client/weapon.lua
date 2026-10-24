@@ -3,7 +3,7 @@ VantaWeapon = { armed = false, allowed = false }
 local UNARMED = joaat('WEAPON_UNARMED') & 0xFFFFFFFF
 local READ_ARMED_MS, READ_IDLE_MS = 66, 100
 
--- groupe GTA -> silhouette de repli
+-- GTA weapon group -> fallback silhouette
 local kinds = {
     [416676503] = 'pistol', [690389602] = 'pistol', [3337201093] = 'smg', [970310034] = 'rifle',
     [1159398588] = 'mg', [860033945] = 'shotgun', [3082541095] = 'sniper', [2725924767] = 'heavy',
@@ -24,7 +24,7 @@ local function readCurrent()
     local firearm = clipSize > 0
 
     return {
-        name = VantaBridge.WeaponLabel(hash) or 'ARME',
+        name = VantaBridge.WeaponLabel(hash) or T('WEAPON'),
         icon = VantaBridge.WeaponName(hash),
         kind = kinds[GetWeapontypeGroup(hash) & 0xFFFFFFFF] or 'pistol',
         clipSize = clipSize,

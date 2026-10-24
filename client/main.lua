@@ -18,7 +18,7 @@ local pauseControlActive, scaleformReady = false, false
 local nativePause = GetHashKey('FE_MENU_VERSION_MP_PAUSE')
 local redirectMap, redirectUntil, nextRadarZoom = false, 0, 0
 local nativeSettings, nativeSettingsUntil, nativeSettingsSeen = false, 0, false -- GTA settings opened on purpose: no blocking, no redirect to the map
-local directions = { 'N', 'NO', 'O', 'SO', 'S', 'SE', 'E', 'NE' }
+local directions = { 'N', 'NW', 'W', 'SW', 'S', 'SE', 'E', 'NE' } -- GTA headings turn anticlockwise
 
 -- compare the useful state before SendNUIMessage encodes it once
 -- the pose timestamp must not trigger a full send while standing still
@@ -370,6 +370,8 @@ callback('settings', function(data)
         merged.displayMode = data.preset
         candidate = validate(merged)
     else
+        -- a missing table would otherwise silently reset everything to defaults
+        if data.reset ~= true and type(data.settings) ~= 'table' then return { ok = false, error = T('Invalid settings.') } end
         candidate = validate(data.reset == true and {} or data.settings)
     end
     local styleChanged = candidate.blipStyle ~= settings.blipStyle or data.reset == true
@@ -560,7 +562,7 @@ CreateThread(function()
 end)
 
 CreateThread(function()
-    local nextLayout, lastRadarVisible = 0, 0, nil
+    local nextLayout, lastRadarVisible = 0, nil
     local nextVitals, vitalsPed, vitalsVehicle, vitals = 0, 0, 0, nil
     local nextVehicleDetails, detailsVehicle, detailsPed, vehicleDetails = 0, 0, 0, nil
     while true do

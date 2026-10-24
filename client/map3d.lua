@@ -3,6 +3,22 @@ local active, ready, spriteCursor, firstSweep = false, false, 1, true
 local handles, count, revision = {}, 0, 0
 local snapshot, snapshotRevision, colourCache = {}, -1, {}
 local hiddenDisplay = { [0] = true, [1] = true, [7] = true }
+-- names, zone sizes and Vanta icons reported by shared/blip_info.lua: no native reads them back
+local extras = {}
+AddEventHandler('vanta_hud:blipInfo', function(blip, info)
+    if type(blip) ~= 'number' then return end
+    if info == false then extras[blip] = nil return end
+    if type(info) ~= 'table' then return end
+    local function size(n) return type(n) == 'number' and n > 0 and math.min(n, 5000) or nil end
+    local extra = extras[blip] or {}
+    local radius, width, height = size(info.radius), size(info.width), size(info.height)
+    if radius then extra.radius = radius
+    elseif width and height then extra.width, extra.height = width, height end
+    if type(info.label) == 'string' then extra.label = info.label:sub(1, 60) end
+    if info.icon == false then extra.icon = nil
+    elseif math.type(info.icon) == 'integer' and info.icon >= 0 and info.icon <= 1023 then extra.icon = info.icon end
+    extras[blip] = extra
+end)
 -- earliest deadline first
 local due = {}
 local function push(record)
@@ -52,11 +68,12 @@ local function same(a, b)
             for i = 1, 3 do if value[i] ~= b.colour[i] then return false end end
         elseif value ~= b[key] then return false end
     end
+    for key in pairs(b) do if a[key] == nil then return false end end
     return true
 end
 local function refresh(blip, record, now)
     if not DoesBlipExist(blip) then
-        handles[blip] = nil count = count - 1 VantaBlips.Forget(blip)
+        handles[blip] = nil count = count - 1 VantaBlips.Forget(blip) extras[blip] = nil
         if record.data then revision = revision + 1 end
         return
     end
@@ -87,6 +104,12 @@ local function refresh(blip, record, now)
         kind = kind, alpha = alpha, display = display, street = kind == 4 and record.street or nil,
         colour = colour.rgb, mini = display ~= 3 and display ~= 4, full = display ~= 5 and display ~= 9,
         selectable = display == 2 or display == 3 or display == 4 or display == 6, short = IsBlipShortRange(blip) }
+    local extra = extras[blip]
+    if extra then
+        item.radius, item.width, item.height = extra.radius, extra.width, extra.height
+        item.label, item.icon = extra.label, extra.icon
+        if extra.width then item.rotation = GetBlipRotation(blip) end
+    end
     if not same(record.data, item) or (record.data and record.data.street ~= item.street) then
         record.data = item revision = revision + 1
     end

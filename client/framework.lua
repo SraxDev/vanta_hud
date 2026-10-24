@@ -26,13 +26,19 @@ do
             end
         end
     end
+    -- both run from the HUD loop: a stale object after an es_extended restart must not kill it
     function esx.loaded()
         local obj = object()
-        return obj ~= nil and obj.IsPlayerLoaded()
+        if not obj then return false end
+        local ok, loaded = pcall(obj.IsPlayerLoaded)
+        if not ok then ESX = nil end
+        return ok and loaded == true
     end
     function esx.menuOpen()
         local obj = object()
-        return obj ~= nil and obj.UI ~= nil and obj.UI.Menu ~= nil and next(obj.UI.Menu.GetOpenedMenus()) ~= nil
+        if not obj or not obj.UI or not obj.UI.Menu then return false end
+        local ok, menus = pcall(obj.UI.Menu.GetOpenedMenus)
+        return ok and type(menus) == 'table' and next(menus) ~= nil
     end
     function esx.refresh()
         local obj = object()
@@ -66,9 +72,9 @@ do
     end
     AddEventHandler('esx_status:onTick', function(list) if adapter == esx then ingest(list) end end)
     for _, name in ipairs({ 'esx:setAccountMoney', 'esx:setJob', 'esx:playerLoaded' }) do
-        AddEventHandler(name, function() if adapter == esx then SetTimeout(150, esx.refresh) end end)
+        RegisterNetEvent(name, function() if adapter == esx then SetTimeout(150, esx.refresh) end end)
     end
-    AddEventHandler('esx:onPlayerLogout', function()
+    RegisterNetEvent('esx:onPlayerLogout', function()
         if adapter ~= esx then return end
         VantaBridge.needs = {} VantaBridge.SetEconomy(nil)
     end)
@@ -104,9 +110,9 @@ do
     function qb.hideOwn() end
     function qb.restoreOwn() end
     for _, name in ipairs({ 'QBCore:Player:SetPlayerData', 'QBCore:Client:OnPlayerLoaded', 'QBCore:Client:OnJobUpdate', 'QBCore:Client:OnMoneyChange' }) do
-        AddEventHandler(name, function() if adapter == qb then SetTimeout(150, qb.refresh) end end)
+        RegisterNetEvent(name, function() if adapter == qb then SetTimeout(150, qb.refresh) end end)
     end
-    AddEventHandler('QBCore:Client:OnPlayerUnload', function()
+    RegisterNetEvent('QBCore:Client:OnPlayerUnload', function()
         if adapter ~= qb then return end
         VantaBridge.needs = {} VantaBridge.SetEconomy(nil)
     end)

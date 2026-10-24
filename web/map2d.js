@@ -150,6 +150,7 @@ window.HudMap2D = (() => {
       .replace(/^radar_/, '')
       .replaceAll('_', ' ')
       .toUpperCase();
+  const blipTitle = (b) => b.label || iconName(b.sprite);
   function iconName(sprite) {
     if (!titleCache.has(sprite)) titleCache.set(sprite, rawIconName(sprite));
     return titleCache.get(sprite);
@@ -211,6 +212,7 @@ window.HudMap2D = (() => {
     nearBlips.set(blip.id, visible);
     return visible;
   }
+  const size = (n) => (finite(n) && n > 0 ? Math.min(n, 5000) : 0);
   function safePoint(p) {
     return p && finite(p.x) && finite(p.y) && Math.abs(p.x) <= 20000 && Math.abs(p.y) <= 20000
       ? { x: p.x, y: p.y, z: finite(p.z) ? clamp(p.z, -2000, 10000) : 0 }
@@ -237,7 +239,9 @@ window.HudMap2D = (() => {
       blips.push({
         ...p,
         id: b.id,
-        sprite: b.sprite,
+        // a Vanta icon the game could not show natively (no minimap.gfx), drawn from our atlas
+        sprite: Number.isInteger(b.icon) && b.icon >= 0 && b.icon <= 1023 ? b.icon : b.sprite,
+        label: typeof b.label === 'string' ? b.label.slice(0, 60) : '',
         kind: Number.isInteger(b.kind) ? b.kind : 4,
         alpha: clamp(b.alpha, 0, 255),
         display: b.display,
@@ -246,6 +250,10 @@ window.HudMap2D = (() => {
         short: b.short === true,
         selectable: b.selectable === true,
         street: typeof b.street === 'string' ? b.street.slice(0, 160) : '',
+        radius: size(b.radius),
+        width: size(b.width),
+        height: size(b.height),
+        rotation: finite(b.rotation) ? b.rotation : 0,
         colour:
           Array.isArray(b.colour) && b.colour.length === 3 && b.colour.every(finite)
             ? b.colour.map((n) => Math.round(clamp(n, 0, 255)))
@@ -846,6 +854,39 @@ window.HudMap2D = (() => {
         ctx.fillText(label.name, p.x, p.y);
       }
     }
+    // mission search areas and other radius/area blips, under the route and the icons
+    for (const b of blips) {
+      if ((!b.radius && !(b.width && b.height)) || !visibleCategory(b)) continue;
+      if (!(target.full || target.detail ? b.full : b.mini)) continue;
+      const [r, g, bl] = b.colour;
+      ctx.beginPath();
+      if (b.radius) {
+        const c = project(b, camera, rect);
+        ctx.arc(c.x, c.y, b.radius / camera.mpp, 0, Math.PI * 2);
+      } else {
+        const a = (-b.rotation * Math.PI) / 180,
+          cos = Math.cos(a),
+          sin = Math.sin(a);
+        [
+          [-1, -1],
+          [1, -1],
+          [1, 1],
+          [-1, 1],
+        ].forEach(([sx, sy], i) => {
+          const dx = (sx * b.width) / 2,
+            dy = (sy * b.height) / 2,
+            p = project({ x: b.x + dx * cos - dy * sin, y: b.y + dx * sin + dy * cos }, camera, rect);
+          if (i) ctx.lineTo(p.x, p.y);
+          else ctx.moveTo(p.x, p.y);
+        });
+        ctx.closePath();
+      }
+      ctx.fillStyle = `rgba(${r},${g},${bl},${Math.min(0.45, b.alpha / 255)})`;
+      ctx.fill();
+      ctx.strokeStyle = `rgba(${r},${g},${bl},0.85)`;
+      ctx.lineWidth = 1.5 * scale;
+      ctx.stroke();
+    }
     const path = roadKey && roadRoute.points.length > 1 ? roadRoute.points : route.points || [];
     let startIndex = 0,
       firstPoint = null;
@@ -900,6 +941,7 @@ window.HudMap2D = (() => {
     if (atlas.complete && atlas.naturalWidth) {
       for (const b of visible) {
         if (b.sprite === 6 || b.sprite === 7 || b.sprite === 8 || b.sprite < 0 || b.sprite > 1023) continue;
+        if (b.radius || (b.width && b.height)) continue;
         const xy = project({ ...b, z: b.z + 5 }, camera, rect);
         if (
           !xy ||
@@ -951,7 +993,7 @@ window.HudMap2D = (() => {
       const label = $('map3d-hover');
       label.hidden = !hover;
       if (hover) {
-        label.textContent = iconName(hover.blip.sprite);
+        label.textContent = blipTitle(hover.blip);
         label.style.left = clamp(hover.x + 16, 12, innerWidth - 190) + 'px';
         label.style.top = clamp(hover.y - 24, 85, innerHeight - 50) + 'px';
       }
@@ -1023,7 +1065,7 @@ window.HudMap2D = (() => {
     ctx.restore();
   }
   function selectPlace(blip) {
-    selected = { ...blip, name: iconName(blip.sprite) };
+    selected = { ...blip, name: blipTitle(blip) };
     paintChrome();
     wake();
     hooks.sound?.('confirm');
@@ -1085,7 +1127,7 @@ window.HudMap2D = (() => {
           b.selectable &&
           b.kind === 4 &&
           b.sprite !== 8 &&
-          (iconName(b.sprite) + ' ' + (b.street || '')).toLocaleLowerCase('fr').includes(query)
+          (blipTitle(b) + ' ' + (b.street || '')).toLocaleLowerCase('fr').includes(query)
       )
       .sort(
         (a, b) =>
@@ -1098,7 +1140,7 @@ window.HudMap2D = (() => {
       ':' +
       placeFilter +
       ':' +
-      items.map((b) => b.id + ':' + b.sprite).join(',') +
+      items.map((b) => b.id + ':' + b.sprite + ':' + b.label).join(',') +
       ':' +
       settings.blipStyle;
     if (signature === placesSignature) return;
@@ -1115,7 +1157,7 @@ window.HudMap2D = (() => {
         icon.style.backgroundImage = 'url("assets/blips/' + settings.blipStyle + '.png")';
         icon.style.backgroundPosition =
           -(blip.sprite % 32) * 32 + 'px ' + -Math.floor(blip.sprite / 32) * 32 + 'px';
-        label.textContent = iconName(blip.sprite);
+        label.textContent = blipTitle(blip);
         detail.textContent =
           blip.street ||
           textDistance(Math.hypot(blip.x - (data.world?.x || 0), blip.y - (data.world?.y || 0)));

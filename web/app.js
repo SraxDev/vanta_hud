@@ -1946,7 +1946,7 @@
     $('street').textContent = data.street || 'LOS SANTOS';
     $('zone').textContent = locationSubtitle(data);
     $('clock').textContent = data.clock || '';
-    $('direction').textContent = data.heading || 'N';
+    $('direction').textContent = t(data.heading || 'N');
     $('voice').hidden = !settings.voice;
     $('voice').classList.toggle('talking', data.talking === true || data.context?.radio === true);
     $('voice').classList.toggle('radio-talking', data.context?.radio === true);
@@ -2462,7 +2462,7 @@
     group.querySelector('.address strong').textContent = state.street || 'LOS SANTOS';
     group.querySelector('.address small').textContent = state.zone || '';
     group.querySelector('time').textContent = state.clock || '';
-    group.querySelector('.compass').textContent = state.heading || 'N';
+    group.querySelector('.compass').textContent = t(state.heading || 'N');
     group.querySelector('.voice').hidden = !settings.voice;
     group
       .querySelector('.voice')

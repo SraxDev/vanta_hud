@@ -68,6 +68,16 @@ exports.vanta_hud:SetNeeds(hunger, thirst)
 exports.vanta_hud:SetEconomy({ cash = 1200, bank = 8000, job = 'Police', grade = 'Sergeant' })
 ```
 
+### Blip names and mission areas
+
+GTA has no native to read a blip's name or the size of a radius blip, so the HUD only knows what it is told. In a resource that creates them, add this line before its own client scripts:
+
+```lua
+client_script '@vanta_hud/shared/blip_info.lua'
+```
+
+It wraps the blip natives of that resource (`AddBlipForRadius`, `AddBlipForArea`, `SetBlipSprite`, the blip name commands) and reports names, zone sizes and Vanta icons to the HUD. Nothing else changes, and it does nothing when vanta_hud is not running.
+
 Documentation: `CHANGELOG.md`, `PERFORMANCE.md`, `MAP2D.md`.
 
 ## Known limitations
